@@ -12,4 +12,6 @@
 - [데이터센터](Basic/Data_center.md)
 
 
-## [하드웨어](Hardware)
+## [하드웨어](Hardware/hardware.md)
+
+## [네트워크]()
