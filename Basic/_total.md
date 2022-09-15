@@ -20,7 +20,7 @@
 ### 미들웨어
 - 서버 상에서 서버가 특정 역할을 하도록 기능을 제공하는 소프트웨어
 
-<br><br><br>
+<br><br>
 
 ## 온프레미스와 클라우드
 ### 온프레미스(On-premises)
@@ -69,7 +69,7 @@ AIaaS(AI as a service): 서비스형 인공지능으로써, 다양한 AI 기반 
 ### 멀티 클라우드(Multi Cloud)
 - 다른 CSP의 Public Cloud를 결합한 형태
 
-<br><br><br>
+<br><br>
 
 ## 데이터 센터
 
