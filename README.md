@@ -12,6 +12,9 @@
 - [데이터센터](Basic/data_center.md)
 
 
-## [하드웨어](Hardware/hardware.md)
+## [하드웨어](Hardware/_total.md)
 
-## [네트워크]()
+## [네트워크](Network/_total.md)
+- [방화벽](Network/firewall.md)
+- [네트워크 주소](Network/network_address.md)
+- [OSI 모델](Network/OSI.md)
