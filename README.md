@@ -7,9 +7,9 @@
 
 ## [인프라 기초](Basic/_total.md)
 - [인프라 용어 정리](Basic/_infra_term.md)
-- [인프라 시스템 구성요소](Basic/Component.md)
-- [온프레미스와 클라우드](Basic/On-premise_Cloud.md)
-- [데이터센터](Basic/Data_center.md)
+- [인프라 시스템 구성요소](Basic/component.md)
+- [온프레미스와 클라우드](Basic/on-premise_cloud.md)
+- [데이터센터](Basic/data_center.md)
 
 
 ## [하드웨어](Hardware/hardware.md)
