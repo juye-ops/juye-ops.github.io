@@ -5,3 +5,4 @@
 
 주차별 개인 회고록
 - [1주차 회고록](./reprospective/week1.md)
+- [2주차 회고록](./reprospective/week2.md)
