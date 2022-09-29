@@ -1,6 +1,4 @@
 ## Pytorch 기초
-
-### Pytorch
 Python의 DL 프레임워크에 대한 입지가 높아지면서 기존 Torch에 Py라는 용어가 붙음
 
 ### Pytorch Operations
