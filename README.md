@@ -20,5 +20,5 @@
 - [하이퍼파라미터 튜닝](Pytorch/_total.md)
 
 ## [데이터 시각화](MonitoringTools/_total.md)
-- [신경망](NeuralNetwork/neural_network.md)
-- [역전파](NeuralNetwork/backpropagation.md)
+- [Tensorboard](MonitoringTools/tensorboard.md)
+- [Wandb](MonitoringTools/wandb.md)
