@@ -3,7 +3,7 @@
 
 ## 학습 내용 및 회고록 정리
 
-주차별 개인 회고록
+### Level 1
 <table>
     <th colspan=5>KKKimch</th>
     <tr height="160px">
@@ -40,6 +40,5 @@
     </tr>
 </table>
 
-### Level 1
 - [1주차 회고록](./reprospective/week1.md)
 - [2주차 회고록](./reprospective/week2.md)
