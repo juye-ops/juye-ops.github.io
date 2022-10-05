@@ -38,5 +38,26 @@ Short-term dependencies
 
 <img src = ../static/img/lstm_summary.png height = 400px>
 
-### GRU
+#### GRU
 LSTM 구조에서 Gate를 2개로 줄여 구조적 단순함 식별
+
+
+### Transformer
+기존 seq2seq 모델과 달리, Attention 기법을 적용한 NLP 모델
+
+- Encoder
+  - Feed Forward Neural Network와 Self-Attention으로 구성
+  - Self-Attention
+    - 여러 언어가 Encoder의 입력으로 들어갈 때 각 단어가 다른 단어를 고려하여 인코딩
+  - Feed Forward Neural Network
+    - Self-Attention을 통해 인코딩된 각 단어를 일대일로 변환
+
+---
+<img src="../static/img/transformer1.png">
+
+예시 문장: The animal didn`t cross the street, because it was too tired
+
+위의 예시 문장에서 it이 무엇을 지칭하는지 아는 것이 번역의 핵심으로 취급한다.  
+Self-Attention기법을 통해 it이라는 단어가 그 외의 모든 단어들과 비교하여 연관성을 학습한다.  
+
+---
