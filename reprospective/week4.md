@@ -1,4 +1,4 @@
-# 3주차 회고록
+# 4주차 회고록
 ## 학습 내용
 ### Computer Vision
 - Data Augmentation
