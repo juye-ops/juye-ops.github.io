@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 exp updated
+=======
+exp2
+>>>>>>> exp1
