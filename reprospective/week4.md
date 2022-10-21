@@ -1,5 +1,6 @@
 # 4주차 회고록
 ## 학습 내용
+*개인 학습의 집중을 위해 학습 내용을 별도로 정리하지 않았습니다.*
 ### Computer Vision
 - Data Augmentation
 - Image Classification
