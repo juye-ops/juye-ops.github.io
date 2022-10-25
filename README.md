@@ -20,3 +20,6 @@
 ## [데이터 시각화](MonitoringTools/_total.md)
 - [Tensorboard](MonitoringTools/tensorboard.md)
 - [Wandb](MonitoringTools/wandb.md)
+
+## [CV](CV/data_augmentation.md)
+- [DataAugmentation](CV/data_augmentation.md)
