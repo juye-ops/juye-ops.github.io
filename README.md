@@ -46,3 +46,7 @@
 - [4주차 회고록](./reprospective/week4.md)
 - [5주차 회고록](./reprospective/week5.md)
 - [6주차 회고록](./reprospective/week5.md)
+
+<br>
+
+- [대회 Wrap Up](./reprospective/wrapup.md)
