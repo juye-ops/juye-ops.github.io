@@ -31,3 +31,4 @@
 ### [MLOps](MLOps/_total.md)
 - [MLOps 개론](MLOps/basic.md)
 - [MLOps Component](MLOps/component.md)
+- [ML 프로젝트 Lifecycle](MLOps/lifecycle.md)
