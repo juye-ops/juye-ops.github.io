@@ -47,3 +47,4 @@
 - [5주차 회고록](./reprospective/week5.md)
 - [6주차 회고록](./reprospective/week6.md)
 - [7주차 회고록 - Wrap Up](./reprospective/week7.md)
+- [8주차 회고록](./reprospective/week8.md)
