@@ -33,7 +33,7 @@
   |Augmentation|Parameter|Description|
   |:-:|:-:|:-:|
   |GrayScale||흑백 이미지 변환|
-  |RandomResizedCrop|img_size = 384 \n scale = (0.8, 1.0)|중앙 영역 잘라내기|
+  |RandomResizedCrop|img_size = 384 <br> scale = (0.8, 1.0)|중앙 영역 잘라내기|
   |Sharpening|alpha = (0.5, 1)|이미지 선명화|
   |Horizontal Flip|p = 0.3|p 확률에 따른 좌우 반전|
   |Normalize|mean = (0.485, 0.456, 0.406) <br> std = (0.229, 0.224, 0.225)|이미지 선명화|
