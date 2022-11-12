@@ -36,10 +36,10 @@
 
 ## 인프라(Infrastructure) 공부/학습
 
-#### 참고 사이트
-[개발자를 위한 인프라 기초 총정리 - Eric Han](https://futurecreator.github.io/2018/11/09/it-infrastructure-basics/)  
-[IT 인프라 기초 공부하기](https://youjin86.tistory.com/146?category=0)  
-[웹 개발자를 위한 서버/인프라 용어 정리](https://github.com/jojoldu/infra-summary)
+> ### *참고 사이트*
+> - [개발자를 위한 인프라 기초 총정리 - Eric Han](https://futurecreator.github.io/2018/11/09/it-infrastructure-basics/)  
+> - [IT 인프라 기초 공부하기](https://youjin86.tistory.com/146?category=0)  
+> - [웹 개발자를 위한 서버/인프라 용어 정리](https://github.com/jojoldu/infra-summary)
 
 ### 인프라 기초
 - [**인프라 기초**](Infrastructure/Basic/_total.md)
@@ -54,7 +54,10 @@
 
 ## Git
 
-### 베이스 지식
+
+<details>
+<summary>베이스 지식</summary>
+
 - Commit
 - Push / Pull
 - Branch
@@ -65,6 +68,7 @@
   - Feature
   - Hotfix
   - Release
+</details>
 
 ### Git 유용한 기능
 - [Git 유용한 기능](git-deep.md)
