@@ -26,5 +26,5 @@
 2. 저장소(**Past-Repo**) 이식
    1. **git subtree add --prefix="기존 저장소 명" "기존 저장소 주소" "브랜치 명"**
     ```
-    $ git subtree add --prefix=New-Repo https://github.com/USERNAME/Past-Repo.git main
+    $ git subtree add --prefix=Past-Repo https://github.com/USERNAME/Past-Repo.git main
     ```
