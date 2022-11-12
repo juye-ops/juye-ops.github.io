@@ -1,3 +1,15 @@
-# Git-Practice
+# Git
 
-egoing님의 강의를 통한 CLI기반 Git 연습을 위한 저장소
+### 베이스 지식
+- Commit
+- Push / Pull
+- Branch
+  - Checkout
+  - Merge
+- Git Flow
+  - Develop
+  - Feature
+  - Hotfix
+  - Release
+
+### [Git 유용한 기능](git-deep.md)
