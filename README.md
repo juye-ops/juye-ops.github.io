@@ -71,4 +71,4 @@
 </details>
 
 ### Git 유용한 기능
-- [Git 유용한 기능](Git/git-deep.md)
+- [Git 유용한 기능](Git/git-useful.md)
