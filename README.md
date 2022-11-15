@@ -27,12 +27,22 @@
 - Data Manipulation
   - [DataAugmentation](AI/CV/data_augmentation.md)
 
+### Object Detection
+[외부 참조 블로그](https://herbwood.tistory.com/)
+- [Object Detection 기초](ObjectDetection/basic.md)
+- [2-Stage Detector](ObjectDetection/2-stage.md)
 
 ### MLOps
 - [**MLOps 기초**](MLOps/_total.md)
   - [MLOps 개론](MLOps/basic.md)
   - [MLOps Component](MLOps/component.md)
   - [ML 프로젝트 Lifecycle](MLOps/lifecycle.md)
+
+
+
+
+
+
 
 ## 인프라(Infrastructure) 공부/학습
 
