@@ -1,4 +1,4 @@
-## 인프라(Infrastructure) 공부/학습
+## 💻 인프라(Infrastructure)
 
 > ### *참고 사이트*
 > - [[Blog] 개발자를 위한 인프라 기초 총정리 - Eric Han](https://futurecreator.github.io/2018/11/09/it-infrastructure-basics/)  
