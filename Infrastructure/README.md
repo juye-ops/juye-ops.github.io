@@ -1,9 +1,9 @@
 # 💻 인프라(Infrastructure)
 
 > ### *참고 사이트*
-> - [[Blog] 개발자를 위한 인프라 기초 총정리 - Eric Han](https://futurecreator.github.io/2018/11/09/it-infrastructure-basics/)  
-> - [[Blog] IT 인프라 기초 공부하기](https://youjin86.tistory.com/146?category=0)  
-> - [[Github] 웹 개발자를 위한 서버/인프라 용어 정리](https://github.com/jojoldu/infra-summary)
+> - *[**[Blog]** 개발자를 위한 인프라 기초 총정리 - Eric Han](https://futurecreator.github.io/2018/11/09/it-infrastructure-basics/)*  
+> - *[**[Blog]** IT 인프라 기초 공부하기](https://youjin86.tistory.com/146?category=0)*  
+> - *[**[Github]** 웹 개발자를 위한 서버/인프라 용어 정리](https://github.com/jojoldu/infra-summary)*
 
 ## 인프라 기초
 - [**인프라 기초**](Basic/_total.md)

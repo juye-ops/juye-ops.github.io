@@ -1,7 +1,7 @@
 # 🧠 인공지능(AI)
 
 > ### *참고 사이트*
-> - [[Blog] 약초의 숲으로 놀러오세요](https://herbwood.tistory.com/)
+> - *[**[Blog]** 약초의 숲으로 놀러오세요](https://herbwood.tistory.com/)*
 
 ## 인공지능
 - [**인공지능 기초**](Basic/_total.md)
