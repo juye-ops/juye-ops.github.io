@@ -15,23 +15,33 @@
   - [Pytorch 기초](Pytorch/basic.md)
   - [프로젝트 구조](Pytorch/projectstructure.md)
   - [Dataset](Pytorch/dataset.md)
-  - [구현](Pytorch/_total.md)
-  - [Multi-GPU](Pytorch/_total.md)
-  - [모델 관리](Pytorch/_total.md)
-  - [전이 학습](Pytorch/_total.md)
-  - [하이퍼파라미터 튜닝](Pytorch/_total.md)
+  - [구현](Pytorch/imple.md)
+  - [Multi-GPU](Pytorch/multi-gpu.md)
+  - [모델 관리](Pytorch/model.md)
+  - [전이 학습](Pytorch/transfer_learning.md)
+  - [하이퍼파라미터 튜닝](Pytorch/hyperparameter_tuning.md)
 
 - [**데이터 시각화**](MonitoringTools/_total.md)
   - [Tensorboard](MonitoringTools/tensorboard.md)
   - [Wandb](MonitoringTools/wandb.md)
 
-### CV(Computer Vision)
-- Data Manipulation
-  - [DataAugmentation](CV/data_augmentation.md)
+
+### Deep Learning
+- [**Deep Learning**](DeepLearning/_total.md)
+  - [딥러닝 기초](DeepLearning/basic.md)
+  - [최적화](DeepLearning/optimization.md)
+  - [RNN](DeepLearning/rnn.md)
+  - [CNN](DeepLearning/cnn.md)
 
 ### Object Detection
-- [Object Detection 기초](ObjectDetection/basic.md)
-- [2-Stage Detector](ObjectDetection/2-stage.md)
+- **Object Detection**
+  - [Object Detection Metric](ObjectDetection/basic.md)
+  - [2-Stage Detector](ObjectDetection/2-stage.md)
+
+### CV(Computer Vision)
+- **Data Manipulation**
+  - [DataAugmentation](CV/data_augmentation.md)
+
 
 ### MLOps
 - [**MLOps 기초**](MLOps/_total.md)

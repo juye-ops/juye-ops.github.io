@@ -11,7 +11,7 @@
   - [온프레미스와 클라우드](Basic/on-premise_cloud.md)
   - [데이터센터](Basic/data-center.md)
 - [**인프라 시스템 구성요소**](Basic/_total_.md)
-    - [하드웨어](Basic/hardware.md)
-    - [네트워크](Basic/network.md)
-    - [운영체제](Basic/OS.md)
+  - [하드웨어](Basic/hardware.md)
+  - [네트워크](Basic/network.md)
+  - [운영체제](Basic/OS.md)
     <!-- - [미들웨어](Basic/middleware.md) -->
