@@ -1,9 +1,9 @@
-## 🧠 인공지능(AI)
+# 🧠 인공지능(AI)
 
 > ### *참고 사이트*
 > - [[Blog] 약초의 숲으로 놀러오세요](https://herbwood.tistory.com/)
 
-### 인공지능
+## 인공지능
 - [**인공지능 기초**](Basic/_total.md)
   - [벡터](Basic/vector.md)
   - [행렬](Basic/matrix.md)
@@ -26,24 +26,24 @@
   - [Wandb](MonitoringTools/wandb.md)
 
 
-### Deep Learning
+## Deep Learning
 - [**Deep Learning**](DeepLearning/_total.md)
   - [딥러닝 기초](DeepLearning/basic.md)
   - [최적화](DeepLearning/optimization.md)
   - [RNN](DeepLearning/rnn.md)
   - [CNN](DeepLearning/cnn.md)
 
-### Object Detection
+## Object Detection
 - **Object Detection**
   - [Object Detection Metric](ObjectDetection/basic.md)
   - [2-Stage Detector](ObjectDetection/2-stage.md)
 
-### CV(Computer Vision)
+## CV(Computer Vision)
 - **Data Manipulation**
   - [DataAugmentation](CV/data_augmentation.md)
 
 
-### MLOps
+## MLOps
 - [**MLOps 기초**](MLOps/_total.md)
   - [MLOps 개론](MLOps/basic.md)
   - [MLOps Component](MLOps/component.md)
