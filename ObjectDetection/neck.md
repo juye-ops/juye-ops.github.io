@@ -25,3 +25,13 @@ Low Level의 feature는 Semantic이 약하고, High Level의 feature는 Localiza
 - 여러 scale의 물체를 탐지하기 위해 설계
 - 여러 크기의 Feature를 사용
 - Bottom up(backbone)에서 다양한 크기의 Feature map을 추출하고, Feature map의 Semantic을 교환하기 위해 Top-down 방식 사용
+
+### PANet(Path Aggregation Network)
+다수의 CNN 레이어를 갖는 모델에서 Low-Level Feature까지 정보가 전달되지 않는 한계를 개선
+- Adaptive Feature Pooling
+  - $k=[k_0 + log_2(\sqrt{wh}/224)]$ 수식이 wh에 따라 Feature map을 선택하므로 다른 결과를 유도할 수 있는 우려 발생
+  - 모든 Feature map에서 RoI Projection를 진행하여 Channel에 대한 Max Pooling하여 최종 Feature map 생성
+- 문맥 교환 추가
+  - Bottom-up Path way: Top-down Path way를 진행 후 다시 Low Level의 Feature를 High Level에도 전달
+  
+<img src="static/img/panet.png" height=300px>
