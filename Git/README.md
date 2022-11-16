@@ -1,6 +1,8 @@
-# Git
+## Git
 
-### 베이스 지식
+<details>
+<summary>베이스 지식</summary>
+
 - Commit
 - Push / Pull
 - Branch
@@ -11,5 +13,7 @@
   - Feature
   - Hotfix
   - Release
+</details>
 
-### [Git 유용한 기능](git-deep.md)
+### Git 유용한 기능
+- [Git 유용한 기능](git-useful.md)
