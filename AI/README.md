@@ -1,4 +1,8 @@
 ## 인공지능(AI) 공부/학습
+
+> ### *참고 사이트*
+> - [[Blog] 약초의 숲으로 놀러오세요](https://herbwood.tistory.com/)
+
 ### 인공지능
 - [**인공지능 기초**](Basic/_total.md)
   - [벡터](Basic/vector.md)
@@ -26,7 +30,6 @@
   - [DataAugmentation](CV/data_augmentation.md)
 
 ### Object Detection
-[외부 참조 블로그](https://herbwood.tistory.com/)
 - [Object Detection 기초](ObjectDetection/basic.md)
 - [2-Stage Detector](ObjectDetection/2-stage.md)
 
