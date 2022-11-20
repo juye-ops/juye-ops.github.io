@@ -15,5 +15,5 @@
   - Release
 </details>
 
-## Git 유용한 기능
-- [Git 유용한 기능](git-useful.md)
+## Git Practical Tips
+- [Git Tips](practical-tips.md)
