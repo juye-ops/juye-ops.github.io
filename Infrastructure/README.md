@@ -15,6 +15,3 @@
   - [네트워크](Basic/network.md)
   - [운영체제](Basic/OS.md)
     <!-- - [미들웨어](Basic/middleware.md) -->
-
-## Infra Practical Tips
-- [Infra Tips](./practical-tips.md)
