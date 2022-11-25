@@ -85,3 +85,7 @@
         </td>
     </tr>
 </table>
+
+
+- [9주차 회고록](./reprospective/week9.md)
+- [10주차 회고록](./reprospective/week10.md)
