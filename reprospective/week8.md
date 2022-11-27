@@ -1,4 +1,4 @@
-# 5주차 회고록
+# 8주차 회고록
 ## 학습 내용
 [8주차 정리 내용](https://github.com/juye-ops/Study-AI/tree/main/MLOps)
 
