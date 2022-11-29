@@ -2,15 +2,15 @@
 
 ### keywords
 - patch / token: (이미지) 파편
-- 
+- 잠재 변수(Latent representations): 특정 데이터를 가장 잘 설명할 수 있는 값
 
 ### 요약
 > MAE is Scalable **Self-supervised learners**.  
 > MAE의 Concept는 패치를 랜덤으로 Masking하고, Masking된 Missing Pixels를 재 구성 하는 것이다.  
 > MAE의 Design은 다음 두 가지를 따르며, 무거운 모델에 대한 efficiently and effectively하게 학습이 가능하다.
 > 
-> 1. 비대칭 인코더-디코더 구조이다.  
-> 인코더는 without Mask patches에 대해서 동작하며, 디코더는 latent representations와 mask patches를 통해 원본 이미지를 재구성한다.  
+> 1. 비대칭 Encoder-Decoder 구조이다.  
+> Encoder는 without Mask patches에 대해서 동작하며, Decoder는 latent representations와 mask patches를 통해 원본 이미지를 재구성한다.  
 > 2. 75%와 같은 매우 큰 영역에 대해 마스킹을 처리하게 될 시 의미있는 supervisory task를 반환할 것으로 예상한다.
 >
 > 해당 Design은 3배 이상의 속도와 함께 정확도 향상을 도출한다.
@@ -37,3 +37,8 @@
      - 패치가 없어져도 주변 패치의 parts, objects, scenes를 high-level로 이해하여 회복 가능
      - 차이를 극복하기 위해 이미지의 매우 많은 영역을 랜덤으로 Masking
 3. Decoder
+   - 언어의 Decoder는 찾아 낼 Missing Words의 Semantic이 풍부
+   - *BERT의 Decoder는 MLP로 보잘 것 없다!*
+   - 이미지 Decoder는 Pixel을 형성하므로 Recognition Task에 비해 낮은 Semantic을 보유
+   - 이미지의 Decoder은 학습된 잠재 변수의 Semantic level을 결정
+
