@@ -1,8 +1,9 @@
 # Masked Auto-Encoder (MAE)
 
-### keywords
+### terms
 - patch / token: (이미지) 파편
 - 잠재 변수(Latent representations): 특정 데이터를 가장 잘 설명할 수 있는 값
+- Auxiliary dummy token: ViT의 Class token 역할
 
 ### 요약
 > MAE is Scalable **Self-supervised learners**.  
@@ -81,7 +82,10 @@ Random patch에 대해 마스킹 후 재구성
 
 ## 제안
 
-<img src="static/img/MAE_architecture.png" width = 500px>
+|![](static/img/MAE_architecture.png)|
+|:-:|
+|MAE Architecture|
+</table>
 
 - 비대칭 구조의 ```Auto encoder```
   - Encoder: Visible patch에 대한 Signal을 latent representations로 맵핑
@@ -101,7 +105,7 @@ Random patch에 대해 마스킹 후 재구성
   - 입력 값: Fullset(Visible patches의 Encoding 정보와 Mask token)
   - 각 Masked patch는 스스로를 학습하는 벡터
   - 공간 정보를 식별하기 위해 Fullset patch 별 Positional embeddings를 부여
-  - Patch의 재구성만을 목적으로 하며, Encoder과 독립적이므로 유연하게 디자인 가능
+  - Patch의 재구성만을 목적으로 하며, Encoder와 독립적이므로 유연하게 디자인 가능
   - 본 연구에서는 Encoder에 비해 10% 미만의 연산량을 확보한 매우 가볍고 작은 Decoder로 설계
 - Target 재구성
   - Decoder의 최종 레이어가 Output channels와 Pixel 수가 동일한 Linear projection으로 구성
@@ -117,3 +121,93 @@ Random patch에 대해 마스킹 후 재구성
   ※ Shuffling과 Unshuffling의 overhaad는 적다.
 
 
+## 실험
+
+### ImageNet Expreiments
+#### Baseline: ViT-Large
+- ViT 기본 구조
+  - Multi-head self-attention bloack(Layer Norm) + MLP block(Layer Norm)
+  - Class token 보유
+- 구조 변형
+  - Encoder와 Decoder의 크기가 다르므로 Encoding 후 Linear projection layer를 도입
+  - Encoder와 Decoder 각 Input에서 Sine-Cosine Positional embeddings 적용
+- 학습 방법
+  - Pre-training: Encoder와 Decoder를 학습
+  - (end-to-end) Fine-tuning: Encoder(trainable) + Classifier
+  - Linear probing: Encoder(frozen) + Classifier
+    - Linear layer만 학습
+    - Mixup, Cutmix, Drop path, Color jittering와 같은 Regularization이 큰 방해 요소로 취급
+    - Weight decay를 0으로 초기화
+    - Pre-trained features를 정규화하는 것이 유용하여 Affine 변환을 하지 않은 Batch Norm 레이어를 Linear classifier 앞 단에 적용
+  - Scratch
+    - ViT-L/H의 학습이 불안정한 점을 완화
+- 특징 추출
+  - Encoder의 output
+  - Auxiliary dummy token 없이도 원활한 작동을 지원
+
+<table>
+  <tr><th colspan=4><p align=center>학습 방법 별 Settings</p></th></tr>
+  <tr><th></th><th>Pre-training</th><th>Fine-tuning</th><th>Linear probing</th><th>Scratch</th></tr>
+  <tr><td>optimizer</td><td>AdamW</td><td>AdamW</td><td>LARS</td><td>AdamW</td></tr>
+  <tr><td>optimizer momentum</td><td>β1, β2=0.9, 0.95</td><td>β1, β2=0.9, 0.999</td><td></td><td>β1, β2=0.9, 0.95</td></tr>
+  <tr><td>base learning rate</td><td>1.5e-4</td><td>1e-3</td><td>0.1</td><td>1e-4</td></tr>
+  <tr><td>weight decay</td><td>0.05</td><td>0.05</td><td>0</td><td>0.3</td></tr>
+  <tr><td>batch size</td><td>4096</td><td>1024</td><td>16384</td><td>4096</td></tr>
+  <tr><td>layer-wise lr decay</td><td></td><td>0.75</td><td></td><td></td></tr>
+  <tr><td>learning rate schedule</td><td>cosine decay</td><td>cosine decay</td><td>cosine decay</td><td>cosine decay</td></tr>
+  <tr><td>warmup epochs</td><td>40</td><td>5</td><td>10</td><td>20</td></tr>
+  <tr><td>training epochs</td><td></td><td>100 (B), 50 (L/H)</td><td>90</td><td>300 (B), 200 (L/H)</td></tr>
+  <tr><td>augmentation</td><td>RandomResizedCrop</td><td>RandAug (9, 0.5)</td><td>RandomResizedCrop</td><td>RandAug (9, 0.5)</td></tr>
+  <tr><td>label smoothing</td><td></td><td>0.1</td><td></td><td>0.1</td></tr>
+  <tr><td>mixup</td><td></td><td>0.8</td><td></td><td>0.8</td></tr>
+  <tr><td>cutmix</td><td></td><td>1.0</td><td></td><td>1.0</td></tr>
+  <tr><td>drop path</td><td></td><td>0.1 (B/L) 0.2 (H)</td><td></td><td>0.1 (B), 0.2 (L/H)</td></tr>
+  <tr><td>exp. moving average (EMA)</td><td></td><td></td><td></td><td>0.9999</td></tr>
+</table>
+
+#### Properties
+
+|![](static/img/MAE_masking-ratio.png)|![](static/img/MAE_masking-result.png)|
+|:-:|:-:|
+|Masking ratio 별 validation 정확도 비교: Fine-tuning model에 대한 결과(상)와 Linear probing에 대한 결과(하)|Reconstructions 결과|
+
+- Masking ratio 별 비교
+  - Fine-tuned와 Linear probing 모두 75% 가량의 Mask ratio가 이상적
+  - BERT는 15%의 ratio가 이상적이며 그 외의 관련 연구에서도 20%~50%에 비해 월등히 높은 비율
+  - Fine-tuned model에서는 ratio와의 연관성이 낮으며 scratch에 대한 결과(82.5%)보다 우수한 성능을 도출
+  - Linear probed model에서는 ratio에 비례하는 추세
+
+|![](static/img/MAE_ft-lin1.png)|![](static/img/MAE_ft-lin2.png)|![](static/img/MAE_ft-lin3.png)|![](static/img/MAE_ft-lin4.png)|![](static/img/MAE_ft-lin5.png)|![](static/img/MAE_ft-lin6.png)|
+|:-:|:-:|:-:|:-:|:-:|:-:|
+|Decoder depth|Decoder width|Mask token|Reconstruction target|Data augmentation|Mask sampling|
+
+|![](static/img/MAE_masking-strategy.png)|![](static/img/MAE_training-schedules.png)|
+|:-:|:-:|
+|Masking 방법|Epochs에 따른 Accuracy|
+
+- Decoder design
+  - Decoder의 Depth와 Width에 대해 성능 차이
+  - Mask tokens 유무에 따른 속도 및 성능 차이 (FLOPS vs FLOPs)
+  - Reconstruction 방법에 따른 성능 차이
+  - Data augmentation에 따른 성능 차이
+  - Masking 방법에 따른 성능 차이
+
+|![](static/img/MAE_vs-self-supervised.png)|![](static/img/MAE_vs-supervised.png)|![](static/img/MAE_partial-fine-tuning.png)|
+|:-:|:-:|:-:|
+|MAE vs Self-supervised pretrained models|MAE vs Supervised pretrained models|Partial fine-tuning|
+
+|![](static/img/MAE_object-detection-segmentation.png)|![](static/img/MAE_semantic-segmentation.png)|
+|:-:|:-:|
+|Object detection and segmentation|Semantic segmentation|
+
+|![](static/img/MAE_comparison-with-dataset.png)|![](static/img/MAE_pixel-vs-token.png)|
+|:-:|:-:|
+|Object detection and segmentation|Semantic segmentation|
+
+## 결론
+- 도메인 별 Self-supervised learning
+  - NLP: 기하급수적으로 확장되는 models에 대해 유용
+  - CV: Self-supervised learning이 성장하더라도 해당 task에서는 기존 CNN이나 ViT가 적용
+- ImageNet과 Transfer learning을 통해 Auto-Encoder가 Scalable 모델에서 유용
+- Object를 Masking하는 대신 Patch를 제거하였음에도 불구하고, Semantics와 같은 visual concepts를 학습하여 Patch 재구성
+  - 가설: Hidden representations
