@@ -64,11 +64,10 @@ Random patch에 대해 마스킹 후 재구성
 - Input signal을 오염시킨 후, original signal을 재구성하는 학습
 - MAE에 비해 무지한 방법
 
-**Masked Image Encoding**
-- Mask로 인해 더렵혀진 representations를 학습
-- ```DAE```에 대한 일종의 후속작
+**Stacked DAE**
+- ```DAE```에 대한 일종의 후속작으로 Masking을 통해 Noise를 추가
 - Context Encoder: 넓은 missing regions를 CNN을 통해 Inpainting
-- Motivations: ```Transformers```
+- Motivations: ```Transformers```, ```NLP```
   - ```iGPT```: pixel의 시퀀스로 동작하며, unknown pixels를 예측
   - ```ViT```: self-supervised learning을 위한 masked patch 예측
   - ```BEiT```: 개별 patch를 예측 (Recent research)
@@ -88,7 +87,7 @@ Random patch에 대해 마스킹 후 재구성
 </table>
 
 - 비대칭 구조의 ```Auto encoder```
-  - Encoder: Visible patch에 대한 Signal을 latent representations로 맵핑
+  - Encoder: Visible patch에 대한 Signal을 Latent representations로 맵핑
   - Decoder: Encoder에서 추출한 Latent representations로 부터의 전체 Signal과 Masked patch를 재구성하는 가벼운 Decoder
   - Figure 1 참조
 - Masking
@@ -112,13 +111,15 @@ Random patch에 대해 마스킹 후 재구성
   - Reshape를 통한 이미지 재구성
   - 본 연구에서 Loss 함수로 MSE를 사용하며, Loss는 BERT와 유사하게 Masked patches에 대해서만 적용
   - Representation의 퀄리티를 높이기 위해 평균과 표준편차를 고려한 Normalized pixel로 이미지를 재구성
-- Simple implementations
-  1. 매 Input에 대해 patch를 생성(Linear projection with positional embedding)
-  2. Shuffle 후 Masking ratio에 따른 뒷 부분 제거
-  3. 인코딩 후 리스트에 Masked token 추가
-  4. Full list에 대해 Unshuffle(Inverting) 후 Patch 정렬
-  5. Decoder에서 해당 Full list를 적용
-  ※ Shuffling과 Unshuffling의 overhaad는 적다.
+
+### Simple implementations
+1. 매 Input에 대해 patch를 생성(Linear projection with positional embedding)
+2. Shuffle 후 Masking ratio에 따른 뒷 부분 제거
+3. 인코딩 후 리스트에 Masked token 추가
+4. Full list에 대해 Unshuffle(Inverting) 후 Patch 정렬
+5. Decoder에서 해당 Full list를 적용
+
+> ※ Shuffling과 Unshuffling의 overhead는 적다.
 
 
 ## 실험
@@ -141,6 +142,7 @@ Random patch에 대해 마스킹 후 재구성
     - Pre-trained features를 정규화하는 것이 유용하여 Affine 변환을 하지 않은 Batch Norm 레이어를 Linear classifier 앞 단에 적용
   - Scratch
     - ViT-L/H의 학습이 불안정한 점을 완화
+    - Original < Implemented
 - 특징 추출
   - Encoder의 output
   - Auxiliary dummy token 없이도 원활한 작동을 지원
