@@ -146,7 +146,7 @@ Random patch에 대해 마스킹 후 재구성
   - Auxiliary dummy token 없이도 원활한 작동을 지원
 
 <table>
-  <tr><th colspan=4><p align=center>학습 방법 별 Settings</p></th></tr>
+  <tr><th colspan=5><p align=center>학습 방법 별 Settings</p></th></tr>
   <tr><th></th><th>Pre-training</th><th>Fine-tuning</th><th>Linear probing</th><th>Scratch</th></tr>
   <tr><td>optimizer</td><td>AdamW</td><td>AdamW</td><td>LARS</td><td>AdamW</td></tr>
   <tr><td>optimizer momentum</td><td>β1, β2=0.9, 0.95</td><td>β1, β2=0.9, 0.999</td><td></td><td>β1, β2=0.9, 0.95</td></tr>
