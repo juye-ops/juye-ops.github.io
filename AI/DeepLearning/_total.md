@@ -1,3 +1,12 @@
+---
+title: Deep Learning 정리
+author: Juye-ops
+date: 2022-10-04 10:00:00 +0900
+categories: [TIL, AI]
+tags: [Study, AI, Deep Learning, ]
+render_with_liquid: false
+---
+
 # Deep learning
 
 ## 딥러닝 기초
