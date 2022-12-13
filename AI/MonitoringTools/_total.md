@@ -1,3 +1,12 @@
+---
+title: 학습 모니터링
+author: Juye-ops
+date: 2022-09-29 10:00:00 +0900
+categories: [TIL, AI]
+tags: [Study, AI, Visualization]
+render_with_liquid: false
+---
+
 ## Tensorboard
 DL 시각화 핵심 도구
 - Tensorflow의 프로젝트로 만들어진 시각화 도구
@@ -23,7 +32,6 @@ DL 시각화 핵심 도구
 - 
 
 ```python
-
 from torch.utils.tensorboard import SummaryWriter
 
 writer = SummaryWriter(logs_base_dir)
