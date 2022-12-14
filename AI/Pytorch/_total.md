@@ -1,5 +1,13 @@
-# Pytorch
+---
+title: Pytorch 기초
+author: Juye-ops
+date: 2022-09-27 10:00:00 +0900
+categories: [TIL, AI]
+tags: [Study, AI, Pytorch]
+render_with_liquid: false
+---
 
+# Pytorch
 ## Pytorch 기초
 Python의 DL 프레임워크에 대한 입지가 높아지면서 기존 Torch에 Py라는 용어가 붙음
 
