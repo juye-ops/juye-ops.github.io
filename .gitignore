@@ -11,6 +11,8 @@
 # bundler cache
 _site
 vendor
+!_sass/vendor
+Gemfile.lock
 
 # rubygem
 *.gem
