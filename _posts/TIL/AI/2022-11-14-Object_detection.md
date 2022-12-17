@@ -1,9 +1,9 @@
 ---
-title: Object Detection 기초
+title: 'Object Detection 기초'
 author: Juye-ops
 date: 2022-11-14 10:00:00 +0900
-categories: [Development, AI]
-tags: [TIL, AI, Object detection]
+categories: [TIL, AI]
+tags: [Study, AI, Object detection]
 render_with_liquid: false
 ---
 

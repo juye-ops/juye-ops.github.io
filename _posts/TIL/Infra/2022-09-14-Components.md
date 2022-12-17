@@ -1,5 +1,5 @@
 ---
-title: Infra Components
+title: 'Infra Components'
 author: Juye-ops
 date: 2022-09-14 10:00:00 +0900
 categories: [TIL, Infra]

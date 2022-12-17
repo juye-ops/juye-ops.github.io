@@ -1,5 +1,5 @@
 ---
-title: 하이퍼 파라미터 튜닝
+title: '하이퍼 파라미터 튜닝'
 author: Juye-ops
 date: 2022-10-04 10:00:00 +0900
 categories: [TIL, AI]

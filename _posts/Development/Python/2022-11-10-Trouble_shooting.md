@@ -1,5 +1,5 @@
 ---
-title: Trouble shooting
+title: 'Trouble shooting'
 author: Juye-ops
 date: 2022-11-10 10:00:00 +0900
 categories: [Development, Infra]

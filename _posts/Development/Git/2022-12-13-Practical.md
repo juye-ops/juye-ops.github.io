@@ -1,5 +1,5 @@
 ---
-title: Git 유용한 기능
+title: 'Git 유용한 기능'
 author: Juye-ops
 date: 2022-12-13 10:00:00 +0900
 categories: [Development, Git]

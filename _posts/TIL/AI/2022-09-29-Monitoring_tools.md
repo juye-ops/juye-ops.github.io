@@ -1,5 +1,5 @@
 ---
-title: 학습 모니터링
+title: '학습 모니터링'
 author: Juye-ops
 date: 2022-09-29 10:00:00 +0900
 categories: [TIL, AI]
