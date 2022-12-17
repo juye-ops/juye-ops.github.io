@@ -54,7 +54,7 @@ render_with_liquid: false
 - 모델링에 집중할 수 있도록 관련된 인프라를 만들고, 자동으로 운영되도록 만드는 일
 
 *머신러닝 모델링 코드는 머신러닝 시스템 중 일부에 불과*
-<img src="../static/img/mlops_code.png">
+<img src="/static/img/AI/mlops_code.png">
 
 **MLOps의 목표**는 빠른시간 내에 가장 적은 위험을 부담하며 아이디어 단계부터 Production단계까지 ML프로젝트를 진행할 수 있도록 기술적 마찰을 줄이는 것
 
@@ -94,7 +94,7 @@ MLOps의 구성 요소에 따라 역할 분리
   - 한 번에 하나씩(실시간으로) 예측
   - 병목이 없으며, 확장 가능하도록 준비
 
-<img src="../static/img/serving.png" width="1000px">
+<img src="/static/img/AI/serving.png" width="1000px">
 
 
 ### Experiment, Model Management
@@ -113,7 +113,7 @@ MLOps의 구성 요소에 따라 역할 분리
 - Data/Model/Concept drift
   - 모델을 새로운 데이터에 맞게 꾸준히 학습하거나 목적 등을 전환하는 행위
 
-<img src="../static/img/drift.png" width = "1000px">
+<img src="/static/img/AI/drift.png" width = "1000px">
 
 
 ### Continuous Training
@@ -121,7 +121,7 @@ MLOps의 구성 요소에 따라 역할 분리
 - 새로운 데이터를 사용하여 프로덕션 모델이 자동으로 학습
 - 성능을 확인하여 학습 여부를 따지는 Pipeline이 Data Processing/Model training/Model evaluation engine에 영향을 미쳐 학습 진행
 
-<img src="../static/img/continuous_training.png" width = 1000px>
+<img src="/static/img/AI/continuous_training.png" width = 1000px>
 
 ### Monitoring
 - 모델의 지표, 인프라 성능 지표 등을 기록
@@ -131,8 +131,8 @@ MLOps의 구성 요소에 따라 역할 분리
 
 ## ML 프로젝트 Lifecycle
 
-<img src = "../static/img/mlops_lifecycle.png" width = 800px>
-<img src = "../static/img/nvidia-mlops_lifecycle.jpg" width = 800px>
+<img src = "/static/img/AI/mlops_lifecycle.png" width = 800px>
+<img src = "/static/img/AI/nvidia-mlops_lifecycle.jpg" width = 800px>
 
 
 

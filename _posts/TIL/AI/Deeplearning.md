@@ -58,7 +58,7 @@ render_with_liquid: false
 - 학습용 데이터를 k개로 쪼개어 각각의 partition을 해당 학습의 validation으로 이용
 
 #### Bias vs Variance
-<img src = ../static/img/bias_variance.png height=500px> 
+<img src = /static/img/AI/bias_variance.png height=500px> 
 
 - bias
   - target위치와 떨어져있는 정도
@@ -69,7 +69,7 @@ render_with_liquid: false
 #### Bootstraping
 학습 데이터가 고정되어있다고 가정할 때, Subsampling된 데이터를 기반으로 여러 모델을 통해 metric을 추출하여 결과를 분석
 
-<img src = ../static/img/bagging_boosting.png height=500px> 
+<img src = /static/img/AI/bagging_boosting.png height=500px> 
 
 
 - Bagging(**B**ootstrapping **agg**regat**ing**)
@@ -91,7 +91,7 @@ Batch size의 값을 작게 적용하면 Flat minimizer에 도달하고, 크게 
 - Generalization 성능이 향상
 - Train 성능과 Test 성능의 유사성을 실험적으로 도출
 
-<img src = ../static/img/minimizer.png height=500px>
+<img src = /static/img/AI/minimizer.png height=500px>
 
 ### Gradient Descent
 - $\eta$: 학습률
@@ -171,7 +171,7 @@ Short-term dependencies
 
 |RNN 구조|Gradient Vanishing/Exploding|
 |:-:|:-:|
-|<img src = "../static/img/rnn.png">|<img src = "../static/img/gradient-vanishing.png">|
+|<img src = "/static/img/AI/rnn.png">|<img src = "/static/img/AI/gradient-vanishing.png">|
 
 
 ### Long Short Term Memory(LSTM)
@@ -189,7 +189,7 @@ Short-term dependencies
   - Input gate: 현재 정보에서 Cell state에 등록할 정보를 선택
   - Output gate: 최종적으로 조작하여 다음 노드로 전달할 정보를 정리
 
-<img src = ../static/img/lstm_summary.png height = 400px>
+<img src = /static/img/AI/lstm_summary.png height = 400px>
 
 #### GRU
 LSTM 구조에서 Gate를 2개로 줄여 구조적 단순함 식별
@@ -206,7 +206,7 @@ LSTM 구조에서 Gate를 2개로 줄여 구조적 단순함 식별
     - Self-Attention을 통해 인코딩된 각 단어를 일대일로 변환
 
 ---
-<img src="../static/img/transformer1.png">
+<img src="/static/img/AI/transformer1.png">
 
 예시 문장: The animal didn`t cross the street, because it was too tired
 
@@ -221,11 +221,11 @@ Self-Attention기법을 통해 it이라는 단어가 그 외의 모든 단어들
 ### Convolution
 |Filter 연산|
 |:-:|
-|<img src=../static/img/convolution_0.png height=300px>|
+|<img src=/static/img/AI/convolution_0.png height=300px>|
 
 |CNN 청사진 예시|
 |:-:|
-|<img src=../static/img/convolution_1.png height=200px>|
+|<img src=/static/img/AI/convolution_1.png height=200px>|
 
 #### Stride
 - 슬라이딩 간격 설정

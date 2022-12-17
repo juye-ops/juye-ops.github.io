@@ -104,7 +104,7 @@ render_with_liquid: false
     - Selective search는 학습 개념이 아니므로 End-to-End를 완전히 해결하지 못한 학습
 
 
-<img src="static/img/roi_projection.png" height=300px>
+<img src="/static/img/AI/roi_projection.png" height=300px>
 
 ### Faster R-CNN
 #### Pipeline
@@ -159,7 +159,7 @@ Low Level의 feature는 Semantic이 약하고, High Level의 feature는 Localiza
 - Feature Pyramid Network: 각 Layer의 Feature에서 예측한 후 문맥 교환 제공
   - Top-down Path way: Pyramid 구조를 통해서 High Level의 정보를 Low Level에 순차적으로 전달
 
-<img src="static/img/FPN.jpg" width=500px>
+<img src="/static/img/AI/FPN.jpg" width=500px>
 
 #### Scoring
 - 각 Feature Map을 각각의 RPN에 입력하여 개별적인 class score과 BBox regressor을 출력
@@ -172,7 +172,7 @@ Low Level의 feature는 Semantic이 약하고, High Level의 feature는 Localiza
   - 아래 그림에서 $k_0 = 4$
   - $w, h$가 크면 클수록 Low Level의 Feature map
 
-<img src="static/img/FPN_RoI.jpg" width=500px>
+<img src="/static/img/AI/FPN_RoI.jpg" width=500px>
 
 #### 결론
 - 여러 scale의 물체를 탐지하기 위해 설계
@@ -187,4 +187,4 @@ Low Level의 feature는 Semantic이 약하고, High Level의 feature는 Localiza
 - 문맥 교환 추가
   - Bottom-up Path way: Top-down Path way를 진행 후 다시 Low Level의 Feature를 High Level에도 전달
   
-<img src="static/img/panet.png" height=300px>
+<img src="/static/img/AI/panet.png" height=300px>

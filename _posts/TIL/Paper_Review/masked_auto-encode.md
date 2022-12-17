@@ -91,7 +91,7 @@ Random patch에 대해 마스킹 후 재구성
 
 ## 제안
 
-|![](static/img/MAE_architecture.png)|
+|![](/static/img/Paper_Review/MAE_architecture.png)|
 |:-:|
 |MAE Architecture|
 </table>
@@ -179,7 +179,7 @@ Random patch에 대해 마스킹 후 재구성
 
 #### Properties
 
-|![](static/img/MAE_masking-ratio.png)|![](static/img/MAE_masking-result.png)|
+|![](/static/img/Paper_Review/MAE_masking-ratio.png)|![](/static/img/Paper_Review/MAE_masking-result.png)|
 |:-:|:-:|
 |Masking ratio 별 validation 정확도 비교: Fine-tuning model에 대한 결과(상)와 Linear probing에 대한 결과(하)|Reconstructions 결과|
 
@@ -189,11 +189,11 @@ Random patch에 대해 마스킹 후 재구성
   - Fine-tuned model에서는 ratio와의 연관성이 낮으며 scratch에 대한 결과(82.5%)보다 우수한 성능을 도출
   - Linear probed model에서는 ratio에 비례하는 추세
 
-|![](static/img/MAE_ft-lin1.png)|![](static/img/MAE_ft-lin2.png)|![](static/img/MAE_ft-lin3.png)|![](static/img/MAE_ft-lin4.png)|![](static/img/MAE_ft-lin5.png)|![](static/img/MAE_ft-lin6.png)|
+|![](/static/img/Paper_Review/MAE_ft-lin1.png)|![](/static/img/Paper_Review/MAE_ft-lin2.png)|![](/static/img/Paper_Review/MAE_ft-lin3.png)|![](/static/img/Paper_Review/MAE_ft-lin4.png)|![](/static/img/Paper_Review/MAE_ft-lin5.png)|![](/static/img/Paper_Review/MAE_ft-lin6.png)|
 |:-:|:-:|:-:|:-:|:-:|:-:|
 |Decoder depth|Decoder width|Mask token|Reconstruction target|Data augmentation|Mask sampling|
 
-|![](static/img/MAE_masking-strategy.png)|![](static/img/MAE_training-schedules.png)|
+|![](/static/img/Paper_Review/MAE_masking-strategy.png)|![](/static/img/Paper_Review/MAE_training-schedules.png)|
 |:-:|:-:|
 |Masking 방법|Epochs에 따른 Accuracy|
 
@@ -204,15 +204,15 @@ Random patch에 대해 마스킹 후 재구성
   - Data augmentation에 따른 성능 차이
   - Masking 방법에 따른 성능 차이
 
-|![](static/img/MAE_vs-self-supervised.png)|![](static/img/MAE_vs-supervised.png)|![](static/img/MAE_partial-fine-tuning.png)|
+|![](/static/img/Paper_Review/MAE_vs-self-supervised.png)|![](/static/img/Paper_Review/MAE_vs-supervised.png)|![](/static/img/Paper_Review/MAE_partial-fine-tuning.png)|
 |:-:|:-:|:-:|
 |MAE vs Self-supervised pretrained models|MAE vs Supervised pretrained models|Partial fine-tuning|
 
-|![](static/img/MAE_object-detection-segmentation.png)|![](static/img/MAE_semantic-segmentation.png)|
+|![](/static/img/Paper_Review/MAE_object-detection-segmentation.png)|![](/static/img/Paper_Review/MAE_semantic-segmentation.png)|
 |:-:|:-:|
 |Object detection and segmentation|Semantic segmentation|
 
-|![](static/img/MAE_comparison-with-dataset.png)|![](static/img/MAE_pixel-vs-token.png)|
+|![](/static/img/Paper_Review/MAE_comparison-with-dataset.png)|![](/static/img/Paper_Review/MAE_pixel-vs-token.png)|
 |:-:|:-:|
 |Object detection and segmentation|Semantic segmentation|
 
