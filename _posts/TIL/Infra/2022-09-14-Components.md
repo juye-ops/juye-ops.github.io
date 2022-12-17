@@ -1,6 +1,6 @@
 ---
 title: 'Infra Components'
-author: Juye-ops
+author: juye-ops
 date: 2022-09-14 10:00:00 +0900
 categories: [TIL, Infra]
 tags: [Study, Infra]

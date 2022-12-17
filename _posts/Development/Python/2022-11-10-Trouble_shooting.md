@@ -1,6 +1,6 @@
 ---
 title: 'Trouble shooting'
-author: Juye-ops
+author: juye-ops
 date: 2022-11-10 10:00:00 +0900
 categories: [Development, Infra]
 tags: [Develop, Trouble Shooting]

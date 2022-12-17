@@ -1,6 +1,6 @@
 ---
 title: 'Object Detection 기초'
-author: Juye-ops
+author: juye-ops
 date: 2022-11-14 10:00:00 +0900
 categories: [TIL, AI]
 tags: [Study, AI, Object detection]
