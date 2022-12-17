@@ -52,7 +52,7 @@ render_with_liquid: false
 이중화(Redundancy) or 다중화: 이중화란 같은 장비 또는 시스템이 장애가 나는 것을 대비해 같은 모듈을 2개(또는 그 이상) 준비하는 것
 
 #### AWS의 이중화(다중 AZ 배포)
-<img src=../static/img/con-multi-AZ.png width=400px>
+<img src=/static/img/Infra/con-multi-AZ.png width=400px>
 
 - AWS의 RDS를 같은 Region 내 다른 가용 영역에 분산해서 이중화를 구성
 - 같은 지역이라도 데이터가 나뉘어져 있어서 Master에서 문제가 생기면 Slave에서 이를 복구하여 데이터를 유지
@@ -128,7 +128,7 @@ render_with_liquid: false
 - 데이터가 네트워크로 진입할때는 위층에서 진입
 - 네트워크에서 데이터를 수신할 때는 아래층에서 진입
 
-<img src="../static/img/network_in-out.jpg" width="800px"/>
+<img src="/static/img/Infra/network_in-out.jpg" width="800px"/>
 
 > 프로토콜: 컴퓨터 내부에서, 또는 컴퓨터 사이에서 데이터의 교환 방식(언어, 방법 등)을 정의하는 규칙 체계
 
