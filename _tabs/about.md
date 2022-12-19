@@ -26,14 +26,13 @@ order: 5
         <td>
             <img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=Python&logoColor=white"/>
             <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&logo=PyTorch&logoColor=white"/>
+            <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=flat&logo=TensorFlow&logoColor=white"/>
             <img src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=GitHub&logoColor=white"/>
-            <img src="https://img.shields.io/badge/GitLab-FC6D26?style=flat&logo=GitLab&logoColor=white"/>
         </td>
     </tr>
     <tr>
         <td align=right>Medium</td>
         <td>
-            <img src="https://img.shields.io/badge/Keras-D00000?style=flat&logo=Keras&logoColor=white"/>
             <img src="https://img.shields.io/badge/Flask-000000?style=flat&logo=Flask&logoColor=white"/>
         </td>
     </tr>
@@ -43,6 +42,15 @@ order: 5
             <img src="https://img.shields.io/badge/Docker-2496ED?style=flat&logo=Docker&logoVColor=white"/>
             <img src="https://img.shields.io/badge/Node.js-339933?style=flat&logo=Node.js&logoColor=white"/>
             <img src="https://img.shields.io/badge/Vue.js-4FC08D?style=flat&logo=Vue.js&logoColor=white"/>
+        </td>
+    </tr>
+    <tr>
+        <td colspan=2 align=right><b>Develop Env</b></td>
+        <td>
+            <img src="https://img.shields.io/badge/Visual_Studio_Code-007ACC?style=flat&logo=Visual-Studio-Code&logoColor=white"/>
+            <img src="https://img.shields.io/badge/PyCharm-000000?style=flat&logo=PyCharm&logoColor=white"/>
+            <img src="https://img.shields.io/badge/Vim-019733?style=flat&logo=Vim&logoColor=white"/>
+            <img src="https://img.shields.io/badge/Sourcetree-0052CC?style=flat&logo=Sourcetree&logoColor=white"/>
         </td>
     </tr>
 </table>
