@@ -56,51 +56,46 @@ order: 5
 </table>
 
 ## Projects
-> #### GRU 기반 행동 분석 모델을 이용한 어린이 이상 행동 검출 시스템
+> #### [GRU 기반 행동 분석 모델을 이용한 어린이 이상 행동 검출 시스템](/posts/GRU_Behavioral_analysis/)
 > 2022.03. ~ 2022.08.  
 > 금상 수상
 > - MoblieNetV3을 통해 추출한 특징 벡터를 GRU에 입력하여 행동 분류
-> - 일반과 폭력으로 구분하며 폭력 행동 시 이를 알림
+> - 일반과 폭력으로 구분하며 폭력 행동 시 위험 신호 제어
 > - Detection 모델을 통하여 사람 외 노이즈를 제거함으로써 성능을 향상
-> - [[DBpia] 한국정보기술학회 2022년도 하계종합학술대회 및 대학생논문경진대회](https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE11082631)
 
-> #### 개인 맞춤 정보 제공 전자 게시판
+> #### [개인 맞춤 정보 제공 전자 게시판](/posts/Post_recommendation/)
 > 2021.10. ~ 2022.04.
 > - 교내 학생들에게 유용한 정보를 개별적으로 제공해주고자 고안된 추천 시스템
 > - 입력된 학생의 정보를 바탕으로 웹 크롤링을 통해 저장한 기사와의 유사성을 판단
 > - 학생의 필요에 따라 기사 정보를 교내 애플리케이션으로 전송
 
-> #### 문서 객체의 랜덤 배치를 통한 문서 레이아웃 분석기
+> #### [문서 객체의 랜덤 배치를 통한 문서 레이아웃 분석기](/posts/Document_layout_analysis/)
 > 2021.09 ~ 2021.12.
 > - Data Manipulation에 따른 Document Layout Analysis 분야 연구
 > - Layout 별 이미지를 무작위로 배치함으로써 높은 mAP를 달성
-> - [[DBpia] 한국정보기술학회 2021년도 추계종합학술대회 및 대학생논문경진대회](https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE10664634)
 
-> #### 객체 탐지 데이터 및 학습 관리를 위한 웹 기반 딥러닝 지원 시스템
+> #### [객체 탐지 데이터 및 학습 관리를 위한 웹 기반 딥러닝 지원 시스템](/posts/Web-based_DL_platform/)
 > 2021.01 ~ 2021.08.
 > - 웹 기반 딥러닝 지원 플랫폼 서비스
 > - Object detection 학습에 대한 End-to-End 서비스 제공
 
-> #### 이미지 분류와 객체 검출 기반의 컴퓨터 부품 조립 위치 확인 시스템
+> #### [이미지 분류와 객체 검출 기반의 컴퓨터 부품 조립 위치 확인 시스템](/posts/Detecting_assembling_position/)
 > 2020.09. ~ 2020.12.
 > - 인공지능 입문 프로젝트
 > - 식별 된 컴퓨터 부품에 대한 메인보드 상의 결합 위치를 Detection으로 검출
-> - [[DBpia] 한국정보과학회 2020 한국소프트웨어종합학술대회](https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE10530016)
 
-> #### 딥러닝 기반 객체 인식을 활용한 퍼스널 모빌리티 안전 보조 시스템 개발
+> #### [딥러닝 기반 객체 인식을 활용한 퍼스널 모빌리티 안전 보조 시스템 개발](/posts/Personal_mobility/)
 > 2020.07. ~ 2020.10.
 > - 퍼스널 모빌리티 운전자의 안전을 도모하기 위한 시스템
 > - 특정 물체와의 거리에 따른 경고 신호 발생
-> - [[DBpia] 한국정보통신학회](https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE10542873)
 
-
-## Extracurricular Activities
+## [Extracurricular Activities
 > #### 네이버 Boostcamp AI Tech 4기
 > 2022.09. ~ 2023.02.  
 > - 인공지능에 대한 기초/심화 지식을 학습
 > - 인공지능 분야의 팀 프로젝트 활성화
 
-> #### 2021 근골격계 동영상 데이터 인공지능 모델 알고리즘 개발 해커톤
+> #### [2021 근골격계 동영상 데이터 인공지능 모델 알고리즘 개발 해커톤](/posts/Musculoskeletal/)
 > 2021.11. ~ 2021.12.  
 > 우수상 수상
 > - 제공하는 데이터셋(동영상)을 재활치료 종류에 따라 분류
