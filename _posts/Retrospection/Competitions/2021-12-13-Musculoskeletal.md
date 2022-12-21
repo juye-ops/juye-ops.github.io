@@ -6,6 +6,7 @@ categories: ['Retrospection', 'Competitions']
 tags: ['Award', 'Competition', 'Video Classification']
 render_with_liquid: false
 ---
+
 # 📘 상세 설명
 ---
 
