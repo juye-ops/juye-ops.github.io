@@ -121,7 +121,7 @@ Python의 지식이 나름 갖춰져 있다고 생각하였으나, 아직은 다
 본 해결법은 정확도는 상승하였지만, 학습 뿐만 아니라 추론 속도를 늦추게 만들었습니다.
 또한, 정지된 CCTV에만 이용될 수 있도록 국한되었습니다.
 
-Human segmentation 모델을 통해 노이즈를 제거하고자 하였으나, Human part segmentation과 같이 pre-text task가 정확히 일치하는 모델은 찾기 힘들었습니다.
+Human segmentation 모델을 통해 노이즈를 제거하고자 하였으나, Human part segmentation과 같이 task가 정확히 일치하는 모델은 찾기 힘들었습니다.
 추후 가능하다면, Human part segmentation의 의의가 무엇인지 판별하여 본 연구에 적용하기 위한 **타당성이 적절한 지 평가**하고자 합니다.
 
 # 🔗 관련 링크
