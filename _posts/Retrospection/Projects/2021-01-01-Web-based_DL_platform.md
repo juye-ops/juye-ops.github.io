@@ -3,7 +3,7 @@ title: '객체 탐지 데이터 및 학습 관리를 위한 웹 기반 딥러닝
 author: juye-ops
 date: 2021-01-01 10:00:00 +0900
 categories: ['Retrospection', 'Projects']
-tags: ['Infra', 'AI', 'OD', 'Communication']
+tags: ['Infra', 'AI', 'Object detection', 'Communication']
 render_with_liquid: false
 ---
 
@@ -20,7 +20,7 @@ render_with_liquid: false
 
 
 ## 프로젝트 소개
-오픈소스인 COCO Annotator를 응용하여 제작한 웹 기반 **딥러닝 학습 제공 시스템**입니다.
+오픈소스인 [COCO Annotator](https://github.com/jsbroks/coco-annotator)를 응용하여 제작한 웹 기반 **딥러닝 학습 제공 시스템**입니다.
 흔히 CLI 상으로 제공하는 머신러닝의 API 들을 GUI 형태로 제공하여 **비전 기반 인공지능**을 사용하는데에 **우수한 접근성과 편의를 제공**합니다.
 
 연구실에서 제안한 본 프로젝트의 궁극적인 목적은 ```Few-shot Learning``` 기법에 편의를 제공하는 것에 있습니다.  
