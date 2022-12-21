@@ -89,7 +89,7 @@ order: 5
 > - 퍼스널 모빌리티 운전자의 안전을 도모하기 위한 시스템
 > - 특정 물체와의 거리에 따른 경고 신호 발생
 
-## [Extracurricular Activities
+## Extracurricular Activities
 > #### 네이버 Boostcamp AI Tech 4기
 > 2022.09. ~ 2023.02.  
 > - 인공지능에 대한 기초/심화 지식을 학습
