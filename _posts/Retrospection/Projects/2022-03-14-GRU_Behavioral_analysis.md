@@ -10,6 +10,9 @@ render_with_liquid: false
 # 📘 상세 설명
 ---
 ## 프로젝트 소개
+
+<img src="/static/img/Projects/Abnormal-result.png">
+
 본 연구는 어린이 대상 AI 연구가 적다는 주관적인 관점을 토대로 아동 학대에 대한 문제점을 식별하여 **사회적 문제를 해결하는데 기여**하고자 진행한 프로젝트입니다.  
 본 프로젝트는 동영상 분석을 기반으로 하여 어린이의 이상 행동을 식별하는 시스템을 제작하였습니다.
 
@@ -24,8 +27,13 @@ render_with_liquid: false
   - 보호자의 CCTV 열람에 대해 복잡한 과정을 요구
 
 ## 연구 방법
+> 논문에서는 크로마키 데이터셋만을 활용하였으며, 추후 Object detection을 적용하였습니다.  
+> 따라서, 본 내용은 논문의 확장 연구까지 진행한 결과입니다.
+{: .prompt-info }
+
 ### **데이터셋**
-[어린이 보호구역 내 어린이 도로보행 위험행동 영상 학습용 데이터](https://aihub.or.kr/aidata/34139)
+
+[어린이 보호구역 내 어린이 도로보행 위험행동 영상 학습용 데이터](https://aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDataSe=realm&dataSetSn=169)
 - 어린이 보호구역(스쿨존) 내 어린이 도로보행 위험영상을 다양하게 확보하기 위해 시나리오를 기반으로 촬영하여 수집된 데이터
 - 데이터셋 구성
   - 10가지의 이상행동
@@ -34,7 +42,7 @@ render_with_liquid: false
   - 객체 별 Annotations
 - 구축 기관: 비엔지티
 
-[이상행동 CCTV 영상](https://aihub.or.kr/aidata/139)
+[이상행동 CCTV 영상](https://aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDataSe=realm&dataSetSn=171)
 - 공공 보안용 CCTV에서 이상행동 발생 시 검출하기 위한 인공지능 학습용 데이터
 - 데이터셋 구성
     - 12가지의 이상행동
@@ -44,6 +52,11 @@ render_with_liquid: false
 - 구축 기관: 마인즈랩
 
 ### **실험**
+
+|Video Feature 추출|Feature vector를 바탕으로 한 GRU 모델|
+|:-:|:-:|
+|<img src="/static/img/Projects/Abnormal-architecture1.png">|<img src="/static/img/Projects/Abnormal-architecture2.png">|
+
 - 데이터 전처리
   - `YoloV4` tiny 모델을 통해 원본 영상에서 사람 객체의 Bounding Box 좌표 식별
   - 원본 영상을 대상으로 `Optical flow`를 적용하여 Optical field 추출
@@ -56,6 +69,7 @@ render_with_liquid: false
   - FC 층을 통한 폭력 상황 구분 진행
 - 추론
   - 동영상 파일 좌측 상단에 폭력 상황 여부 시각화
+
 
 ### **추후 확장 방안**
 - 데이터 포맷
