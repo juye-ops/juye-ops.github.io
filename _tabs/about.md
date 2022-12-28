@@ -1,21 +1,27 @@
 ---
 # the default layout is 'page'
+layout: about
 icon: fas fa-info-circle
 order: 5
 ---
 
-<table>
-    <tr><td colspan=2 align=right><b>Name</b></td><td>김주엽</td></tr>
-    <tr><td colspan=2 align=right><b>Email</b></td><td><a href="mailto:kjye.ops@gmail.com">kjye.ops@gmail.com</a></td></tr>
-    <tr><td colspan=2 align=right><b>Github</b></td><td><a href="https://github.com/juye-ops">https://github.com/juye-ops</a></td></tr>
-    <tr><td colspan=2 align=right><b>Graduate</b></td><td>B.S, Dept. of Computer Engineering, Kumoh national Institute of Technology</td></tr>
-    <tr>
-        <td colspan=2 align=right><b>GPA</b></td><td>4.13 (Major: 4.24)</td>
-    </tr>
-    <tr><td colspan=2 align=right><b>Research Area</b></td><td>Computer Vision, Self-supervised Learning, Video Recognition</td></tr>
-</table>
+# **김주엽**
+- Email: <kjye.ops@gmail.com>
+- Github: <https://github.com/juye-ops>
 
-## Projects
+## EDUCATION
+---
+금오공과대학교  
+- B.S, Dept. of Computer Engineering
+- Overall: 4.13 / 4.5
+- Major: 4.24 / 4.5
+
+## RESEARCH AREA
+---
+Computer Vision, Self-supervised Learning, Video Recognition
+
+## PROJECTS
+---
 > #### [GRU 기반 행동 분석 모델을 이용한 어린이 이상 행동 검출 시스템](/posts/GRU_Behavioral_analysis/)
 > 2022.03. ~ 2022.08.  
 > 금상 수상
@@ -27,7 +33,7 @@ order: 5
 > 2021.10. ~ 2022.04.
 > - 교내 학생들에게 유용한 정보를 개별적으로 제공해주고자 고안된 추천 시스템
 > - 입력된 학생의 정보를 바탕으로 웹 크롤링을 통해 저장한 기사와의 유사성을 판단
-> - Proxy를 활용하여 서버 논리 일관화 및 효율 증대
+> - Proxy를 활용하여 논리적인 서버 구성 및 통신 효율 증대
 
 > #### [문서 객체의 랜덤 배치를 통한 문서 레이아웃 분석기](/posts/Document_layout_analysis/)
 > 2021.09 ~ 2021.12.
@@ -50,8 +56,9 @@ order: 5
 > - 퍼스널 모빌리티 운전자의 안전을 도모하기 위한 시스템
 > - 특정 물체와의 거리에 따른 경고 신호 발생
 
-## Extracurricular Activities
-> #### 네이버 Boostcamp AI Tech 4기
+## EXTRACURRICULAR ACTIVITIES
+---
+> #### 부스트캠프 AI Tech 4기 [NAVER Connect Foundation]
 > 2022.09. ~ 2023.02.  
 
 > #### AI Grand Challange 2020
@@ -59,22 +66,24 @@ order: 5
 > - 트랙 3: 사물인지 분야를 통해 첫 인공지능 대회 참여
 > - 네이버 AI 클라우드 서비스(NSML)를 적극적으로 활용
 
-> #### 포스트 코로나 AI 챌린지 (KT)
+> #### 포스트 코로나 AI 챌린지 [KT]
 > 2020.04.
 > - 펜데믹 대비용 아이디어톤
 > - 상용화 되기 전의 QR 코드 출입 시스템을 고안
 
-## ON-CAMPUS Activities
-> #### 알고리즘 전공 특화 멘토
+## ON-CAMPUS ACTIVITIES
+---
+> #### 전공 특화 멘토 - 알고리즘
 > 2021.09. ~ 2021.12.
 
-> #### Python 전공 멘토
+> #### 기초학력 향상 멘토 - Python
 > 2021.03. ~ 2021.06.
 
 > #### 신입생 멘토
 > 2021.03. ~ 2022.02.
 
-## Awards
+## AWARDS
+---
 > #### [2021 근골격계 동영상 데이터 인공지능 모델 알고리즘 개발 해커톤](/posts/Musculoskeletal/)
 > 2021.11. ~ 2021.12.  
 > 우수상 수상
