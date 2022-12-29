@@ -12,17 +12,11 @@ render_with_liquid: false
 ## 딥러닝 기초
 
 ### 인공지능 vs ML vs DL
-#### 인공지능
-사람의 지능을 모방하여 분류하는 알고리즘
+- 인공지능: 사람의 지능을 모방하여 분류하는 알고리즘
+- ML: 데이터를 기반으로 학습하는 알고리즘
+- DL: 인공신경망을 통해 데이터를 학습하는 알고리즘
 
-#### ML
-데이터를 기반으로 학습하는 알고리즘
-
-#### DL
-인공신경망을 통해 데이터를 학습하는 알고리즘
-
-### 딥러닝 요소
-#### 데이터
+### 데이터
 어떠한 문제를 해결하기 위해 그에 알맞은 데이터 포맷을 요구
 - Classification
 - Semantic segmentation
@@ -30,47 +24,51 @@ render_with_liquid: false
 - Pose Estimation
 - Visual Q&A
 
-#### Loss function
+### Loss function
 오차를 판별하고, 가중치를 수정할 기준을 정의
-
-#### 최적화 알고리즘
-가중치를 수정
-- SGD
-- Momentum
-- NAG
-- Adagrad
-- Adadelta
-- RMSProp
-
-## 최적화
 
 ### Generalization; 일반화
 학습 성능과 테스트 성능에 대한 차이 정도
 
-#### Over/Under fitting
+
+### Regularization
+Generalization을 위한 규제를 정의
+
+- Early stopping
+  - Validation error가 최저인 점을 기준으로 n회 동안 발전이 없을 시 학습 종료
+- Parameter Norm Penalty; Weight decay
+  - 네트워크 가중치 수들이 크기 관점으로 작을수록 좋다는 가정을 수립
+- Data Augmentation
+  - 데이터의 특징을 살려서 데이터를 늘리는 기법
+- Noise Robustness
+  - 입력 데이터에 Noise 삽입
+  - Weight에 Noise 삽입
+- Label Smoothing
+  - Mixup/CutMix와 같은 전처리 시 강아지 0.5, 고양이 0.5... 이런식으로 label을 다양화
+- Batch Normalization
+  - 평균과 분산등을 통해 정규화 진행
+
+### Over/Under fitting
 - Overfitting(과적합)
   - 학습 데이터에 대해 우수한 성능을 보이나 학습을 진행하지 않은 테스트 데이터셋에 대해 낮은 성능을 도출하는 현상
   - 학습 데이터를 깊이 학습하여 나타나는 현상
 
 > Generalization gap: 특정 에폭에 대해 학습 정확도(loss)와 테스트 정확도(loss)의 차이
 
-#### Cross-Validation; K-fold validation
+### Cross-Validation; K-fold validation
 - 학습용 데이터를 k개로 쪼개어 각각의 partition을 해당 학습의 validation으로 이용
 
-#### Bias vs Variance
-<img src = /static/img/AI/bias_variance.png height=500px> 
-
-- bias
+### Bias vs Variance
+- Bias
   - target위치와 떨어져있는 정도
-- variance
+- Variance
   - 집단이 퍼져있는 정도
 > bias and variance tradeoff: bias 혹은 variance를 조정하기 위해 데이터에 노이즈가 삽입되었다고 가정할 때, 서로 간의 Tradeoff 관계 형성
 
-#### Bootstraping
+<img src = "/static/img/AI/bias_variance.png" height=500px> 
+
+### Bootstraping
 학습 데이터가 고정되어있다고 가정할 때, Subsampling된 데이터를 기반으로 여러 모델을 통해 metric을 추출하여 결과를 분석
-
-<img src = /static/img/AI/bagging_boosting.png height=500px> 
-
 
 - Bagging(**B**ootstrapping **agg**regat**ing**)
   - 일반적인 Bootstraping 기법을 의미
@@ -78,7 +76,15 @@ render_with_liquid: false
 - Boosting
   - Subsampled 데이터를 학습한 모델들의 결과를 Sequential하게 취급하여 가중치 학습과 유사하게 처리함으로써 하나의 모델로 도출
 
-### Practical Gradient Descent
+<img src = "/static/img/AI/bagging_boosting.png" height=500px> 
+
+
+## 최적화
+### Gradient Descent
+- $\eta$: 학습률
+- $g_t$: 이전 gradient
+
+#### Practical Gradient Descent
 - Stochastic gradient descent
   - 하나의 데이터에 대해 경사하강법 진행
 - Mini-batch gradient descent
@@ -91,65 +97,50 @@ Batch size의 값을 작게 적용하면 Flat minimizer에 도달하고, 크게 
 - Generalization 성능이 향상
 - Train 성능과 Test 성능의 유사성을 실험적으로 도출
 
-<img src = /static/img/AI/minimizer.png height=500px>
+<img src = "/static/img/AI/minimizer.png" height=500px>
 
-### Gradient Descent
-- $\eta$: 학습률
-- $g_t$: 이전 gradient
-#### (Stochastic) Gradient descent
-- $W_{t+1} \larr W_t - \eta g_t$
+### Stochastic Gradient descent
+데이터의 일부(Batch)만을 이용하여 경사하강법 적용
+- $W_{t+1} = W_t - \eta g_t$
 
-#### Momentum
+### Momentum
+SGD 미분 값에 관성을 적용하여 갱신
+- 빠른 수렴을 유도
 - $\beta$: momentum
-- $a_{t+1} \larr \beta a_t + g_t$
-- $W_{t+1} \larr W_t - \eta a_{t+1}$
+- $a_{t+1} = \beta a_t + g_t$
+- $W_{t+1} = W_t - \eta a_{t+1}$
 
-#### Neterov Accelerated Gradient(NAG)
+### Nesterov Accelerated Gradient(NAG)
+Momentum 적용 후의 위치에서 기울기를 고려
 - $\nabla L(W_t - \eta \beta a_t)$: Lookahead gradient
-- $a_{t+1} \larr \beta a_t + \nabla L(W_t - \eta \beta a_t)$
-- $W_{t+1} \larr W_t - \eta a_{t+1}$
+- $a_{t+1} = \beta a_t + \nabla L(W_t - \eta \beta a_t)$
+- $W_{t+1} = W_t - \eta a_{t+1}$
 
-#### Adagrad
-과거, 적게 변화한 가중치에 대해서 많은 변화를 유도
+### Adagrad
+과거를 보았을 때, 적게 변화한 가중치에 대해서 큰 변화를 유도
 - $G_t$: 지금까지의 gradient 제곱의 합
 - $W_{t+1} = W_t - \frac{\eta}{\sqrt{G_t + \epsilon}}g_t$
 
-#### Adadelta
+### Adadelta
 Adagrad에서 $G_t$가 커지는 현상을 완화
 - 학습률이 없는 학습법
 - $G_t = \gamma G_{t-1} + (1 - \gamma)g_t^2$
 - $W_{t+1} = W_t - \frac{\sqrt{H_{t-1} + \epsilon}}{\sqrt{G_t + \epsilon}}g_t$
 - $H_t = \gamma H_{t-1} + (1 - \gamma)(\Delta W_t)^2$
 
-#### RMSprop
+### RMSprop
+Adagrad에서 $G_t$가 커지는 현상을 완화하기 위해 지수 이동 평균을 이용하여 영향력을 상쇄
 - $G_t = \gamma G_{t-1} + (1 - \gamma)g_t^2$
 - $W_{t+1} = W_t - \frac{\eta}{\sqrt{G_t + \epsilon}}g_t$
 
-#### Adam
+### Adam
 Momentum을 확보한 Adaptive 기법
 - $m_t$: Momentum
 - $v_t$: EMA of gradient squares
-- $m_t = \beta _1 m_{t-1} + (1-\beta _1)g_t$
-- $v_t = \beta _2 m_{t-1} + (1-\beta _2)g_t^2$
+- $m_t = \beta_1 m_{t-1} + (1-\beta_1)g_t$
+- $v_t = \beta_2 m_{t-1} + (1-\beta_2)g_t^2$
 - $W_{t+1} = W_t - \frac{\eta}{\sqrt{v_t + \epsilon}}\frac{\sqrt{1-\beta_2^t}}{1-\beta_1^t}m_t$
 
-
-### Regularization
-Generalization을 위한 규제를 정의
-
-- Ealry stopping
-  - validation error가 최저인 점을 기준으로 n회 동안 발전이 없을 시 학습 종료
-- Parameter Norm Penalty; Weight decay
-  - 네트워크 가중치 수들이 크기 관점으로 작을수록 좋다는 가정을 수립
-- Data Augmentation
-  - 데이터의 특징을 살려서 데이터를 늘리는 기법
-- Noise Robustness
-  - 입력 데이터에 Noise 삽입
-  - Weight에 Noise 삽입
-- Label Smoothing
-  - Mixup/CutMix와 같은 전처리 시 강아지 0.5, 고양이 0.5... 이런식으로 label을 다양화
-- Batch Normalization
-  - 평균과 분산등을 통해 정규화 진행
 
 ## Recurrent Neural Networks(RNN)
 
