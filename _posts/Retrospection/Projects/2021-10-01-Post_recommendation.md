@@ -5,10 +5,6 @@ date: 2021-10-01 10:00:00 +0900
 categories: ['Retrospection', 'Projects']
 tags: ['Vue.js', 'Flask', 'Flask', 'Crawl']
 render_with_liquid: false
-image:
-  path: /static/img/Projects/PR_blueprint.png
-  width: 500
-  alt: 프로젝트 구조도
 ---
 # 📘 상세 설명
 ---
@@ -18,9 +14,9 @@ image:
 
 본 프로젝트는 교내 앱에 존재하는 모바일 학생증의 QR코드를 이용하여 추출한 사용자의 데이터를 바탕으로 교내외 정보에 대한 웹 크롤링 및 데이터 마이닝을 진행하고 전자 게시판을 통하여 사용자에게 맞춤형 정보를 제공합니다.
 
-|교내 도서관에 설치한 시스템|교수 및 개발원|
-|:-:|:-:|
-|<img src="/static/img/Projects/PR_system.png" width=475px>|<img src="/static/img/Projects/PR_member.png" width=400px>|
+![Desktop View](/static/img/Projects/PR_blueprint.png)
+_프로젝트 구조도_
+
 
 ## 개발 동기
 - 게시판의 활용
@@ -31,6 +27,10 @@ image:
   - 학생들의 대학 생활을 지원하는 서비스나 시스템 등의 **변화를 주도**
 
 ## 연구 방법
+
+<img src="/static/img/Projects/PR_system.png" width=475px>
+_교내 도서관에 설치한 시스템_
+
 > ### 제안하는 성능 평가 지표
 > - [x]  QR 코드 인식 속도 1초 이내
 > - [x]  시스템 반응 속도(입력 인지 후 데이터 처리부터 표출까지의 속도) 2초 이내
@@ -101,5 +101,9 @@ image:
 
 # 🔗 관련 링크
 ---
+
+<img src="/static/img/Projects/PR_member.png" width=400px>
+_교수 및 개발원_
+
 - [금오공대, 'AI·빅데이터실습실' 개소](http://news.unn.net/news/articleView.html?idxno=529832)
 - [국립금오공과대학교, 'AI·빅데이터실습실' 개소](http://www.gmilbo.net/news/article.html?no=64815)

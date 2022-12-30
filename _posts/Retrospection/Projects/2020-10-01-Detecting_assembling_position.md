@@ -11,9 +11,10 @@ render_with_liquid: false
 ---
 ## 프로젝트 소개
 
-|프로젝트 요약도|
-|:-:|
-|<img src="/static/img/Projects/DAP_blueprint.png">|
+
+![Desktop View](/static/img/Projects/DAP_blueprint.png)
+_프로젝트 요약도_
+
 본 프로젝트의 주제는 인식된 컴퓨터 부품에 대해 메인보드 상 결합되어야 할 위치를 반환하는 것입니다.
 
 데이터는 크롤링을 통해 수집하였으며, 부품 Classification은 ```Tensorflow```의 튜토리얼을 바탕으로 98.9% 정확도를 확인하였고, 메인보드 조립 위치 검출은 ```YoloV5``` 모델을 바탕으로 96.8%의 mAP를 확인하였습니다.

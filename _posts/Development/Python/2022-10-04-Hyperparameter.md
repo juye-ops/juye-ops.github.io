@@ -1,9 +1,9 @@
 ---
-title: '하이퍼 파라미터 튜닝'
+title: '[딥러닝] 하이퍼 파라미터 튜닝'
 author: juye-ops
 date: 2022-10-04 10:00:00 +0900
-categories: [TIL, AI]
-tags: [Study, AI, Deep Learning, ]
+categories: [Development, Python]
+tags: [Deep Learning, ray]
 render_with_liquid: false
 ---
 

@@ -28,7 +28,8 @@ $ git config --global user.email="USER-EMAIL"
    - date: 업데이트 할 날짜 정보
      - 요일, 일, 월, 년, 시간, 표준시 순서대로 공백 단위에 맞춰 입력
     ```bash
-    $ git commit --amend --no-edit --date "Sat 1 Jan 2022 00:00:00 KST" # 한국 표준시 기준 1월 1일 토요일 0시 0분 0초로 위의 커밋 정보 수정
+    $ git commit --amend --no-edit --date "Sat 1 Jan 2022 00:00:00 KST"
+    # 한국 표준시 기준 1월 1일 토요일 0시 0분 0초로 위의 커밋 정보 수정
     ```
 
 3. 강제 푸시

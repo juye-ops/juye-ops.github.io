@@ -2,7 +2,7 @@
 title: 'Infra 기초'
 author: juye-ops
 date: 2022-09-12 10:00:00 +0900
-categories: [TIL, Infra]
+categories: [TIL, Infrastructure]
 tags: [Study, Infra]
 render_with_liquid: false
 ---
@@ -76,7 +76,8 @@ AIaaS(AI as a service): 서비스형 인공지능으로써, 다양한 AI 기반 
 
 
 ### 하이브리드 클라우드(Hybrid cloud)
-![Hybrid Cloud](/static/img/analytics-hybrid.svg)
+![Desktop View](/static/img/Infra/analytics-hybrid.svg)
+_하이브리드 클라우드 구조_
 
 - 각 시스템의 특성에 맞게 온프레미스와 클라우드를 함께 사용하기도 함
 - 클라우드 프로바이더 역시 각자의 장점이 달라서 여러 클라우드를 함께 사용하기도 함

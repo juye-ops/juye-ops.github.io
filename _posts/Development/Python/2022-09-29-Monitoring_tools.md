@@ -1,9 +1,9 @@
 ---
-title: '학습 모니터링'
+title: '[딥러닝] Tensorboard & Wandb 학습 모니터링'
 author: juye-ops
 date: 2022-09-29 10:00:00 +0900
-categories: [TIL, AI]
-tags: [Study, AI, Visualization]
+categories: [Development, Python]
+tags: [AI, Visualization]
 render_with_liquid: false
 ---
 
@@ -29,7 +29,6 @@ DL 시각화 핵심 도구
   - exp_n(실험 디렉터리)에 대한 루트 디렉터리 혹은 특정 exp_n 디렉터리
   - 루트 디렉터리 지정 시, 내부 하위폴더에 대한 모든 tensor board를 시각화
   - 특정 exp_n 디렉터리 지정 시, 해당 실험에 대해 tensor board를 시각화 
-- 
 
 ```python
 from torch.utils.tensorboard import SummaryWriter
