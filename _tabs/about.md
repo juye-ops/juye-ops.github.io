@@ -59,18 +59,10 @@ Computer Vision, Self-supervised Learning, Video Recognition
 - 퍼스널 모빌리티 운전자의 안전을 도모하기 위한 시스템
 - 특정 물체와의 거리에 따른 경고 신호 발생
 
-## EXTRACURRICULAR ACTIVITIES
+## AWARDS
 ---
-#### 부스트캠프 AI Tech 4기 [NAVER Connect Foundation]
-2022.09. ~ 2023.02.  
-
-#### AI Grand Challange 2020
-2020.07.
-- 비정형 폐기물 이미지를 생활 폐기물 배출 기준에 따라 구분
-
-#### 포스트 코로나 AI 챌린지 [KT]
-2020.04.
-- AI를 활용하여 감염병으로부터 국민안전에 기여할 수 있는 서비스 제안
+- 한국정보기술학회 2022년도 하계종합학술대회 및 대학생논문경진대회 - **금상 수상**
+- 2021 근골격계 동영상 데이터 인공지능 모델 알고리즘 개발 해커톤 - **2위 우수상 수상**, 
 
 ## TEACHING EXPERIENCES
 ---
@@ -83,7 +75,15 @@ Computer Vision, Self-supervised Learning, Video Recognition
 #### 신입생 멘토
 2021.03. ~ 2022.02.
 
-## AWARDS
+## EXTRACURRICULAR ACTIVITIES
 ---
-- 한국정보기술학회 2022년도 하계종합학술대회 및 대학생논문경진대회 - **금상 수상**
-- 2021 근골격계 동영상 데이터 인공지능 모델 알고리즘 개발 해커톤 - **2위 우수상 수상**, 
+#### 부스트캠프 AI Tech 4기 [NAVER Connect Foundation]
+2022.09. ~ 2023.02.  
+
+#### AI Grand Challange 2020
+2020.07.
+- 비정형 폐기물 이미지를 생활 폐기물 배출 기준에 따라 구분
+
+#### 포스트 코로나 AI 챌린지 [KT]
+2020.04.
+- AI를 활용하여 감염병으로부터 국민안전에 기여할 수 있는 서비스 제안

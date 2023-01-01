@@ -9,7 +9,7 @@ render_with_liquid: false
 
 ### 키워드
 [Energy based model(EBM)](https://arxiv.org/abs/1609.03126): Energy function을 이용하는 생성모델
-Score matching
+Parameterization: 하나의 표현식에 대해 다른 parameter를 사용하여 다시 표현하는 과정
 
 # 요약
 
