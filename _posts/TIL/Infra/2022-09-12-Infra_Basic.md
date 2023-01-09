@@ -2,7 +2,7 @@
 title: 'Infra 기초'
 author: juye-ops
 date: 2022-09-12 10:00:00 +0900
-categories: [TIL, Infrastructure]
+categories: [TIL, Infra]
 tags: [Study, Infra]
 render_with_liquid: false
 ---
