@@ -137,6 +137,7 @@ Public repo는 무료이며, Private repo는 아래 조건을 따름
 
 # Github Action 사용
 ## SSH action
+
 ```yaml
 # .github/workflow/deploy-ssh.yml
 name: CICD-SSH
@@ -154,7 +155,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: executing remote ssh commands using ssh key
+      name: executing remote ssh commands using ssh key
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.HOST }} 
@@ -165,4 +166,3 @@ jobs:
             cd ${{ github.event.repository.name }}/part2/04-cicd
             sh deploy_ssh.sh
 ```
-
