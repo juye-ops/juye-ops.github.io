@@ -7,8 +7,7 @@ tags: ['K8S']
 render_with_liquid: false
 ---
 
- # 컨테이너
-
+# 컨테이너
 ## Scale Up/Out
 - Scale Up
   - 수직적 계층에 따른 App 확장
@@ -67,3 +66,16 @@ Control plane의 지휘에 따른 Node Docker를 구성
   - Multi master(3, 5개의 Master nodes)
 - Worker node
   - 도커 플랫폼을 통해 컨테이너를 동작하며 실제 서비스 제공
+
+<!-- # keywords
+
+<table>
+  <th>
+    <td>용어</td>
+    <td>설명</td>
+  </th>
+  <tr>
+    <td></td>
+    <td></td>
+  </tr>
+</table> -->

@@ -49,7 +49,7 @@ Create a new repository from the [**Chirpy Starter**](https://github.com/cotes20
 Before running for the first time, go to the root directory of your site, and install dependencies as follows:
 
 ```console
-$ bundle
+bundle
 ```
 
 ### Step 3. Running Local Server
@@ -57,13 +57,13 @@ $ bundle
 Run the following command in the root directory of the site:
 
 ```console
-$ bundle exec jekyll s
+bundle exec jekyll s
 ```
 
 Or run with Docker:
 
 ```console
-$ docker run -it --rm \
+docker run -it --rm \
     --volume="$PWD:/srv/jekyll" \
     -p 4000:4000 jekyll/jekyll \
     jekyll serve

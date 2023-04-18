@@ -76,7 +76,7 @@ writer.add_images('my_image_batch', img_batch, 0)
 - [weights&biases](https://wandb.ai)
 
 ```
-$ pip install wandb -q
+pip install wandb -q
 ```
 
 ```python

@@ -23,7 +23,7 @@ render_with_liquid: false
 - iter마다 메모리 상태 식별 가능
 
 ```
-$ pip install GPUtil
+pip install GPUtil
 ```
 
 ```python

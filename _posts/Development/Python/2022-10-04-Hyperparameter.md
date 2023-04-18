@@ -28,7 +28,7 @@ render_with_liquid: false
 - Hyper-parameter Search를 위한 다양한 모듈 제공
 
 ```
-$ pip install ray tensorboardX
+pip install ray tensorboardX
 ```
 
 ```python

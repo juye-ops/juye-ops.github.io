@@ -17,20 +17,20 @@ render_with_liquid: false
    1. 새로운 저장소(**New-Repo**) 생성
    2. New-Repo 클론
        ```
-       $ git clone https://github.com/USERNAME/New-Repo.git
+       git clone https://github.com/USERNAME/New-Repo.git
        ```
    3. 저장소 이동
        ```
-       $ cd New-Repo
+       cd New-Repo
        ```
    4. New-Repo에 대한 최초 커밋
        ```
-       $ git add .
-       $ git commit -m 'MESSAGE'
+       git add .
+       git commit -m 'MESSAGE'
        ```
 
 2. 저장소(**Past-Repo**) 이식
    1. **git subtree add --prefix="기존 저장소 명" "기존 저장소 주소" "브랜치 명"**
     ```
-    $ git subtree add --prefix=Past-Repo https://github.com/USERNAME/Past-Repo.git main
+    git subtree add --prefix=Past-Repo https://github.com/USERNAME/Past-Repo.git main
     ```
