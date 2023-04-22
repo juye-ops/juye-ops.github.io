@@ -1,5 +1,5 @@
 ---
-title: '[Dacon] 항공편 지연 예측 AI 경진대회(진행중)'
+title: '[Dacon] 도배 하자 유형 분류 AI 경진대회(진행중)'
 author: juye-ops
 date: 2022-04-22 10:00:00 +0900
 categories: [Retrospection, Competitions]중
@@ -10,7 +10,9 @@ render_with_liquid: false
 # 📘 상세 설명
 ---
 ## 프로젝트 소개
-데이콘 항공편 지연 예측 AI 경진대회에서는 준지도학습을 활용한 AI 모델 개발을 목표로 합니다.
+실내 마감재는 건축물 내부 공간의 인테리어와 쾌적한 생활을 좌우하는 만큼, 제품 결함에 대한 꼼꼼한 관리 역시 매우 중요합니다.
+이를 위해 한솔데코에서는 AI 기술을 활용하여 하자를 판단하고 빠르게 대처할 수 있는 혁신적인 방안을 모색하고자 합니다.
+이미지 데이터를 기반으로 도배의 하자 유형을 정확하게 분류해 낼 수 있는 AI 모델을 개발합니다.
 
 ## 개발 동기
 - Container 학습
@@ -31,4 +33,4 @@ render_with_liquid: false
 
 # 🔗 관련 링크
 ---
-[월간 데이콘 항공편 지연 예측 AI 경진대회](https://dacon.io/competitions/official/236094/overview/description)
+[도배 하자 유형 분류 AI 경진대회](https://dacon.io/competitions/official/236082/overview/description)
