@@ -2,7 +2,7 @@
 title: '[Dacon] 도배 하자 유형 분류 AI 경진대회(진행중)'
 author: juye-ops
 date: 2022-04-22 10:00:00 +0900
-categories: [Retrospection, Competitions]중
+categories: [Retrospection, Competitions]
 tags: [Competition, Docker, Airflow, Kubernetes]
 render_with_liquid: false
 ---
