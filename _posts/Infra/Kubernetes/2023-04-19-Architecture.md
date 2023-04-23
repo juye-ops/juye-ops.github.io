@@ -1,7 +1,7 @@
 ---
 title: '[Kubernetes] 아키텍처'
 author: juye-ops
-date: 2023-01-01 00:00:00 +0900
+date: 2023-04-19 00:00:00 +0900
 categories: [Infra, Kubernetes]
 tags: [K8S]
 render_with_liquid: false

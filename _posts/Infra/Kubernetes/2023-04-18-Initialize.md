@@ -20,8 +20,6 @@ render_with_liquid: false
 
 # Control Plane(Master Node) 설정
 ## 런타임 설정: 도커 엔진
-- [cri-dockerd](https://github.com/Mirantis/cri-dockerd) 설치
-
 ```bash
 # Default: Containerd 런타임
 sudo kubeadm init
