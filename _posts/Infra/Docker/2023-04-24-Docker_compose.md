@@ -68,3 +68,6 @@ networks:
 volumes:
   db-data:  # 컨테이너 설정에서 사용할 변수
 ```
+
+## 유의사항
+- Dockerfile을 build하고 docker-compose를 build하는 형식으로 만들면 오류가 날 때도 있음
