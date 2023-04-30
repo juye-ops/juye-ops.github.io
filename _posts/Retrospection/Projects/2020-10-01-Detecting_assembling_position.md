@@ -75,12 +75,12 @@ _프로젝트 요약도_
 # 💡 개발 경험 및 후기
 ---
 ## 인공지능 첫 걸음
-Classification과 Object detection을 결합한 AI 분야 첫 프로젝트 입니다.
-다양한 기술을 많이 적용하고자 하였고, 그 결과, Crawling, Classification, Object detection의 기술을 삽입할 수 있었습니다.
+Classification과 Object detection을 결합한 AI 분야 첫 프로젝트이다.
+다양한 기술을 많이 적용하고자 하였고, 그 결과, Crawling, Classification, Object detection의 기술을 삽입할 수 있었다.
 
-본 프로젝트가 아직은 실용적이지 않다고 생각하며, Classification과 Detection을 결합하여 **새로운 Task를 생성**하는데에 데 큰 의의를 두었습니다.
+본 프로젝트가 아직은 실용적이지 않다고 생각하며, Classification과 Detection을 결합하여 **새로운 Task를 생성**하는데에 데 큰 의의를 두었다.
 
-앞으로도 이와 같이 **다양한 도전을 호기심과 함께 발현**하고 싶습니다.
+앞으로도 이와 같이 **다양한 도전을 호기심과 함께 발현**하고 싶다.
 
 
 
