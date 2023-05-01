@@ -5,14 +5,39 @@ order: 1
 ---
 
 # **김주엽**
-## **One-Thing**을 공략하는 개발자
-**Juye-Ops** - DevOps, MLOps와 같이 **스스로를 개발자로서 운영하고 배포**  
-> 프로젝트의 주요 **One-Thing**에 집중합니다.  
-> 호기심을 자극하는 개발자로서 **오픈소스에 기여**하고 싶습니다.  
-> 나아가, 컴퓨터 공학에 영향을 미칠 수 있는 **인플루언서 개발자**가 되고 싶습니다.  
+## 경험으로 설계하는 개발자
+학부생으로서 다양한 프레임워크 활용 경험을 축적하여 **배경지식이 풍부**합니다.  
+이를 바탕으로 많은 프로젝트에서 아이디어를 제안하거나 아키텍처를 주도적으로 설계해왔습니다.  
 
-## Domain
-```AI```는 Computer-illiterate 대상으로도 **이용성이 우수**하며, 다양한 업무에서의 **인적 자원을 획기적으로 감소**할 수 있다는 점에서 큰 매력을 느꼈습니다. 특히 ```Vision```은 자연 신호로써 색, 공간 등과 같이 정보를 풍부하게 담고 있어 **범용성이 다른 종류의 데이터 대비 우수**하다고 생각합니다.
+**깔끔한 코딩 스타일**을 추구합니다.  
+다양한 오픈소스를 분석한 경험을 통해 템플릿과 컨벤션을 정의하는 데에 능합니다.  
+개발 내용을 병합하기 위해 템플릿을 직접 수정하여 협업의 파이프라인을 구축한 경험이 있습니다.  
 
-세상에 대한 개발자의 역할은 **편의**와 **실용성**을 바탕으로 **실질적인 서비스를 지속적으로 제공**하는 것이라고 생각합니다. ```Infra```는 서비스를 원활하게 지원하기 위해 시스템, 유저와의 **지속적인 소통**을 요구합니다. 특히 ```System Engineering```은 기반 기술을 통해 시스템의 토대를 마련한다는 점에서 매력적으로 느껴졌습니다.
+**Agile 개발 방법론**을 추구합니다.  
+협업에 있어 기꺼이 도움을 제공하거나, 커뮤니케이션을 수시로 진행해왔습니다.  
+이러한 습관 덕에 Boostcamp 활동 당시 좋은 분위기로 주도하여 협업에 우수한 팀으로 칭송받을 수 있었습니다.  
 
+현재는 다양한 개발 프로세스나 플랫폼에서 더욱 최적화된 환경을 제공하기 위한 **Cloud**에 관심이 있습니다.  
+
+# Skills
+**Programming Language**
+
+<img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=Python&logoColor=white"/>
+
+**Infra**
+
+<img src="https://img.shields.io/badge/Ubuntu-E95420?style=flat&logo=Ubuntu&logoColor=white"/>
+<img src="https://img.shields.io/badge/Kubernetes-326CE5?style=flat&logo=Kubernetes&logoColor=white"/>
+<img src="https://img.shields.io/badge/Docker-2496ED?style=flat&logo=Docker&logoColor=white"/>
+<img src="https://img.shields.io/badge/Amazon-AWS-232F3E?style=flat&logo=Amazon-AWS&logoColor=white"/>
+
+**DL Framework**
+
+<img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&logo=PyTorch&logoColor=white"/>
+<img src="https://img.shields.io/badge/Tensorflow-FF6F00?style=flat&logo=Tensorflow&logoColor=white"/>
+<img src="https://img.shields.io/badge/Keras-D00000?style=flat&logo=Keras&logoColor=white"/>
+
+**SCM**
+
+<img src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=GitHub&logoColor=white"/>
+<img src="https://img.shields.io/badge/GitLab-FC6D26?style=flat&logo=GitLab&logoColor=white"/>
