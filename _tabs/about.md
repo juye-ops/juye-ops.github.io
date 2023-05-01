@@ -17,24 +17,24 @@ order: 5
 Cloud/Infra Engineering, Computer Vision
 
 # Projects
-### [Cotton Candy](/posts/Cotton_Candy/)
-웹 기반 Private 클라우드 서비스  
+### [Cotton Candy](/posts/Cotton_candy/)
+웹 기반 Private 클라우드 서비스
 - Docker & Kubernetes 기반 인프라 구축
 - 클라이언트 요청에 따른 IaaS, PaaS 컨테이너 제공
 - 개발 컨테이너 별 Code-server 오픈소스 IDE 제공
 
 ### [CAFE: CArtoonize For Extras faces](/posts/CAFE/)
-GAN 및 Object Tracking 기반 특정 인물 만화화  
+GAN 및 Object Tracking 기반 특정 인물 만화화
 - Bash script & Anaconda 기반 인프라 구축
 - FastAPI 기반 Micro-Service Architecture 지향 설계 및 구축
 
 ### [개인 맞춤 정보 제공 전자 게시판](/posts/Post_recommendation/)
-교내 학생 대상 유용한 기사 추천 시스템  
+교내 학생 대상 유용한 기사 추천 시스템
 - 개발 인프라 구축
 - Flask 기반 Micro-Service Architecture 설계 및 구축
 
 ### [객체 탐지 데이터 및 학습 관리를 위한 웹 기반 딥러닝 지원 시스템](/posts/Web-based_DL_platform/)
-웹 기반 Object detection 분야 MLOps 시각화 툴  
+웹 기반 Object detection 분야 MLOps 시각화 툴
 - COCO Annotator 오픈소스 커스터마이징
 - Docker 기반 Monolithic Architecture 응용
 
