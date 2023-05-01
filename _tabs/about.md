@@ -44,12 +44,12 @@ GAN 및 Object Tracking 기반 특정 인물 만화화
 - [이미지 분류와 객체 검출 기반의 컴퓨터 부품 조립 위치 확인 시스템](/posts/Detecting_assembling_position/)
 - [딥러닝 기반 객체 인식을 활용한 퍼스널 모빌리티 안전 보조 시스템 개발](/posts/Personal_mobility/)
 
-# AWARDS
+# Awards
 ---
 - 한국정보기술학회 2022년도 하계종합학술대회 및 대학생논문경진대회 - **금상 수상**
 - 2021 근골격계 동영상 데이터 인공지능 모델 알고리즘 개발 해커톤 - **2위 우수상 수상**
 
-# TEACHING EXPERIENCES
+# Teaching Experiences
 ---
 ### 신입생 멘토
 
@@ -58,7 +58,7 @@ GAN 및 Object Tracking 기반 특정 인물 만화화
 ### 기초학력 향상 멘토 - Python
 
 
-# EXTRACURRICULAR ACTIVITIES
+# Extracurricular Activities
 ---
 ### 부스트캠프 AI Tech 4기 [네이버 커넥트재단]
 - CV 도메인 및 프로덕트 서빙 기본 개념 학습
