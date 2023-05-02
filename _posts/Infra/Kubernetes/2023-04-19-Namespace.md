@@ -1,7 +1,7 @@
 ---
 title: '[Kubernetes] Namespace'
 author: juye-ops
-date: 2023-04-19 00:00:00 +0900
+date: 2023-04-19 03:00:00 +0900
 categories: [Infra, Kubernetes]
 tags: [Kubernetes]
 render_with_liquid: false
