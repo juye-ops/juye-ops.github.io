@@ -1,7 +1,7 @@
 ---
 title: '[Kubernetes] 환경 구성'
 author: juye-ops
-date: 2023-04-18 00:00:00 +0900
+date: 2023-04-18 01:00:00 +0900
 categories: [Infra, Kubernetes]
 tags: [Docker, Installation]
 render_with_liquid: false
