@@ -1,5 +1,5 @@
 ---
-title: '[Kubernetes] Pod 실행 패턴'
+title: '[Kubernetes] Pod: 실행 패턴'
 author: juye-ops
 date: 2023-05-07 01:00:00 +0900
 categories: [Infra, Kubernetes]

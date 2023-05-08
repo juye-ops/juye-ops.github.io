@@ -1,5 +1,5 @@
 ---
-title: '[Kubernetes] Multi-Pod'
+title: '[Kubernetes] Pod: Multi-Pod'
 author: juye-ops
 date: 2023-04-19 02:00:00 +0900
 categories: [Infra, Kubernetes]

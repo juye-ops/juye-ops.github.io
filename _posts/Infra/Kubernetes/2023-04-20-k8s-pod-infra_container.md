@@ -1,5 +1,5 @@
 ---
-title: '[Kubernetes] Infra(Pause) Container'
+title: '[Kubernetes] Pod: Infra(Pause) Container'
 author: juye-ops
 date: 2023-04-20 01:00:00 +0900
 categories: [Infra, Kubernetes]

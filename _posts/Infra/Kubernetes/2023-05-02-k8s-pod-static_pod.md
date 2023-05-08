@@ -1,5 +1,5 @@
 ---
-title: '[Kubernetes] Static Pod'
+title: '[Kubernetes] Pod: Static Pod'
 author: juye-ops
 date: 2023-05-02 00:00:00 +0900
 categories: [Infra, Kubernetes]

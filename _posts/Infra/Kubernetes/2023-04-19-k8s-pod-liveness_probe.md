@@ -1,5 +1,5 @@
 ---
-title: '[Kubernetes] Self-healing: Liveness Probe'
+title: '[Kubernetes] Pod: Self-healing(Liveness Probe)'
 author: juye-ops
 date: 2023-04-19 00:00:00 +0900
 categories: [Infra, Kubernetes]
