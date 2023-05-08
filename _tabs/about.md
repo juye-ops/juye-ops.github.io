@@ -17,32 +17,32 @@ order: 5
 Cloud/Infra Engineering, Computer Vision
 
 # Projects
-### [Cotton Candy](/posts/Cotton_candy/)
+### [Cotton Candy](/posts/project-cotton_candy/)
 웹 기반 Private 클라우드 서비스
 - Docker & Kubernetes 기반 인프라 구축
 - 클라이언트 요청에 따른 IaaS, PaaS 컨테이너 제공
 - 개발 컨테이너 별 Code-server 오픈소스 IDE 제공
 
-### [CAFE: CArtoonize For Extras faces](/posts/CAFE/)
+### [CAFE: CArtoonize For Extras faces](/posts/project-CAFE/)
 GAN 및 Object Tracking 기반 특정 인물 만화화
 - Bash script & Anaconda 기반 인프라 구축
 - FastAPI 기반 Micro-Service Architecture 지향 설계 및 구축
 
-### [개인 맞춤 정보 제공 전자 게시판](/posts/Post_recommendation/)
+### [개인 맞춤 정보 제공 전자 게시판](/posts/project-post_recommendation/)
 교내 학생 대상 유용한 기사 추천 시스템
 - 개발 인프라 구축
 - Flask 기반 Micro-Service Architecture 설계 및 구축
 
-### [객체 탐지 데이터 및 학습 관리를 위한 웹 기반 딥러닝 지원 시스템](/posts/Web-based_DL_platform/)
+### [객체 탐지 데이터 및 학습 관리를 위한 웹 기반 딥러닝 지원 시스템](/posts/project-web-based_dl_platform/)
 웹 기반 Object detection 분야 MLOps 시각화 툴
 - COCO Annotator 오픈소스 커스터마이징
 - Docker 기반 Monolithic Architecture 응용
 
 ### ETC
-- [GRU 기반 행동 분석 모델을 이용한 어린이 이상 행동 검출 시스템](/posts/GRU_Behavioral_analysis/)
-- [문서 객체의 랜덤 배치를 통한 문서 레이아웃 분석기](/posts/Document_layout_analysis/)
-- [이미지 분류와 객체 검출 기반의 컴퓨터 부품 조립 위치 확인 시스템](/posts/Detecting_assembling_position/)
-- [딥러닝 기반 객체 인식을 활용한 퍼스널 모빌리티 안전 보조 시스템 개발](/posts/Personal_mobility/)
+- [GRU 기반 행동 분석 모델을 이용한 어린이 이상 행동 검출 시스템](/posts/project-GRU_behavioral_analysis/)
+- [문서 객체의 랜덤 배치를 통한 문서 레이아웃 분석기](/posts/project-document_layout_analysis/)
+- [이미지 분류와 객체 검출 기반의 컴퓨터 부품 조립 위치 확인 시스템](/posts/project-detecting_assembling_position/)
+- [딥러닝 기반 객체 인식을 활용한 퍼스널 모빌리티 안전 보조 시스템 개발](/posts/project-personal_mobility/)
 
 # Awards
 ---
@@ -66,7 +66,7 @@ GAN 및 Object Tracking 기반 특정 인물 만화화
 - 재활용 품목 분류를 위한 Detection/Segmentation 수행
 - CAFE: CArtoonize For Extras faces 프로젝트 수행
 
-### [2021 근골격계 동영상 데이터 인공지능 모델 알고리즘 개발 해커톤](/posts/Musculoskeletal/)
+### [2021 근골격계 동영상 데이터 인공지능 모델 알고리즘 개발 해커톤](/posts/competition-musculoskeletal/)
 - 제공하는 데이터셋(동영상)을 재활치료 종류에 따라 분류
 - CNN을 통한 Feature를 LSTM 기반으로 학습하여 추론
 

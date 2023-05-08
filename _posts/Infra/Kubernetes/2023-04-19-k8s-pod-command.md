@@ -1,7 +1,7 @@
 ---
 title: '[Kubernetes] 기초 문법'
 author: juye-ops
-date: 2023-04-18 03:00:00 +0900
+date: 2023-04-19 00:30:00 +0900
 categories: [Infra, Kubernetes]
 tags: [Docker, Installation]
 render_with_liquid: false
