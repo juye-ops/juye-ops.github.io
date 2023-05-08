@@ -74,7 +74,7 @@ kubeadm join [ip:6443] --token [token]\
 
 # 도커엔진 런타임
 kubeadm join [ip:6443] --token [token]\
-  --discovery-token-ca-cert-bash sha256:[hash]  
+  --discovery-token-ca-cert-bash sha256:[hash] --cri-socket /var/run/cri-dockerd.sock
 ```
 
 # 완료 확인
