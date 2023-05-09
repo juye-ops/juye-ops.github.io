@@ -13,7 +13,7 @@ render_with_liquid: false
 - 아래 설정의 Pod 2개 운영
   - labels: {name: apache, app: main, rel: stable}
   - rc name: rc-mainui
-  - container: httpd: 2.2
+  - container: httpd:2.2
 - 현재 디렉토리에 rc-lab.yaml을 생성하며, 파일을 이용해 실행
 
 ```yaml
