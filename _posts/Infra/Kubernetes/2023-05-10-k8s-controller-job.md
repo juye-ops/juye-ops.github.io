@@ -82,3 +82,28 @@ Job에서 진행한 로그는 각 Job의 Pod에 보존
 
 # CronJob
 Unix의 Crontab과 같이 특정 날짜 패턴에 자동으로 Job을 실행
+
+## Definition
+```yaml
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: cronjob-exam
+spec:
+  schedule: "* * * * *"
+  startingDeadlineSeconds: 500
+#  concurrencyPolicy: Allow
+  concurrencyPolicy: Forbid
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: hello
+            image: busybox
+            args:
+            - /bin/sh
+            - -c
+            - echo Hello; sleep 10; echo Bye
+          restartPolicy: Never
+```
