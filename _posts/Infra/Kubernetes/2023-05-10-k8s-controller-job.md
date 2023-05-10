@@ -79,3 +79,6 @@ centos-job-nmxpr   0/1     Completed   0          68s
 
 ## Job이 끝난 후 스스로 제거되지 않는 이유
 Job에서 진행한 로그는 각 Job의 Pod에 보존
+
+# CronJob
+Unix의 Crontab과 같이 특정 날짜 패턴에 자동으로 Job을 실행
