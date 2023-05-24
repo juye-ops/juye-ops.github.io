@@ -1,7 +1,7 @@
 ---
 title: '[Kubernetes] Pod: Self-healing(Liveness Probe)'
 author: juye-ops
-date: 2023-04-19 00:00:00 +0900
+date: 2023-04-19 01:00:00 +0900
 categories: [Infra, Kubernetes]
 tags: [Kubernetes]
 render_with_liquid: false
