@@ -86,4 +86,5 @@ Classification과 Object detection을 결합한 AI 분야 첫 프로젝트이다
 
 # 🔗 관련 링크
 ---
+- [Github Repo](https://github.com/juye-ops/detecting-assembling-position)
 - [[DBpia] 이미지 분류와 객체 검출 기반의 컴퓨터 부품 조립 위치 확인 시스템](https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE10530016)

@@ -140,5 +140,5 @@ Human segmentation 모델을 통해 노이즈를 제거하고자 하였으나, H
 
 # 🔗 관련 링크
 ---
-1. [Github 소스코드 (수정 중)](https://github.com/kit-3WD/Abnormal-Behavior-Detection)
+1. [Github Repo (수정 중)](https://github.com/kit-haemu/Abnormal-Behavior-Detection)
 2. [[DBpia] GRU 기반 행동 분석 모델을 이용한 어린이 이상 행동 검출 시스템](https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11082631)

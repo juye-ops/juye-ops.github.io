@@ -137,5 +137,5 @@ _서비스 흐름 요약도_
 
 # 🔗 관련 링크
 ---
-1. [Github 소스코드](https://github.com/boostcampaitech4lv23cv1/final-project-level3-cv-07)
+1. [Github Repo](https://github.com/boostcampaitech4lv23cv1/final-project-level3-cv-07)
 2. [[노션] 팀 회고록](https://hallowed-eris-113.notion.site/CV-07-CAFE-CArtoonize-For-Extras-faces-02c39fe351db452292dcaf718a9cac36)
