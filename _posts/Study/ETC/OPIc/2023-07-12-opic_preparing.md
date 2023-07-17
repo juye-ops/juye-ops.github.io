@@ -36,6 +36,7 @@ render_with_liquid: false
 - 휴가/출장
   - 국내여행
   - 집에서 보내는 휴가
+
 ## Self Assessment
 난이도 5
 
