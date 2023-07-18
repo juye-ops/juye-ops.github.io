@@ -36,13 +36,13 @@ render_with_liquid: false
 > My favorite activity is driving.  
 > Actually, I have many hobbies, such as just drinking coffee and sing or listen to music.  
 > I love driving most because It makes me like.. I can do every hobbies.  
-> Drinking coffee while driving,, or sing or listen to music.  
+> Drinking coffee, or sing or listen to music while driving.  
 > And It also makes me feel like free.  
 > So, Sometimes, I used to drive alone without any destination.  
-> And, I prefer to drive when I go on a trip with my friends.  
+> And, I'm willing to drive to go on a trip with my friends.  
 
 - 음악
-> My most favorite genre is a rock ballad, because, It has many emotion.  
+> My most favorite genre is a rock ballad, because, It contains many emotion.  
 > And you know, I really like the singer of MC The MAX.  
 > I love his voice, and I wanna sing with like his voice.  
 > He has such a special, soulful and gifted voice, and many korean really like him like me!  
@@ -53,17 +53,18 @@ render_with_liquid: false
 
 - 커피 / 카페
 > Actually, I don't really like to stay cafe.  
-> I just buy a Americano and just go home to watch youtube.  
+> I just buy an Americano and just go home to watch youtube.  
 > It's my happiness.  
 > Anyway, I just sit down in front of my computer, and watch youtube.  
 > And, You know, I'm a programmer. So, I like to work with coffee.  
-> Not only to me, but every programmer also really like it  
+> Not only to me, but every programmer also really like it.  
 > So I love to do everything with coffee!  
 
 ## Technologies  
 > I usually use my computer more than smartphone.  
 > because, It is true that smartphone is portable thing, But, It is too small.  
 > I can't do anything with the smartphone.  
+> It makes me feel like so stuffy.
 > As I told you before, I'm a programmer.  
 > It is essential for every programmer to use computer.  
 > And I also enjoy playing computer games.  
@@ -77,18 +78,19 @@ render_with_liquid: false
 > There are some rules we have to follow.  
 > We threw the trash away to where it is divided into regular trash and recyclables.  
 > We usually divide the recyclable trash into many groups, plastic, bottle and paper and waste, can.  
-> There is designated area for the recycling.  
-> And the gover send out the truck to pick all the garbages up.  
+> There are many recycling zones all over the country.  
+> And the gover send out the truck to pick all the trash up.  
 > People get fined when they don’t recycle.  
 > Korean recycling system is well practiced at almost everywhere.   
 
 - When I was young
 > There are some differences.  
-> In the past, there was nothing special about recycling.  
+> In the past, It was nothing special about recycling.  
 > So not many people were interest in recycle and just put everything in the garbage bag without any sorting.  
 > It was common and also, there wasn’t official recycling policy.  
 > But now, things are changed.  
-> Recycling system in korea is quite strict. There are some rules we have to follow.  
+> Recycling system in korea is quite strict.  
+> There are some rules we have to follow.  
 > We threw away the trash to recycling zone.  
 > Honestly, recycling is sometimes tiresome.  
 > But, I think it's necessary to protect our environment.  
@@ -102,8 +104,8 @@ render_with_liquid: false
 > But there aren't many recycling zone.  
 > So We saw trashes thrown away on the street.  
 > It is social issue in Korea.  
-> These days, Most people suggest preventing to eat foods in the park.  
-> Anyway, It was terrible and I reminded myself not to throw the trash anywhere.
+> These days, Most people suggest to prevent to eat foods in the park.  
+> Anyway, It was terrible and I reminded myself not to throw away the trash anywhere.
 
 
 ## RP
@@ -132,7 +134,7 @@ render_with_liquid: false
 > Because as I said before, I live in Hapcheon which is just a small village.  
 > Anyway, I slept about 4:00AM, and My mother suddenly made a plan to go hiking.  
 > So I was really tired but, I drived to the mountain.  
-> I didn't hike a mountain. Just sleep in a car.  
+> I didn't hike a mountain. Just slept in a car.  
 > After an hour, My family came back, and I woke up.  
 > But you know, I was still tired.  
 > So I wanted to go to bed again when we arrived at home.  
