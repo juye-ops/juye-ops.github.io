@@ -19,7 +19,7 @@ render_with_liquid: false
 
 본 프로젝트의 궁극적인 목적은 인적 자원을 감소하여 초상권 침해 방지와 영상의 분위기를 유지하는 데에 있습니다.
 
-## **연구 방법**
+## **개발 방법**
 ### **Model Pipeline**
 <img src="/static/img/Projects/CAFE_pipeline.png">
 _모델 파이프라인_

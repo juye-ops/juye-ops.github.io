@@ -20,7 +20,7 @@ render_with_liquid: false
 
 <img src="/static/img/Projects/Abnormal-result.png">
 
-## **연구 방법**
+## **개발 방법**
 > 논문에서는 크로마키 데이터셋만을 활용하였으며, 추후 Object detection을 적용하였습니다.  
 > 따라서, 본 내용은 논문의 확장 연구까지 진행한 결과입니다.
 {: .prompt-info }

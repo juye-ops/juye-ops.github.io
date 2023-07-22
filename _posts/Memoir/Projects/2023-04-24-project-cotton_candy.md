@@ -25,7 +25,7 @@ Host PC를 Private CSP로 지정하여 웹 기반 클라우드 개발 환경(IDE
 <img src="/static/img/Projects/Cotton_architecture.png">
 _프로젝트 요약도_
 
-## **연구 방법**
+## **개발 방법**
 - `Docker-compose` 환경 구성
   - frontend: 클라이언트가 접근할 `React` 기반 웹 페이지로, 포트 개방 요구
   - backend: 클라이언트가 웹에서 요청한 Request를 처리하는 `Python`의 `FastAPI` 기반 WAS

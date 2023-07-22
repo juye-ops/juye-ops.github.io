@@ -23,7 +23,7 @@ render_with_liquid: false
 ![Desktop View](/static/img/Projects/PR_blueprint.png)
 _프로젝트 구조도_
 
-## **연구 방법**
+## **개발 방법**
 > ### 제안하는 성능 평가 지표
 > - [x]  QR 코드 인식 속도 1초 이내
 > - [x]  시스템 반응 속도(입력 인지 후 데이터 처리부터 표출까지의 속도) 2초 이내
