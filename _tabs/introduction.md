@@ -21,15 +21,15 @@ order: 1
 
 # **Skills**
 
-<img width="64px" src="https://cdn.simpleicons.org/ubuntu/E95420"/>
-<img width="64px" src="https://cdn.simpleicons.org/kubernetes/326CE5" />
-<img width="64px" src="https://cdn.simpleicons.org/docker/2496ED" />
-<img width="64px" src="https://cdn.simpleicons.org/amazonaws/232F3E" />
+<img src="https://cdn.simpleicons.org/ubuntu/E95420" alt="" width="64px"/>
+<img src="https://cdn.simpleicons.org/kubernetes/326CE5"  alt="" width="64px"/>
+<img src="https://cdn.simpleicons.org/docker/2496ED"  alt="" width="64px"/>
+<img src="https://cdn.simpleicons.org/amazonaws/232F3E"  alt="" width="64px"/>
 
-<img width="64px" src="https://cdn.simpleicons.org/python/3776AB" />
-<img width="64px" src="https://cdn.simpleicons.org/pytorch/EE4C2C" />
-<img width="64px" src="https://cdn.simpleicons.org/tensorflow/FF6F00" />
-<img width="64px" src="https://cdn.simpleicons.org/keras/D00000" />
+<img src="https://cdn.simpleicons.org/python/3776AB"  alt="" width="64px"/>
+<img src="https://cdn.simpleicons.org/pytorch/EE4C2C"  alt="" width="64px"/>
+<img src="https://cdn.simpleicons.org/tensorflow/FF6F00"  alt="" width="64px"/>
+<img src="https://cdn.simpleicons.org/keras/D00000"  alt="" width="64px"/>
 
-<img width="64px" src="https://cdn.simpleicons.org/github/181717" />
-<img width="64px" src="https://cdn.simpleicons.org/gitlab/FC6D26" />
+<img src="https://cdn.simpleicons.org/github/181717"  alt="" width="64px"/>
+<img src="https://cdn.simpleicons.org/gitlab/FC6D26"  alt="" width="64px"/>
