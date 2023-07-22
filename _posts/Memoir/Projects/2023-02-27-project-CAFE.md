@@ -7,12 +7,14 @@ tags: ['AI', 'Backend', 'Infra', 'Python']
 render_with_liquid: false
 ---
 
-# 📘 상세 설명
+`Bash script` `FastAPI` `BoT SORT` `Re-ID` `White-box Cartoonization`
+
+# 📘 **상세 설명**
 ---
-## 프로젝트 소개
+## **프로젝트 소개**
 본 프로젝트는 기존의 모자이크를 대체하여 사람을 특정할 수 있을 정도로 얼굴을 노출시키지 않는 동시에 얼굴 표정, 시선, 눈빛과 같은 정보는 보존할 수 있는 새로운 방식을 제안합니다.
 
-## 개발 동기
+## **개발 동기**
 - 얼굴 모자이크
   - 초상권 침해 방지를 위해 TV 프로그램 혹은 유튜브에서 메인 출연자가 아닌 이들 얼굴에 모자이크 적용
   - 얼굴의 특징을 지워버리기 때문에 인물의 얼굴 표정, 눈빛, 시선과 같은 정보를 상실
@@ -20,8 +22,8 @@ render_with_liquid: false
   - 일반인의 표정과 대응되는 특정 인물의 사진으로 대체하여 그들의 반응을 효과적으로 파악하도록 유도
   - 편집자가 직접 해당 프레임의 얼굴을 찾아 바꿔주어야 하기 때문에 상당한 비용(시간, 노력 등)이 발생
 
-## 연구 방법
-### Model Pipeline
+## **연구 방법**
+### **Model Pipeline**
 <img src="/static/img/Projects/CAFE_pipeline.png">
 _모델 파이프라인_
 
@@ -33,30 +35,30 @@ _모델 파이프라인_
 3. 주인공 사진과 영상에 등장하는 인물들의 사진에 대한 feature를 뽑아낸 후, cosine similarity를 계산하여 target과 target이 아닌 얼굴들을 구분한다.
 4. target이 아닌 얼굴들에 대한 정보(from 2-1)를 이용하여, 모든 프레임의 얼굴을 swap 한다.
 
-### Face Tracking
+### **Face Tracking**
 <img src="/static/img/Projects/CAFE_face-tracking.png">
 _Face Tracking 구조_
 
-- BoT SORT(Bag of Tricks for Simple Online and Real-time Tracking)
+- `BoT SORT`(Bag of Tricks for Simple Online and Real-time Tracking)
   - 빠른 속도와 간단한 알고리즘으로 좋은 성능의 tracking을 구현
   - Kalman filter를 현재 프레임의 detection 결과와 예측한 bbox를 IoU과 appearance정보를 사용하여 매칭
 
-### Robust Tracking with Face Re-identification
+### **Robust Tracking with Face Re-identification**
 - 화면 전환이 빈번하게 발생하는 영상들에서 face tracking을 할 경우 화면이 넘어갈 때 서로 다른 인물의 얼굴이 우연히 화면의 같은 위치에 존재한다면 다른 사람임에도 동일한 Tracklet으로 판단
   - 각 인물의 tracking 결과 마다 하나의 대표 bounding box를 뽑는 과정에서 다른 인물이 tracking 결과를 대표하게 되는 문제점이 발생
-  - 단순히 bounding box간 IoU에만 근거하여 tracking을 하는 것이 아니라, IoU가 높더라도 bounding box의 feature간 일정 수준이상 유사하지 않으면 tracking을 공유하지 않도록 face re-identification을 사용
+  - 단순히 bounding box간 IoU에만 근거하여 tracking을 하는 것이 아니라, IoU가 높더라도 bounding box의 feature간 일정 수준이상 유사하지 않으면 tracking을 공유하지 않도록 face `re-identification`을 사용
 
 
-### Cartoonize
+### **Cartoonize**
 <img src="/static/img/Projects/CAFE_cartoonize.png">
 _Cartoonize 항목 및 특징_
 
 - Cartoonize: Neural Style Transfer GAN 기법을 이용한 만화화 기법을 명명
   - 얼굴만 cartoonize하는 모델의 경우(Toonify, Facial Cartoonization, StyleGAN), 영상에 등장하는 얼굴 수에 비례하여 inference 횟수 증가
   - 전체 이미지를 Cartoonize하는 모델의 경우, 한 번의 inference를 진행하여 얼굴 영역만 crop하여 사용하면 되므로 일정한 서비스 시간을 제공
-  - 서비스 시간과 Cartoonize된 결과물의 완성도를 고려하여 White-Box cartoonization을 채택하였다.
+  - 서비스 시간과 Cartoonize된 결과물의 완성도를 고려하여 `White-Box cartoonization`을 채택하였다.
 
-### 얼굴 유사도 검사
+### **얼굴 유사도 검사**
 
 <img src="/static/img/Projects/CAFE_similarity.png">
 _유사도 검사 요약도_
@@ -75,7 +77,7 @@ _2차 유사도 검사_
 - 2차 유사도 검사를 통해, 1차에서 추출한 target image와 가장 유사하다고 판단한 얼굴과 tracking된 image들로 유사도 검사를 수행
   - 영상 내의 인물의 모습에 기반하여 매칭을 수행하므로, 유사도 검사 시 사용자가 제공한 다양한 target image에 대해 일관된 매칭 결과를 도출 가능
 
-### Face Swapping
+### **Face Swapping**
 - Tracking 및 Similarity Check 과정을 통해 얻은 주인공이 아닌 얼굴들에 대한 Bbox 정보를 이용하여, 모든 Bbox의 크기를 기존의 2배로 확장
 - 해당 영역(얼굴)의 이미지를 cartoonize된 이미지로 대체하였으며, 단순히 해당 영역의 이미지를 덮어씌우는 경우 이미지의 경계가 부각되는 부자연스러운 장면을 생성하므로 pixel-wise weighted sum을 통한 edge smoothing을 고안
   - 이미지에 곱해줄 weights를 만드는 방식으로 총 세 가지 방법을 구성
@@ -86,7 +88,7 @@ _2차 유사도 검사_
 <img src="/static/img/Projects/CAFE_edge-smoothing.png">
 _최종 edge smoothing_
 
-### Service Flow
+### **Service Flow**
 <img src="/static/img/Projects/CAFE_serviceflow.png">
 _서비스 흐름 요약도_
 
@@ -96,20 +98,20 @@ _서비스 흐름 요약도_
 4. 위의 과정이 끝난 이후, backend에서 MongoDB에 저장된 tracking 정보를 사용하여 Face swapping 과정을 수행한다.
 5. Streamlit을 통해 사용자가 최종 결과물의 재생 및 저장한다.
 
-# 👪 역할 및 개발 내용
+# 👪 **역할 및 개발 내용**
 ---
 - 개발 인프라 구축
-    - 협업을 위한 공동 템플릿(개발 환경) 제작
-    - Bash shell script 기반 개발 환경 구축
+  - 협업을 위한 공동 템플릿(개발 환경) 제작
+  - Bash shell script 기반 개발 환경 구축
 - 모델 파이프라인 구축
-    - Micro-Service 지향 Architecture 구성
-    - 파이프라인을 직접 설계하고 구축
-    - 기능 연계를 위한 코드 병합 주도
+  - Micro-Service 지향 Architecture 구성
+  - 파이프라인을 직접 설계하고 구축
+  - 기능 연계를 위한 코드 병합 주도
 - Product Serving
-    - Frontend의 View 기능들을 비동기적으로 수행함으로써 시각화 효과 상승
-    - 모델 추론 기능을 비동기적으로 수행함으로써 Inference 수행 시간 단축
+  - Frontend의 View 기능들을 비동기적으로 수행함으로써 시각화 효과 상승
+  - 모델 추론 기능을 비동기적으로 수행함으로써 Inference 수행 시간 단축
 
-# 💡 개발 경험 및 후기
+# 💡 **개발 경험 및 후기**
 ---
 ## 한계점 및 아쉬운 점
 - Docker in docker
