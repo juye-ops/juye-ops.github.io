@@ -7,26 +7,18 @@ tags: ['KIIT', 'Awards', 'AI', 'Video Classification']
 render_with_liquid: false
 ---
 
-`GRU` `YoloV4` `Optical flow` `MobileNetV3`
+|⚙ 개발 환경|💡오픈소스 & 라이브러리|
+|:-:|:-:|
+|`Python`|`OpenCV` `Tensorflow`|
 
 # 📘 **상세 설명**
 ---
 ## **프로젝트 소개**
 
-<img src="/static/img/Projects/Abnormal-result.png">
-
-본 연구는 어린이 대상 AI 연구가 적다는 주관적인 관점을 토대로 아동 학대에 대한 문제점을 식별하여 **사회적 문제를 해결하는데 기여**하고자 진행한 프로젝트입니다.  
+본 연구는 아동학대 발생 사례가 증가하고, 어린이 대상 AI 연구가 적다는 관점을 토대로 아동 학대에 대한 문제점을 식별하여 **사회적 문제를 해결하는 데에 기여**하고자 진행한 프로젝트입니다.  
 본 프로젝트는 동영상 분석을 기반으로 하여 어린이의 이상 행동을 식별하는 시스템을 제작하였습니다.
 
-## **개발 동기**
-- 아동학대 발생 사례 증가
-  - 어린이집에서 빈번히 발생
-  - 교사의 시선을 벗어나, 사각지대에서의 안전사고 혹은 아동 간의 다툼 발생
-- 아동학대 방지를 위한 법 $\cdot$ 제도적 대책
-  - 2000년도 이후 국내 아동 복지법을 개정하여 아동 학대에 대한 법 $\cdot$ 제도적 토대 마련
-  - 인천 어린이집 폭행 사건*(2015년 1월 8일)*을 계기로 아동학대 근절 대책 추진
-    - 본 사건을 계기로 어린이집에 CCTV 설치를 의무화
-  - 보호자의 CCTV 열람에 대해 복잡한 과정을 요구
+<img src="/static/img/Projects/Abnormal-result.png">
 
 ## **연구 방법**
 > 논문에서는 크로마키 데이터셋만을 활용하였으며, 추후 Object detection을 적용하였습니다.  
@@ -54,11 +46,6 @@ render_with_liquid: false
 - 구축 기관: 마인즈랩
 
 ### **실험**
-
-|Video Feature 추출|Feature vector를 바탕으로 한 GRU 모델|
-|:-:|:-:|
-|<img src="/static/img/Projects/Abnormal-architecture1.png">|<img src="/static/img/Projects/Abnormal-architecture2.png">|
-
 - 데이터 전처리
   - `YoloV4` tiny 모델을 통해 원본 영상에서 사람 객체의 Bounding Box 좌표 식별
   - 원본 영상을 대상으로 `Optical flow`를 적용하여 Optical field 추출
@@ -73,34 +60,37 @@ render_with_liquid: false
   - 동영상 파일 좌측 상단에 폭력 상황 여부 시각화
 
 
+|Video Feature 추출|Feature vector를 바탕으로 한 GRU 모델|
+|:-:|:-:|
+|<img src="/static/img/Projects/Abnormal-architecture1.png">|<img src="/static/img/Projects/Abnormal-architecture2.png">|
+
+
 ### **추후 확장 방안**
 - 데이터 포맷
-    - 동영상 변환 시간
-        - 프레임의 특징벡터를 추출하여 30개 씩 numpy 파일로 변환하는 데 많은 시간 소요
-        - 데이터 관리에 복잡도 상승
-    - 동영상 변환 공간
-        - 동영상을 프레임으로 분리할 시 파일 크기가 약 5배 이상 상승
-        - 동영상 압축을 고려하지 않은 방법
-    - Generator 기법 적용 예정
-        - 동영상을 프레임으로 분리하는 것에 시공간적 낭비가 심함
-        - Tensorflow의 Generator를 통해 데이터를 Iterator와 같이 호출하여 시공간 복잡도 절약 예상
-        - 실시간 추론 가능성 식별
+  - 동영상 변환 시간
+    - 프레임의 특징벡터를 추출하여 30개 씩 numpy 파일로 변환하는 데 많은 시간 소요
+    - 데이터 관리에 복잡도 상승
+  - 동영상 변환 공간
+    - 동영상을 프레임으로 분리할 시 파일 크기가 약 5배 이상 상승
+    - 동영상 압축을 고려하지 않은 방법
+  - Generator 기법 적용 예정
+    - 동영상을 프레임으로 분리하는 것에 시공간적 낭비가 심함
+    - Tensorflow의 Generator를 통해 데이터를 Iterator와 같이 호출하여 시공간 복잡도 절약 예상
+    - 실시간 추론 가능성 식별
 - Segmentation
-    - 본 연구에서는 사람의 Optical field 영역을 확보하여 사람의 형상만 추출
-    - 사람의 Segmentation 학습 모델을 이용한다면 더욱 정확하고 우수한 모델이 될 것으로 예상
+  - 본 연구에서는 사람의 Optical field 영역을 확보하여 사람의 형상만 추출
+  - 사람의 Segmentation 학습 모델을 이용한다면 더욱 정확하고 우수한 모델이 될 것으로 예상
 - Categories
-    - 아동 학대 뿐만 아니라 실신, 사고 등의 이상행동을 식별하고자 하였으나 정확도를 우선 높이기 위해 폭력 여부만 식별
-    - 추후 모델을 개선하여 복수 카테고리에 대한 분류 진행
+  - 아동 학대 뿐만 아니라 실신, 사고 등의 이상행동을 식별하고자 하였으나 정확도를 우선 높이기 위해 폭력 여부만 식별
+  - 추후 모델을 개선하여 복수 카테고리에 대한 분류 진행
 
 # 👪 **역할 및 개발 내용**
 ---
 - 아이디어 제시
   - 팀원들에게 Video와 같이 **시계열 Vision 데이터를 활용**하도록 유도
-
 - 데이터 전처리 효율 증대
   - Video 데이터의 **FPS를 낮추어 Frame 단위로 분해**
-  - map 함수를 통해 **메모리를 줄여 데이터 정제 효율 상승**
-
+  - Functional 코드 작성을 통한 **메모리 점유율 감소 및 데이터 정제 효율 상승**
 - 모델 제작
   - `MobileNet V3`를 통한 **특징 벡터 추출**
   - GRU 기반 **모델 제작**

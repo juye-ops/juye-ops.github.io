@@ -7,57 +7,41 @@ tags: ['AI', 'Classification', 'Object detection', 'Tensorflow', 'YoloV5', 'Sele
 render_with_liquid: false
 ---
 
-`MobileNetV2` `Selenium` `YoloV5`
+|⚙ 개발 환경|💡오픈소스 & 라이브러리|
+|:-:|:-:|
+|`Python`|`OpenCV` `Selenium` `Tensorflow` `YoloV5`|
 
 # 📘 **상세 설명**
 ---
+
 ## **프로젝트 소개**
+PC의 부품 비용과 조립 난이도를 고려하여 초보자에게 발생하는 사고를 방지하기 위한 인공지능 서비스입니다.  
+
+본 프로젝트의 주제는 인식된 컴퓨터 부품에 대해 메인보드 상 결합되어야 할 위치를 반환하는 것입니다.
+
+데이터는 크롤링을 통해 수집하였으며, 부품 Classification은 ```Tensorflow```의 튜토리얼을 바탕으로 **98.9% 정확도**를 확인하였고, 메인보드 조립 위치 검출은 ```YoloV5``` 모델을 바탕으로 **96.8%의 mAP**를 확인하였습니다.
 
 ![Desktop View](/static/img/Projects/DAP_blueprint.png)
 _프로젝트 요약도_
 
-본 프로젝트의 주제는 인식된 컴퓨터 부품에 대해 메인보드 상 결합되어야 할 위치를 반환하는 것입니다.
-
-데이터는 크롤링을 통해 수집하였으며, 부품 Classification은 ```Tensorflow```의 튜토리얼을 바탕으로 98.9% 정확도를 확인하였고, 메인보드 조립 위치 검출은 ```YoloV5``` 모델을 바탕으로 96.8%의 mAP를 확인하였습니다.
-
-## **개발 동기**
-- 부품 조립의 난이도
-  - 메인보드에 결합되는 부품으로는 약 20가지가 존재
-  - 접착 부의 모양, 크기 등이 유사하여 조립에 실패하는 불상사가 때떄로 발생
-- 관련 연구의 부족
-  - 자동차 부품 조립 연구
-    - 영상처리 기반으로 분석하므로 신뢰성 저하
-  - VR을 이용한 가상 이미지 결합
-    - 가상 이미지를 조립함으로써 혼란을 제공
-
 ## **연구 방법**
+### **기술 스택**
 ### **데이터셋**
 - 데이터 마이닝
   - Selenium을 통해 [Danawa](https://danawa.com/) 페이지의 키워드를 검색하여 크롤링
   - 검색된 키워드의 Thumbnail 이미지를 저장
-- 검출(메인보드) 데이터셋 구성
-  - 메인보드: 600장
-  - CVAT를 통해 BBox Labeling 진행
-- 분류(부품) 데이터셋 구성
-  - CPU: 300장
-  - 그래픽카드: 300장
-  - RAM: 300장
+
+||검출(메인보드) 데이터셋|분류(부품) 데이터셋|
+|-:|:-:|:-:|
+|개수|메인보드 600장|CPU 300장<br>그래픽카드 300장<br>RAM 300장|
+|비고|CVAT를 통해 BBox Labeling 진행||
 
 ### **실험**
-- Classification
-  - MobileNet v2를 통해 추론 속도 및 높은 정확도를 확보
-  - Augmentation
-    - Rescale
-    - Color Jitter
-  - 정확도: 98.9%
 
-- Object detection
-  - YoloV5를 통해 추론 속도 및 높은 정확도를 확보
-  - Augmentation
-    - Rescale
-    - Color Jitter
-  - mAP@0.5: 96.8%
-  - mAP@0.5:0.95: 86.9%
+||Classification|Object detection|
+|Model|`MobileNetV2`|`YoloV5`|
+|Augmentation|Rescale, Color Jitter|Rescale, Color Jitter|
+|정확도|98.9%|96.8% mAP@0.5<br>96.8% mAP@0.5:0.95|
 
 ### **추후 확장 방안**
 - 부품 확장

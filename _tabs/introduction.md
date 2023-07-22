@@ -5,7 +5,7 @@ order: 1
 ---
 
 # **김주엽**
-## 경험으로 설계하는 개발자
+## **경험**으로 **설계**하는 엔지니어
 학부생으로서 다양한 프레임워크 활용 경험을 축적하여 **배경지식이 풍부**합니다.  
 이를 바탕으로 많은 프로젝트에서 아이디어를 제안하거나 아키텍처를 주도적으로 설계해왔습니다.  
 
@@ -19,25 +19,17 @@ order: 1
 
 현재는 다양한 개발 프로세스나 플랫폼에서 더욱 최적화된 환경을 제공하기 위한 **Cloud**에 관심이 있습니다.  
 
-# Skills
-**Programming Language**
+# **Skills**
 
-<img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=Python&logoColor=white" alt="python"/>
+<img width="64px" src="https://cdn.simpleicons.org/ubuntu/E95420"/>
+<img width="64px" src="https://cdn.simpleicons.org/kubernetes/326CE5" />
+<img width="64px" src="https://cdn.simpleicons.org/docker/2496ED" />
+<img width="64px" src="https://cdn.simpleicons.org/amazonaws/232F3E" />
 
-**Infra**
+<img width="64px" src="https://cdn.simpleicons.org/python/3776AB" />
+<img width="64px" src="https://cdn.simpleicons.org/pytorch/EE4C2C" />
+<img width="64px" src="https://cdn.simpleicons.org/tensorflow/FF6F00" />
+<img width="64px" src="https://cdn.simpleicons.org/keras/D00000" />
 
-<img src="https://img.shields.io/badge/Ubuntu-E95420?style=flat&logo=Ubuntu&logoColor=white" alt="Ubuntu"/>
-<img src="https://img.shields.io/badge/Kubernetes-326CE5?style=flat&logo=Kubernetes&logoColor=white" alt="Kubernetes"/>
-<img src="https://img.shields.io/badge/Docker-2496ED?style=flat&logo=Docker&logoColor=white" alt="Docker"/>
-<img src="https://img.shields.io/badge/Amazon-AWS-232F3E?style=flat&logo=Amazon-AWS&logoColor=white" alt="AWS"/>
-
-**DL Framework**
-
-<img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&logo=PyTorch&logoColor=white" alt="PyTorch"/>
-<img src="https://img.shields.io/badge/Tensorflow-FF6F00?style=flat&logo=Tensorflow&logoColor=white" alt="Tensorflow"/>
-<img src="https://img.shields.io/badge/Keras-D00000?style=flat&logo=Keras&logoColor=white" alt="Keras"/>
-
-**SCM**
-
-<img src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=GitHub&logoColor=white" alt="GitHub"/>
-<img src="https://img.shields.io/badge/GitLab-FC6D26?style=flat&logo=GitLab&logoColor=white" alt="GitLab"/>
+<img width="64px" src="https://cdn.simpleicons.org/github/181717" />
+<img width="64px" src="https://cdn.simpleicons.org/gitlab/FC6D26" />

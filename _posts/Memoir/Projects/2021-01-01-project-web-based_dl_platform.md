@@ -7,7 +7,9 @@ tags: ['Infra', 'AI', 'Object detection', 'Communication']
 render_with_liquid: false
 ---
 
-`Docker` `Flask` `YoloV5` `Vue` `MongoDB` `RabbitMQ`
+|⚙ 개발 환경|💡오픈소스 & 라이브러리|
+|:-:|:-:|
+|`Docker` `MongoDB` `Python` `RabbitMQ` `Vue`|`COCO Annotator` `Flask` `YoloV5`|
 
 # 📘 **상세 설명**
 ---
@@ -17,39 +19,38 @@ render_with_liquid: false
 
 
 ## **프로젝트 소개**
-오픈소스인 [COCO Annotator](https://github.com/jsbroks/coco-annotator)를 응용하여 제작한 웹 기반 **딥러닝 학습 제공 시스템**입니다.
-흔히 CLI 상으로 제공하는 머신러닝의 API 들을 GUI 형태로 제공하여 **비전 기반 인공지능**을 사용하는데에 **우수한 접근성과 편의를 제공**합니다.
 
-연구실에서 제안한 본 프로젝트의 궁극적인 목적은 `Few-shot Learning` 기법에 편의를 제공하는 것에 있습니다.  
+Object detection 학습 환경을 GUI로 제공함으로써 누구나 쉽게 접근할 수 있도록 장려하고자 합니다.  
 
-## **개발 동기**
-- 기존 웹 기반 학습 플랫폼(Teachable Machine 등)은 Classification task가 대다수
-- Object detection 학습 환경을 GUI로 제공함으로써 누구나 쉽게 접근할 수 있도록 장려
-- Few-shot Learning을 적극적으로 활용하기 위해 GUI를 통해 프로젝트 단위로 데이터 관리
+오픈소스인 [COCO Annotator](https://github.com/jsbroks/coco-annotator)를 응용하여 제작한 웹 기반 **딥러닝 학습 제공 시스템**입니다.  
+흔히 CLI 상으로 제공하는 딥러닝의 API를 GUI 형태로 제공하여 비전 기반 인공지능을 사용하는 데에 **우수한 접근성과 편의를 제공**합니다.  
+Object detection 기법에 대한 Data 관리, 학습, 추론, 결과 식별 등, **MLOps의 시퀀스를 제공**합니다.  
+
+*연구실에서 제안한 본 프로젝트의 궁극적인 목적은 `Few-shot Learning` 기법에 편의를 제공하는 것에 있습니다.*
 
 ## **연구 방법**
+### **실험**
 - 학습 모델 Pool 개발
-  - Pool에 다량의 모델을 등록하여 학습 시 클라이언트가 직접 학습 모델을 선택
-- 레이블링 Format 수정
-  - 학습 모델에 일치하도록 Label format 변환
+  - Pool에 다량의 모델을 등록하여 학습 시 클라이언트가 웹 뷰에서 **학습 모델을 직접 선택**
 - 학습 및 추론
   - 클라이언트가 직접 하이퍼파라미터 입력
   - REST API를 이용하여 서버에서 학습 진행
+  - 클라이언트가 선택한 모델 별 Label format 변환
 - 학습 과정 모니터링
   - Socket을 연결하여 실시간 학습 로그를 시각화
 - 학습 결과로 추출된 가중치 파일 관리
   - 서버를 통한 실제 파일 등록
-  - 데이터베이스를 이용한 성능 지표 및 하이퍼파라미터 기록
+  - `MongoDB`를 이용한 성능 지표 및 하이퍼파라미터 기록
 
 # 👪 **역할 및 개발 내용**
 ---
-- 학습 모델을 선택할 수 있도록 **Pool 형태**로 확장
-    - 학습 모델마다 지원하는 Annotation Format을 일치하기 위해 Converter 적용
-- Backend ↔ Frontend 데이터 수송신을 위해 **`Flask` API 개선**
-    - Frontend에서 입력한 하이퍼 파라미터 전달
-    - Backend에서 추출된 학습 결과를 파일 형태로 전달하기 위한 직렬화 전송 기능 구현
-    - 학습 및 추론의 진행도를 파악하기 위해 Backend에서 진행사항을 실시간으로 전송
-- **서버 운용 및 관리**
+- On-prem 서버 운용 및 관리
+- `Docker`를 이용한 인프라 관리
+  - `Docker-compose`릁 통한 **MSA 적용**
+- 기능 추가
+  - Frontend에서 입력한 하이퍼 파라미터 전달
+  - Backend에서 추출된 학습 결과를 파일 형태로 전달하기 위한 **직렬화 전송 기능** 구현
+  - Backend에서 Socket을 통해 학습 및 추론의 진행도 로그를 웹 뷰에서 실시간으로 식별
 
 
 # 💡 **개발 경험 및 후기**
