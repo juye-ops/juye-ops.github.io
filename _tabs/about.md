@@ -9,6 +9,9 @@ order: 2
 - B.S, Dept. of Computer Engineering
 - Overall: 4.12 / 4.5 (Major: 4.24 / 4.5)
 
+# **Qualifications**
+- [ACTFL] OPIc(English) - IH
+
 # **Awards**
 - 한국정보기술학회 2022년도 하계종합학술대회 및 대학생논문경진대회 - **금상 수상**
 - 2021 근골격계 동영상 데이터 인공지능 모델 알고리즘 개발 해커톤 - **2위 우수상 수상**
