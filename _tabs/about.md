@@ -31,12 +31,11 @@ order: 2
 - 재활용 품목 분류를 위한 Detection/Segmentation 수행
 - CAFE: CArtoonize For Extras faces 프로젝트 수행
 
+### IXLAB(Interaction Lab) - Infra Engineering
+- 온프레미스 인프라 구축 및 관리
+- 연구생 대상 컨테이너 기반 개발 환경 독립적으로 분배
+- 연구실 프로젝트 아키텍처 설계 및 리팩토링
+
 ### [2021 근골격계 동영상 데이터 인공지능 모델 알고리즘 개발 해커톤](/posts/competition-musculoskeletal/)
 - 제공하는 데이터셋(동영상)을 재활치료 종류에 따라 분류
 - CNN을 통한 Feature를 LSTM 기반으로 학습하여 추론
-
-### AI Grand Challenge 2020
-- 비정형 폐기물 이미지를 생활 폐기물 배출 기준에 따라 구분
-
-### 포스트 코로나 AI 챌린지 [KT]
-- AI를 활용하여 감염병으로부터 국민안전에 기여할 수 있는 서비스 제안

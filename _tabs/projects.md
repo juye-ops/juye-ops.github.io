@@ -10,13 +10,13 @@ order: 3
 - Docker 기반 인프라 구축
 - FastAPI 기반 MSA 설계 및 구축
 - Proxy 기반 통신에 따른 보안 강화
-- Docker-py, Code-server 등의 오픈소스 분석
+- 오픈소스(Docker-py, Code-server 등) API 활용에 따른 개발 효율 증대
 
 ## [CAFE: CArtoonize For Extras faces](/posts/project-CAFE/)
 GAN 및 Object Tracking 기반 특정 인물 만화화
 - Bash script & Anaconda 기반 인프라 구축
 - Fast API 기반 Micro-Service Architecture 설계 및 구축
-- 코드 리뷰 주도에 따른 협업 생산성 대폭 향상
+- 코드 리뷰를 주도하여 아이디어 확립 및 코드 병합 등 협업 생산성 대폭 향상
 
 ## [개인 맞춤 정보 제공 전자 게시판](/posts/project-post_recommendation/)
 교내 학생 대상 유용한 기사 추천 시스템
