@@ -8,9 +8,11 @@ order: 3
 ## [Cotton Candy](/posts/project-cotton_candy/)
 웹 기반 Private 클라우드 서비스
 - Docker 기반 인프라 구축
-- FastAPI 기반 MSA 설계 및 구축
-- Proxy 기반 통신에 따른 보안 강화
+- Fast API 기반 Micro-Service Architecture
+- MySQL 스키마 설계 및 구축
+- Proxy 통신에 따른 보안 강화
 - 오픈소스(Docker-py, Code-server 등) API 활용에 따른 개발 효율 증대
+
 
 ## [CAFE: CArtoonize For Extras faces](/posts/project-CAFE/)
 GAN 및 Object Tracking 기반 특정 인물 만화화
