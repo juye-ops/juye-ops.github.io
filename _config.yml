@@ -202,6 +202,13 @@ jekyll-archives:
 
 
 # MOON
+google:
+  plus:            #username
+  analytics: G-4Z6T5WJQ4P
+  verify: l9OvEMt-psWuEk-9YKdHI22UHznGTbblgZiaML2oZRg
+  ad-client: 
+  ad-slot:
+
 logo:               '/assets/img/logo.png'
 background:         '/assets/img/placeholder-big.jpg'
 bio: "Cloud | Infra | MLOps Engineer"
