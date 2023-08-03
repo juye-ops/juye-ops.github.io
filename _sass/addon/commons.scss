@@ -777,10 +777,10 @@ $sidebar-display: "sidebar-display";
     }
 
     @for $i from 1 through $tab-count {
-      $offset: $tab-count - $i - 1;
+      $offset: $tab-count - $i - 3;
       $top: -$offset * $tab-height + ($tab-height - $tab-cursor-height) / 2;
 
-      @if $i < $tab-count - 1 {
+      @if $i < $tab-count - 3 {
         > li.active:nth-child(#{$i}),
         > li.nav-item:nth-child(#{$i}):hover {
           ~ li:last-child::after {
