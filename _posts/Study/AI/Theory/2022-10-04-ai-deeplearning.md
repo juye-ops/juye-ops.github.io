@@ -65,7 +65,7 @@ Generalization을 위한 규제를 정의
   - 집단이 퍼져있는 정도
 > bias and variance tradeoff: bias 혹은 variance를 조정하기 위해 데이터에 노이즈가 삽입되었다고 가정할 때, 서로 간의 Tradeoff 관계 형성
 
-<img src = "/static/img/AI/bias_variance.png" height=500px> 
+<img src = "/static/img/Study/AI/bias_variance.png" height=500px> 
 
 ### Bootstraping
 학습 데이터가 고정되어있다고 가정할 때, Subsampling된 데이터를 기반으로 여러 모델을 통해 metric을 추출하여 결과를 분석
@@ -76,7 +76,7 @@ Generalization을 위한 규제를 정의
 - Boosting
   - Subsampled 데이터를 학습한 모델들의 결과를 Sequential하게 취급하여 가중치 학습과 유사하게 처리함으로써 하나의 모델로 도출
 
-<img src = "/static/img/AI/bagging_boosting.png" height=500px> 
+<img src = "/static/img/Study/AI/bagging_boosting.png" height=500px> 
 
 
 ## 최적화
@@ -97,7 +97,7 @@ Batch size의 값을 작게 적용하면 Flat minimizer에 도달하고, 크게 
 - Generalization 성능이 향상
 - Train 성능과 Test 성능의 유사성을 실험적으로 도출
 
-<img src = "/static/img/AI/minimizer.png" height=500px>
+<img src = "/static/img/Study/AI/minimizer.png" height=500px>
 
 ### Stochastic Gradient descent
 데이터의 일부(Batch)만을 이용하여 경사하강법 적용
@@ -162,7 +162,7 @@ Short-term dependencies
 
 |RNN 구조|Gradient Vanishing/Exploding|
 |:-:|:-:|
-|<img src = "/static/img/AI/rnn.png">|<img src = "/static/img/AI/gradient-vanishing.png">|
+|<img src = "/static/img/Study/AI/rnn.png">|<img src = "/static/img/Study/AI/gradient-vanishing.png">|
 
 
 ### Long Short Term Memory(LSTM)
@@ -180,7 +180,7 @@ Short-term dependencies
   - Input gate: 현재 정보에서 Cell state에 등록할 정보를 선택
   - Output gate: 최종적으로 조작하여 다음 노드로 전달할 정보를 정리
 
-<img src = /static/img/AI/lstm_summary.png height = 400px>
+<img src = /static/img/Study/AI/lstm_summary.png height = 400px>
 
 #### GRU
 LSTM 구조에서 Gate를 2개로 줄여 구조적 단순함 식별
@@ -197,7 +197,7 @@ LSTM 구조에서 Gate를 2개로 줄여 구조적 단순함 식별
     - Self-Attention을 통해 인코딩된 각 단어를 일대일로 변환
 
 ---
-<img src="/static/img/AI/transformer1.png">
+<img src="/static/img/Study/AI/transformer1.png">
 
 예시 문장: The animal didn`t cross the street, because it was too tired
 
@@ -212,11 +212,11 @@ Self-Attention기법을 통해 it이라는 단어가 그 외의 모든 단어들
 ### Convolution
 |Filter 연산|
 |:-:|
-|<img src=/static/img/AI/convolution_0.png height=300px>|
+|<img src=/static/img/Study/AI/convolution_0.png height=300px>|
 
 |CNN 청사진 예시|
 |:-:|
-|<img src=/static/img/AI/convolution_1.png height=200px>|
+|<img src=/static/img/Study/AI/convolution_1.png height=200px>|
 
 #### Stride
 - 슬라이딩 간격 설정

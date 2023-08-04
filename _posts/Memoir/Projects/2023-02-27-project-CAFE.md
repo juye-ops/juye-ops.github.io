@@ -7,21 +7,31 @@ tags: ['AI', 'Backend', 'Infra', 'Python']
 render_with_liquid: false
 ---
 
-|⚙ 개발 환경|💡오픈소스 & 라이브러리|
-|:-:|:-:|
-|`Bash` `Python`|`BoT SORT` `FastAPI` `Re-ID` `White-box Cartoonization`|
+|**분류**|팀 프로젝트|
+|**참여 인원**|5명|
+|**소속**|Boostcamp AI Tech|
+|**개발 기간**|2022.12. ~ 2023.02.|
+|**비고**||
 
-
-# 📘 **상세 설명**
+# 📘 **프로젝트 소개**
 ---
-## **프로젝트 소개**
+## **개요**
 본 프로젝트는 기존의 모자이크를 대체하여 사람을 특정할 수 있을 정도로 얼굴을 노출시키지 않는 동시에 얼굴 표정, 시선, 눈빛과 같은 정보는 보존할 수 있는 새로운 방식을 제안합니다.
 
 본 프로젝트의 궁극적인 목적은 인적 자원을 감소하여 초상권 침해 방지와 영상의 분위기를 유지하는 데에 있습니다.
 
-## **개발 방법**
-### **Model Pipeline**
-<img src="/static/img/Projects/CAFE_pipeline.png">
+## **개발 환경 & 아키텍처**
+- Infra: `Bash` `Anaconda`
+- Object detection: `YoloV7`
+- Tracking: `BoT-SORT`
+- Cartoonize: `White-box Cartoonization`
+- Backend: `FastAPI`
+- Frontend: `Streamlit`
+
+# 📜 **개발 방법**
+---
+## **Model Pipeline**
+<img src="/static/img/Projects/CAFE/pipeline.png">
 _모델 파이프라인_
 
 1. 사용자로부터 영상과 영상의 주인공(target) 사진을 입력받는다.
@@ -32,22 +42,22 @@ _모델 파이프라인_
 3. 주인공 사진과 영상에 등장하는 인물들의 사진에 대한 feature를 뽑아낸 후, cosine similarity를 계산하여 target과 target이 아닌 얼굴들을 구분한다.
 4. target이 아닌 얼굴들에 대한 정보(from 2-1)를 이용하여, 모든 프레임의 얼굴을 swap 한다.
 
-### **Face Tracking**
-<img src="/static/img/Projects/CAFE_face-tracking.png">
+## **Face Tracking**
+<img src="/static/img/Projects/CAFE/face-tracking.png">
 _Face Tracking 구조_
 
 - `BoT SORT`(Bag of Tricks for Simple Online and Real-time Tracking)
   - 빠른 속도와 간단한 알고리즘으로 좋은 성능의 tracking을 구현
   - Kalman filter를 현재 프레임의 detection 결과와 예측한 bbox를 IoU과 appearance정보를 사용하여 매칭
 
-### **Robust Tracking with Face Re-identification**
+## **Robust Tracking with Face Re-identification**
 - 화면 전환이 빈번하게 발생하는 영상들에서 face tracking을 할 경우 화면이 넘어갈 때 서로 다른 인물의 얼굴이 우연히 화면의 같은 위치에 존재한다면 다른 사람임에도 동일한 Tracklet으로 판단
   - 각 인물의 tracking 결과 마다 하나의 대표 bounding box를 뽑는 과정에서 다른 인물이 tracking 결과를 대표하게 되는 문제점이 발생
   - 단순히 bounding box간 IoU에만 근거하여 tracking을 하는 것이 아니라, IoU가 높더라도 bounding box의 feature간 일정 수준이상 유사하지 않으면 tracking을 공유하지 않도록 face `re-identification`을 사용
 
 
-### **Cartoonize**
-<img src="/static/img/Projects/CAFE_cartoonize.png">
+## **Cartoonize**
+<img src="/static/img/Projects/CAFE/cartoonize.png">
 _Cartoonize 항목 및 특징_
 
 - Cartoonize: Neural Style Transfer GAN 기법을 이용한 만화화 기법을 명명
@@ -55,26 +65,26 @@ _Cartoonize 항목 및 특징_
   - 전체 이미지를 Cartoonize하는 모델의 경우, 한 번의 inference를 진행하여 얼굴 영역만 crop하여 사용하면 되므로 일정한 서비스 시간을 제공
   - 서비스 시간과 Cartoonize된 결과물의 완성도를 고려하여 `White-Box cartoonization`을 채택하였다.
 
-### **얼굴 유사도 검사**
+## **얼굴 유사도 검사**
 
-<img src="/static/img/Projects/CAFE_similarity.png">
+<img src="/static/img/Projects/CAFE/similarity1.png">
 _유사도 검사 요약도_
 
 1. 영상에서 tracking을 수행한 각각의 결과(tracklet) 대해 confidence score를 기반으로 tracklet을 대표하는 bbox를 한 개씩 선택한다.
 2. target image와의 similarity를 계산한다.
 3. target image와 계산된 similarity를 통해 같은 인물에 대한 매칭 결과를 얻을 수 있도록 유사도 검사를 두 단계로 수행한다.
 
-<img src="/static/img/Projects/CAFE_similarity-1.png">
+<img src="/static/img/Projects/CAFE/similarity2.png">
 _1차 유사도 검사_
 
-<img src="/static/img/Projects/CAFE_similarity-2.png">
+<img src="/static/img/Projects/CAFE/similarity3.png">
 _2차 유사도 검사_
 
 - 1차 유사도 검사를 통해, target image에 대해 tracking된 image 중 가장 유사도가 높은 얼굴을 추출
 - 2차 유사도 검사를 통해, 1차에서 추출한 target image와 가장 유사하다고 판단한 얼굴과 tracking된 image들로 유사도 검사를 수행
   - 영상 내의 인물의 모습에 기반하여 매칭을 수행하므로, 유사도 검사 시 사용자가 제공한 다양한 target image에 대해 일관된 매칭 결과를 도출 가능
 
-### **Face Swapping**
+## **Face Swapping**
 - Tracking 및 Similarity Check 과정을 통해 얻은 주인공이 아닌 얼굴들에 대한 Bbox 정보를 이용하여, 모든 Bbox의 크기를 기존의 2배로 확장
 - 해당 영역(얼굴)의 이미지를 cartoonize된 이미지로 대체하였으며, 단순히 해당 영역의 이미지를 덮어씌우는 경우 이미지의 경계가 부각되는 부자연스러운 장면을 생성하므로 pixel-wise weighted sum을 통한 edge smoothing을 고안
   - 이미지에 곱해줄 weights를 만드는 방식으로 총 세 가지 방법을 구성
@@ -82,18 +92,36 @@ _2차 유사도 검사_
     2. 각 pixel과 영역 중심 pixel 사이의 L2 distance 계산 후 normalize, thresholding 하여 사용
     3. 이미지의 중심 영역은 1로 설정하고, 이미지의 경계에 가까워 질수록 0에 가까운 값을 padding 하여 사용(선별)
 
-<img src="/static/img/Projects/CAFE_edge-smoothing.png">
+<img src="/static/img/Projects/CAFE/edge-smoothing.png">
 _최종 edge smoothing_
 
-### **Service Flow**
-<img src="/static/img/Projects/CAFE_serviceflow.png">
+## **Service Flow**
+<img src="/static/img/Projects/CAFE/serviceflow.png">
 _서비스 흐름 요약도_
 
-1. Streamlit을 통해 사용자와 상호작용하며, 주인공 이미지와 영상을 입력받고, 결과물을 다운로드할 수 있다.
-2. Streamlit을 통해 입력받은 이미지와 영상은 Server file storage에 저장되며, FastAPI를 통해 Detection & Tracking, Cartoonize 연산을 요청한다.
-3. Detection & Tracking은 PyTorch 환경에서 실행되고, Cartoonize는 Tensorflow 환경에서 실행된다. 이 과정은 병렬적으로 진행되며, Tracking 결과는 MongoDB에 저장한다.
-4. 위의 과정이 끝난 이후, backend에서 MongoDB에 저장된 tracking 정보를 사용하여 Face swapping 과정을 수행한다.
-5. Streamlit을 통해 사용자가 최종 결과물의 재생 및 저장한다.
+1. `Streamlit`을 통해 사용자와 상호작용하며, 주인공 이미지와 영상을 입력받고, 결과물을 다운로드할 수 있다.
+2. `Streamlit`을 통해 입력받은 이미지와 영상은 Server file storage에 저장되며, `FastAPI`를 통해 Detection & Tracking, Cartoonize 연산을 요청한다.
+3. Detection & Tracking은 `PyTorch` 환경에서 실행되고, Cartoonize는 Tensorflow 환경에서 실행된다. 이 과정은 병렬적으로 진행되며, Tracking 결과는 `MongoDB`에 저장한다.
+4. 위의 과정이 끝난 이후, backend에서 `MongoDB`에 저장된 tracking 정보를 사용하여 Face swapping 과정을 수행한다.
+5. `Streamlit`을 통해 사용자가 최종 결과물의 재생 및 저장한다.
+
+## **Result**
+
+|Target|Before|After|
+|:-:|:-:|:-:|
+|<img src="/static/img/Projects/CAFE/minji.png" width=150px>|<img src="/static/img/Projects/CAFE/basic_minji.gif">|<img src="/static/img/Projects/CAFE/result_minji.gif">|
+|<img src="/static/img/Projects/CAFE/haerin.png" width=150px>|<img src="/static/img/Projects/CAFE/basic_haerin.gif">|<img src="/static/img/Projects/CAFE/result_haerin.gif">|
+|<img src="/static/img/Projects/CAFE/jaeseok.png" width=150px>|<img src="/static/img/Projects/CAFE/basic_jaeseok.gif">|<img src="/static/img/Projects/CAFE/result_jaeseok.gif">|
+
+### Discussion
+
+- 첫 번째 결과의 tracking result를 보면 배경 및 의상에서도 얼굴이 인식되는 것을 확인할 수 있다. CAFE는 confidence thresholding을 통해 이러한 상황에서도 강인하게 동작한다.
+- 두 번째, 세 번째 결과를 보면 화면 전환에 의해 동일 인물에 대한 여러 개의 tracklet이 생성되지만, 우리가 제안한 two-step similarity check 과정을 통해 성공적으로 target과 extra를 구분하여 주인공이 아닌 인물들에 대해 일관된 cartoonize를 적용하는 것을 확인할 수 있다.
+
+### 영상 출처
+1. [https://www.youtube.com/watch?v=SP-LJqVgQuw](https://www.youtube.com/watch?v=SP-LJqVgQuw)
+2. [https://www.youtube.com/watch?v=GmAwsAB7nhw](https://www.youtube.com/watch?v=GmAwsAB7nhw)
+3. [https://www.youtube.com/watch?v=tL20swtWOqI](https://www.youtube.com/watch?v=tL20swtWOqI)
 
 # 👪 **역할 및 개발 내용**
 ---

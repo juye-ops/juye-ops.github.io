@@ -3,23 +3,23 @@ title: '객체 탐지 데이터 및 학습 관리를 위한 웹 기반 딥러닝
 author: juye-ops
 date: 2021-01-01 10:00:00 +0900
 categories: ['Memoir', 'Projects']
-tags: ['Infra', 'AI', 'Object detection', 'Communication']
+tags: ['Infra', 'AI', 'VueJS', 'Docker', 'Flask', 'Object detection', 'Communication']
 render_with_liquid: false
 ---
 
-|⚙ 개발 환경|💡오픈소스 & 라이브러리|
-|:-:|:-:|
-|`Docker` `MongoDB` `Python` `RabbitMQ` `Vue`|`COCO Annotator` `Flask` `YoloV5`|
+|**분류**|팀 프로젝트|
+|**참여 인원**|5명|
+|**소속**|IXLAB|
+|**개발 기간**|2021.01. ~ 2021.08.|
+|**비고**||
 
-# 📘 **상세 설명**
+# 📘 **프로젝트 소개**
 ---
 
 > 본 연구는 2020년도 경상북도 4차산업혁명 핵심기술개발사업의 지원을 받아 수행한 연구입니다.  
 {: .prompt-info }
 
-
-## **프로젝트 소개**
-
+## **개요**
 Object detection 학습 환경을 GUI로 제공함으로써 누구나 쉽게 접근할 수 있도록 장려하고자 합니다.  
 
 오픈소스인 [COCO Annotator](https://github.com/jsbroks/coco-annotator)를 응용하여 제작한 웹 기반 **딥러닝 학습 제공 시스템**입니다.  
@@ -28,18 +28,34 @@ Object detection 기법에 대한 Data 관리, 학습, 추론, 결과 식별 등
 
 *연구실에서 제안한 본 프로젝트의 궁극적인 목적은 `Few-shot Learning` 기법에 편의를 제공하는 것에 있습니다.*
 
-## **개발 방법**
-- 학습 모델 Pool 개발
-  - Pool에 다량의 모델을 등록하여 학습 시 클라이언트가 웹 뷰에서 **학습 모델을 직접 선택**
+## **개발 환경 & 아키텍처**
+- Infra: `Docker`
+- AMQP: `RabbitMQ`
+- Frontend: `VueJS`
+- Backend: `Python` `Flask`
+- Database: `MongoDB`
+- Object detection: `YoloV5`
+- Open source: `COCO Annotator`
+
+# 📜 **개발 방법**
+---
+## **기본 COCO Annotator 기능**
+- 데이터 어노테이션 툴
+  - 프로젝트 별 데이터 관리
+  - 클라이언트가 생성한 어노테이션 레이블 포맷 파일 생성
+
+## **학습 모델 Pool 개발**
+- 백엔드에 여러 모델을 등록
+  - 학습 시 클라이언트가 웹 뷰에서 **학습 모델을 직접 선택**
 - 학습 및 추론
-  - 클라이언트가 직접 하이퍼파라미터 입력
-  - REST API를 이용하여 서버에서 학습 진행
-  - 클라이언트가 선택한 모델 별 Label format 변환
+  - 클라이언트가 직접 입력한 모델, 하이퍼파라미터 등의 데이터를 RestAPI를 통해 전달
+  - 학습 요청 시 클라이언트가 선택한 모델에 따른 Label format 변환
 - 학습 과정 모니터링
   - Socket을 연결하여 실시간 학습 로그를 시각화
-- 학습 결과로 추출된 가중치 파일 관리
-  - 서버를 통한 실제 파일 등록
-  - `MongoDB`를 이용한 성능 지표 및 하이퍼파라미터 기록
+
+## **학습 결과로 추출된 가중치 파일 관리**
+- 서버를 통한 실제 파일 등록
+- `MongoDB`를 이용한 성능 지표 및 하이퍼파라미터 기록
 
 # 👪 **역할 및 개발 내용**
 ---

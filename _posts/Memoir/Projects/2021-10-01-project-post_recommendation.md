@@ -3,86 +3,101 @@ title: '개인 맞춤 정보 제공 전자 게시판'
 author: juye-ops
 date: 2021-10-01 10:00:00 +0900
 categories: ['Memoir', 'Projects']
-tags: ['Vue.js', 'Flask', 'Flask', 'Crawl']
+tags: ['VueJS', 'Flask', 'Flask', 'Selenium']
 render_with_liquid: false
 ---
 
-|⚙ 개발 환경|💡오픈소스 & 라이브러리|
-|:-:|:-:|
-|`MongoDB` `Python` `Vue`|`Flask` `Gensim` `Selenium`|
+|**분류**|팀 프로젝트|
+|**참여 인원**|5명|
+|**소속**|IXLAB|
+|**개발 기간**|2021.10. ~ 2022.04.|
+|**비고**|교내 도서관에 전시|
 
-# 📘 **상세 설명**
+# 📘 **프로젝트 소개**
 ---
-## **프로젝트 소개**
+## **개요**
 > 기존 활용 방안은 카드형 학생증의 RFID와 모바일 학생증의 QR 코드를 동시에 지원하는 것이었지만, RFID의 정보 보안에 따라 QR 코드만 지원하도록 변경되었습니다.
 {: .prompt-info }
 
 교내외 정보에 대한 웹 크롤링 및 데이터 마이닝을 진행하고 교내 앱에 존재하는 모바일 학생증의 QR코드를 입력한 사용자의 데이터를 바탕으로 전자 게시판을 통하여 사용자에게 맞춤형 정보를 제공합니다.  
 본 프로젝트는 스마트 캠퍼스 구축을 위해 제작되었으며, 금오공과대학교 도서관 지하 1층에 비치되어 있습니다.
 
-![Desktop View](/static/img/Projects/PR_blueprint.png)
+<img src="/static/img/Projects/PR/blueprint.png" width=500px>
 _프로젝트 구조도_
 
-## **개발 방법**
-> ### 제안하는 성능 평가 지표
+## **개발 환경 & 아키텍처**
+- Frontend: `VueJS`
+- Backend: `Python` `Flask`
+- Database: `MongoDB`
+- Represent Text: `Gensim`
+- Crawling: `Selenium`
+
+
+# 📜 **개발 방법**
+---
+> **제안하는 성능 평가 지표**
 > - [x]  QR 코드 인식 속도 1초 이내
 > - [x]  시스템 반응 속도(입력 인지 후 데이터 처리부터 표출까지의 속도) 2초 이내
 > - [x]  제공할 정보 종류 5종 이상 (행사 정보, 학사 정보, 취업 정보 등)
 
-### **Frontend**
-- `Vue` 기반 대시보드 구현
-- Slider API를 통한 데이터 표출
-  - 로그인 전 크롤링에서 추출한 10개의 기본 기사 표출
-  - Backend에서 로그인 식별 시 변경된 데이터 감지 후 표출 정보 전환
+## 데이터 정제
+- 교내 학생의 특징에 대한 키워드 정리 및 Word Cloud 생성
 
-### **Backend**
+## **Frontend**
+- 게시글 표출 UI 구현
+- Slider API를 통한 UI 향상
+- Backend와 Socket을 통한 로그인 정보 공유
+  - 로그인 전: 크롤링에서 추출한 10개의 기본 기사 표출
+  - 로그인 후: 로그인 정보에 부합하는 데이터 추출 요청 후 표출 정보 전환
+
+## **Backend**
 - 로그인 정보 없을 시 기본 기사 전송
 - Kiosk 통신
-  - Kiosk에 QR코드 입력 시 `REST API`를 통한 로그인 세션 구현
-  - 클라이언트 요청 시 기존 교내 앱인 금오톡톡 API를 통해 스마트 폰으로 기사 정보 전송
-- 로그인
-  - 소켓을 통한 로그인 정보 전송
-  - 사용자의 특징에 대한 키워드 정리 및 Word Cloud 저장
-  - 로그인 한 사용자의 정보와 데이터베이스 내의 기사 간의 유사도를 비교한 후 우선순위 정렬
-  - `Gensim`을 이용한 텍스트 요약 진행
-  - Frontend에 요약된 기사 표출
-  - 3분 후 자동 로그아웃
+  - Edge에 QR코드 입력 시 `REST API`를 통한 로그인 세션 구현
+  - 클라이언트 요청 시 기존 교내 앱인 '금오톡톡' API를 통해 스마트 폰으로 기사 정보 전송
 - 크롤링
-    - 매일 3 AM 네이버 뉴스의 크롤링을 통한 데이터베이스 갱신 진행
+    - 매일 3 AM 네이버 뉴스의 크롤링을 통한 데이터베이스 갱신
+- 로그인
+  - Frontend와 소켓을 통한 로그인 정보 공유
+  - 사용자의 정보와 Word cloud 매칭 후 데이터베이스 내의 기사 간의 유사도를 비교한 후 우선순위 정렬
+  - `Gensim`을 이용한 텍스트 요약 진행
+  - Frontend에 요약된 기사 전송
+  - 3분 후 자동 로그아웃
 
-### **Kiosk**
-- `html` 기반 웹 뷰로 제공
+## **Edge**
+- 모바일 학생증의 QR 코드를 통한 로그인 기능 제공
+- `html` 기반 웹 뷰 제공
   - 메인 화면
-      - 로그인 시도 화면 이동
+    - 로그인 시도 화면 이동 버튼
   - 로그인 시도 화면
-      - 메인 화면 이동 버튼 처리
-      - 로그인 성공/실패 처리
-      - 20초 간의 입력 대기 후 메인화면 이동
+    - 메인 화면 이동 버튼
+    - 로그인 성공/실패 처리
+    - 20초 간의 입력 대기 후 메인화면 이동
   - 존재하지 않는 학번(교수번호 등)에 대한 로그인 실패 화면
-      - 메인 화면 이동 버튼 처리
-      - 5초 후 메인화면 이동
+    - 메인 화면 이동 버튼 처리
+    - 5초 후 메인화면 이동
   - 로그인 성공 화면
-      - 교내 메신저 서비스 ‘금오톡톡’ 을 통한 기사 전송
-      - 로그아웃 및 메인 화면 이동 버튼 처리
+    - 교내 메신저 서비스 '금오톡톡' 을 통한 기사 전송
+    - 로그아웃 및 메인 화면 이동 버튼 처리
 - `Javascript`를 통한 QR코드 입력 이벤트 처리
     - QR코드 입력 방식이 키보드와 동일
     - Key Listener를 통한 QR입력 처리 진행
 
 
-<img src="/static/img/Projects/PR_system.png" width=475px>
+<img src="/static/img/Projects/PR/system.png" width=475px>
 _교내 도서관에 설치한 시스템_
 
 # 👪 **역할 및 개발 내용**
 ---
 - Infra 구축
   - On-prem 서버 관리
-  - Kiosk용 Edge device 관리
-  - Kiosk / Backend / Frontend(Client) 간의 Proxy 기반 통신 구성
+  - Edge device 관리
+  - Edge / Backend / Frontend(Client) 간의 Proxy 기반 통신 구성
   - `REST API` 및 `Socket` 기반 **통신망** 관리 및 운용
   - Backend API 구현 및 기능 연계
 - `MongoDB` 관리 및 운용
 - Kiosk 전 기능 개발
-- 로그인 세션 구현
+- 로그인 구현
 
 # 💡 **개발 경험 및 후기**
 ---
@@ -102,7 +117,7 @@ _교내 도서관에 설치한 시스템_
 # 🔗 관련 링크
 ---
 
-<img src="/static/img/Projects/PR_member.png" width=400px>
+<img src="/static/img/Projects/PR/member.png" width=400px>
 _교수 및 개발원_
 
 - [금오공대, 'AI·빅데이터실습실' 개소](http://news.unn.net/news/articleView.html?idxno=529832)

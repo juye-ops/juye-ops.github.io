@@ -7,14 +7,15 @@ tags: ['AI', 'Object detection', 'YoloV5', 'OpenCV', 'KIIT']
 render_with_liquid: false
 ---
 
-|⚙ 개발 환경|💡오픈소스 & 라이브러리|
-|:-:|:-:|
-|`Python`|`YoloV5` `OpenCV`|
+|**분류**|팀 프로젝트|
+|**참여 인원**|2명|
+|**소속**||
+|**개발 기간**|2021.09. ~ 2021.12.|
+|**비고**||
 
-
-# 📘 **상세 설명**
+# 📘 **프로젝트 소개**
 ---
-## **프로젝트 소개**
+## **개요**
 본 프로젝트는 Document Layout Analysis 분야에서 레이아웃을 검출하기 위한 학습 모델을 제시합니다.  
 약 36만 장으로 구성된 PublayNet의 극히 일부만 사용하여 연구를 진행하였습니다.
 
@@ -23,62 +24,72 @@ render_with_liquid: false
 
 Document objects 배치 방법에 따라 최대 **94.57%, 69.51%의 mAP@0.5 정확도를 도출**하였습니다.
 
-![Desktop View](/static/img/Projects/DLA_blueprint.png)
+<img src="/static/img/Projects/DLA/blueprint.png">
 _프로젝트 요약도_
 
-## **개발 방법**
+## **개발 환경 & 아키텍처**
+- Backend: `Python`
+- Object detection: `YoloV5`
+- Image process: `OpenCV`
 
-### **데이터셋**
-- [PublayNet](https://developer.ibm.com/exchanges/data/all/publaynet/)
-  - Document layout analysis를 위한 논문, 기사 이미지
-  - 96GB / 약 36만 장
-  - 카테고리 = Figure, Text, Title, **List**, Table
+# 📜 **개발 방법**
+---
+## **기본 데이터셋**
+### [PublayNet](https://developer.ibm.com/exchanges/data/all/publaynet/)
+- Document layout analysis를 위한 논문, 기사 이미지
+- 96GB / 약 36만 장
+- 카테고리 = **Figure**, **Text**, **Title**, List, **Table**
 - 데이터셋 재구성
   - Train 양 조정
     - Random Augmentation을 위해 PublayNet에서 제공하는 Train 0 만 활용
-    - Document object를 백지 상에 배치하여 15000, 30000, 45000 장의 이미지를 재생성
+    - Document object를 랜덤으로 백지 상에 배치하여 15000, 30000, 45000 장의 이미지를 재생성
   - EDA 후 카테고리 재구성
     - List가 Text와 너무 유사한 양상으로 표현하므로 제거
-    - Title은 ```OpenCV```를 활용하여 특정 좌표보다 위에 존제하는 대제목을 Title로 두고, 아래에 존재하는 소제목은 Subtitle로 분류
-    - 기존 Figure는 그림과 그래프로 직접 재분류하여 학습
+    - Title은 `OpenCV`를 활용하여 특정 좌표보다 위에 존제하는 대제목을 *Title*로 두고, 아래에 존재하는 소제목은 *Subtitle*로 분류
+    - 기존 *Figure*는 *Figure(그림)*과 *Graph(그래프)*로 재분류하여 학습
   - 최종 데이터셋
     - 데이터셋 수: 15000, 30000, 45000 장
-    - 카테고리: Figure, **Graph**, **Subtitle**, Table, Text, Title
+    - 카테고리: **Figure**, Graph, Subtitle, **Table**, **Text**, **Title**
 
-### **실험**
-- 배치 방법에 따른 정확도 분석
-  - RPLC: 백지 상에 Document object를 랜덤으로 배치 - **94.57%**(mAP@0.5)
-    1. Zero like를 함수를 이용한 여백 이미지 행렬과 Masking 행렬 구비
-    2. 임의의 Document object를 선택
-    3. 이미지 행렬에 Document object 부여
-       - 랜덤 좌표 5번 내에 Masking에 겹치지 않을 시 Document Object 배치
-       - 정상적으로 Document object가 배치될 시 해당 영역에 대해 Masking
-    4. 문서 영역의 50%를 초과할 때 배치 종료 후 데이터 생성
-  - RPSLC: 1열 혹은 2열로 구성된 기사/논문 형식으로 배치 - **69.51%**(mAP@0.5)
-    1. 대 제목을 특정 확률로 가장 상단에 배치
-    2. $y$ 좌표를 고정하고 $x_1$(1열), $x_2$(2열) 좌표를 선정
-    3. 1열에 가장 먼저 Document object를 배치 후 $y$값 수정
-    4. 1열과 2열 중 $y$값이 낮은 열에 Object document 배치
-    5. 사전에 선정한 $y_{Thres}$ 좌표를 초과할 시 데이터 생성
+## **Object 랜덤 배치 알고리즘**
+- 같은 확률로 배치할 시 Subtitle과 같이 **빈도 수가 잦은 이미지의 정확도 하락**
+  - (배치되는 카테고리 총 개수) / (전체 이미지 수)의 확률로 배치 시 **이미지가 많은 카테고리가 독점**하는 현상 발생
+  - 최종적으로 위의 방법에서 **정규 분포를 따르는 확률**로 재조정
 
-![Desktop View](/static/img/Projects/DLA_RPLCvsRPSLC.png)
+### RPLC vs RPSLC
+- RPLC: 백지 상에 Document object를 랜덤으로 배치
+  1. Zero like를 함수를 이용한 여백 이미지 행렬과 Masking 행렬 구비
+  2. 임의의 Document object를 선택
+  3. 이미지 행렬에 Document object 부여
+     - 랜덤 좌표 5번 내에 Masking에 겹치지 않을 시 Document Object 배치
+     - 정상적으로 Document object가 배치될 시 해당 영역에 대해 Masking
+  4. 문서 영역의 50%를 초과할 때 배치 종료 후 데이터 생성
+- RPSLC: 1열 혹은 2열로 구성된 기사/논문 형식으로 배치
+  1. 대 제목을 특정 확률로 가장 상단에 배치
+  2. $y$ 좌표를 고정하고 $x_1$(1열), $x_2$(2열) 좌표를 선정
+  3. 1열에 가장 먼저 Document object를 배치 후 $y$값 수정
+  4. 1열과 2열 중 $y$값이 낮은 열에 Object document 배치
+  5. 사전에 선정한 $y_{Thres}$ 좌표를 초과할 시 데이터 생성
+
+<img src="/static/img/Projects/DLA/RPLCvsRPSLC.png">
 _RPLC(좌) 이미지와 RPSLC(우) 이미지_
+
+## **실험**
+- 배치 방법에 따른 정확도 분석
+  - RPLC: **94.57%**(mAP@0.5)
+  - RPSLC: **69.51%**(mAP@0.5)
 
 |RPLC 데이터 학습 시 추론 결과|RPSLC 데이터 학습 시 추론 결과|
 |:-:|:-:|
-|<img src="/static/img/Projects/DLA_RPLC_inference.png">|<img src="/static/img/Projects/DLA_RPSLC_inference.png">|
+|<img src="/static/img/Projects/DLA/RPLC_inference.png">|<img src="/static/img/Projects/DLA/RPSLC_inference.png">|
 
 # 👪 **역할 및 개발 내용**
 ---
 - **아이디어 제시** 및 **연구 방향성 주도**
 - `Linux` 기반의 **학습 서버**(교내 지원) **관리** 및 **환경 설정**
 - `OpenCV` 라이브러리를 이용한 **데이터 생성 알고리즘** 고안 및 구현
-  - 레이아웃 배치 빈도
-    - 같은 확률로 배치할 시 Subtitle과 같이 **빈도 수가 잦은 이미지의 정확도 하락**
-    - (배치되는 카테고리 총 개수) / (전체 이미지 수)의 확률로 배치 시 **이미지가 많은 카테고리가 독점**하는 현상 발생
-    - 최종적으로 위의 방법에서 **정규 분포를 따르는 확률**로 재조정
 - **배치 알고리즘 테스트**
-    - 레이아웃 배치 빈도 외에 데이터의 타당성을 따지기 위해 **잦은 시행착오** 요구
+  - 레이아웃 배치 빈도 외에 데이터의 타당성을 따지기 위해 **잦은 시행착오** 요구
 - 학습용 **신경망 모델 선별**
 
 # 💡 **개발 경험 및 후기**

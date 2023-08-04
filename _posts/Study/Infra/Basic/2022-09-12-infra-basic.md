@@ -76,7 +76,7 @@ AIaaS(AI as a service): 서비스형 인공지능으로써, 다양한 AI 기반 
 
 
 ### 하이브리드 클라우드(Hybrid cloud)
-![Desktop View](/static/img/Infra/analytics-hybrid.svg)
+![Desktop View](/static/img/Study/Infra/analytics-hybrid.svg)
 _하이브리드 클라우드 구조_
 
 - 각 시스템의 특성에 맞게 온프레미스와 클라우드를 함께 사용하기도 함
