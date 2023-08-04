@@ -8,8 +8,8 @@ order: 3
 ## [Cotton Candy](/posts/project-cotton_candy/)
 웹 기반 Private 클라우드 서비스
 - Docker 기반 인프라 구축
-- Fast API 기반 Micro-Service Architecture
-- MySQL 스키마 설계 및 구축
+- Fast API 기반 Micro-Service Architecture 설계 및 구축
+- MySQL 스키마 설계 및 DAO 구현
 - Proxy 통신에 따른 보안 강화
 - 오픈소스(Docker-py, Code-server 등) API 활용에 따른 개발 효율 증대
 
