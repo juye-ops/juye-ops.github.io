@@ -1,5 +1,5 @@
 ---
-title: 'Cotton Candy - Docker (진행 중)'
+title: 'On Premiser - Docker (진행 중)'
 author: juye-ops
 date: 2023-04-24 10:00:00 +0900
 categories: ['Memoir', 'Projects']
@@ -16,15 +16,12 @@ render_with_liquid: false
 # 📘 **상세 설명**
 ---
 ## **프로젝트 소개**
-- ***Cloud**: 모두가 같은 구름을 본다는 의미에서 명명*
-- ***Cotton candy(솜사탕)**: 자신에게 구름(클라우드)처럼 보이는 솜사탕을 의미*
-
 Host PC를 Private CSP로 지정하여 웹 기반 클라우드 개발 환경(IDE)을 구축합니다.  
 누구나 쉽게 이용할 수 있도록 Easy-to-build 시스템을 지향합니다.  
 클라이언트는 Host의 IP 혹은 도메인을 바탕으로 외부에서 접근한 후, IaaS, PaaS 컨테이너를 생성하여 개발을 진행할 수 있습니다.  
 <!-- 나아가, Host PC를 Control plane으로 지정하여 쿠버네티스 환경을 구축하거나 모니터링 기능도 제공합니다.   -->
 
-<img src="/static/img/Projects/Cotton/systemflow.svg">
+<img src="/static/img/Projects/Premiser/systemflow.svg">
 _프로젝트 구조도_
 
 ## **개발 환경 & 아키텍처**
@@ -144,4 +141,4 @@ TLS를 요구한다는 것까지 이해했는데, 이 점을 구체적으로 적
 
 # 🔗 관련 링크
 ---
-[Github Repo](https://github.com/juye-ops/cotton-candy)
+[Github Repo](https://github.com/juye-ops/on-premiser)

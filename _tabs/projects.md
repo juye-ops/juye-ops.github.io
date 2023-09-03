@@ -5,7 +5,7 @@ icon: fa-solid fa-newspaper
 order: 3
 ---
 
-## [Cotton Candy](/posts/project-cotton_candy/)
+## [On Premiser](/posts/project-on_premiser/)
 웹 기반 Private 클라우드 서비스
 - Docker 기반 인프라 구축
 - Fast API 기반 Architecture 설계 및 구축
