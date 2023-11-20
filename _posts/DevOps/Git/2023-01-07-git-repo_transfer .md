@@ -1,5 +1,5 @@
 ---
-title: '[Git] 저장소(Repository) 병합'
+title: '[Git]저장소(Repository) 병합'
 author: juye-ops
 date: 2023-01-07 10:00:00 +0900
 categories: ['DevOps', 'Git']

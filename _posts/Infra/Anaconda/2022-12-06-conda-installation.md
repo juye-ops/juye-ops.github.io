@@ -1,5 +1,5 @@
 ---
-title: '[Anaconda] 설치'
+title: '[Anaconda]설치'
 author: juye-ops
 date: 2022-12-06 10:00:00 +0900
 categories: ['Infra', 'Anaconda']

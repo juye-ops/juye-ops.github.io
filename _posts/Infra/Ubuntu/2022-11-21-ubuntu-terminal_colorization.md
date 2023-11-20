@@ -1,5 +1,5 @@
 ---
-title: '[Ubuntu] Terminal 색상'
+title: '[Ubuntu]Terminal 색상'
 author: juye-ops
 date: 2022-11-21 10:00:00 +0900
 categories: ['Infra', 'Ubuntu']

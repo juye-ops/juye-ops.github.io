@@ -1,5 +1,5 @@
 ---
-title: '[Kubernetes] Controller: Job Controller'
+title: '[Kubernetes]Controller: Job Controller'
 author: juye-ops
 date: 2023-05-10 01:00:00 +0900
 categories: ['Infra', 'Kubernetes']

@@ -1,5 +1,5 @@
 ---
-title: '[Kubernetes] Headless Service'
+title: '[Kubernetes]Headless Service'
 author: juye-ops
 date: 2023-05-22 00:00:00 +0900
 categories: ['Infra', 'Kubernetes']

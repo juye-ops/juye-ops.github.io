@@ -1,5 +1,5 @@
 ---
-title: '[Kubernetes] 환경 구성'
+title: '[Kubernetes]환경 구성'
 author: juye-ops
 date: 2023-04-18 01:00:00 +0900
 categories: ['Infra', 'Kubernetes']

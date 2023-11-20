@@ -1,5 +1,5 @@
 ---
-title: '[MLOps] Tensorboard & Wandb 학습 모니터링'
+title: '[MLOps]Tensorboard & Wandb 학습 모니터링'
 author: juye-ops
 date: 2022-09-29 10:00:00 +0900
 categories: ["AI", "MLOps"]

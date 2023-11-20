@@ -1,5 +1,5 @@
 ---
-title: '[Infra] RestAPI'
+title: '[Infra]RestAPI'
 author: juye-ops
 date: 2023-01-11 10:00:00 +0900
 categories: ['Infra', '_Infra']

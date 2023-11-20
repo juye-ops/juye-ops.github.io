@@ -1,5 +1,5 @@
 ---
-title: '[Kubernetes] Pod: Init container를 적용한 Pod'
+title: '[Kubernetes]Pod: Init container를 적용한 Pod'
 author: juye-ops
 date: 2023-04-20 00:00:00 +0900
 categories: ['Infra', 'Kubernetes']

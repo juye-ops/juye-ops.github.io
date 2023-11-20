@@ -1,5 +1,5 @@
 ---
-title: '[Kubernetes] Pod: 실습'
+title: '[Kubernetes]Pod: 실습'
 author: juye-ops
 date: 2023-05-07 02:00:00 +0900
 categories: ['Infra', 'Kubernetes']

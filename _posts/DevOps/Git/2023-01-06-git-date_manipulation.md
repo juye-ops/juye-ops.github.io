@@ -1,5 +1,5 @@
 ---
-title: '[Git] 이전 날짜로 커밋'
+title: '[Git]이전 날짜로 커밋'
 author: juye-ops
 date: 2022-01-06 10:00:00 +0900
 categories: ['DevOps', 'Git']

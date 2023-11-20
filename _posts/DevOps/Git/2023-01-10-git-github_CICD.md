@@ -1,5 +1,5 @@
 ---
-title: '[DevOps] Github Action을 이용한 CI/CD'
+title: '[DevOps]Github Action을 이용한 CI/CD'
 author: juye-ops
 date: 2023-01-10 10:00:00 +0900
 categories: ['DevOps', 'Git']

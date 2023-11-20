@@ -1,5 +1,5 @@
 ---
-title: '[Infra] Infra Components'
+title: '[Infra]Infra Components'
 author: juye-ops
 date: 2022-09-14 10:00:00 +0900
 categories: ['Infra', '_Infra']

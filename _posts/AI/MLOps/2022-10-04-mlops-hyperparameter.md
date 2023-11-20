@@ -1,5 +1,5 @@
 ---
-title: '[MLOps] 하이퍼 파라미터 튜닝'
+title: '[MLOps]하이퍼 파라미터 튜닝'
 author: juye-ops
 date: 2022-10-04 10:00:00 +0900
 categories: ["AI", "MLOps"]

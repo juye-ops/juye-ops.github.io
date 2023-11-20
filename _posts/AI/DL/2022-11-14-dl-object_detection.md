@@ -1,5 +1,5 @@
 ---
-title: '[AI] Object Detection 기초'
+title: '[AI]Object Detection 기초'
 author: juye-ops
 date: 2022-11-14 10:00:00 +0900
 categories: ["AI", "Deep Learning"]

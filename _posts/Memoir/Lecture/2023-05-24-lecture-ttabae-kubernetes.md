@@ -1,5 +1,5 @@
 ---
-title: '[회고] 따배쿠: 따라하면서 배우는 쿠버네티스'
+title: '[회고]따배쿠: 따라하면서 배우는 쿠버네티스'
 author: juye-ops
 date: 2023-05-24 00:00:00 +0900
 categories: [Memoir, Lecture]

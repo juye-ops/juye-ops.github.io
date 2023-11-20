@@ -1,5 +1,5 @@
 ---
-title: '[Kubernetes] Controller: DaemonSet'
+title: '[Kubernetes]Controller: DaemonSet'
 author: juye-ops
 date: 2023-05-09 02:00:00 +0900
 categories: ['Infra', 'Kubernetes']

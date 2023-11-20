@@ -1,5 +1,5 @@
 ---
-title: '[Kubernetes] Trouble Shooting'
+title: '[Kubernetes]Trouble Shooting'
 author: juye-ops
 date: 2023-04-18 02:00:00 +0900
 categories: ['Infra', 'Kubernetes']

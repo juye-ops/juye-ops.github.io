@@ -1,5 +1,5 @@
 ---
-title: '[AI] Deep Learning 이란'
+title: '[AI]Deep Learning 이란'
 author: juye-ops
 date: 2022-10-04 10:00:00 +0900
 categories: ["AI", "Deep Learning"]

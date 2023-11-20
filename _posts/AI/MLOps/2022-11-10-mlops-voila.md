@@ -1,5 +1,5 @@
 ---
-title: '[MLOps] Voila'
+title: '[MLOps]Voila'
 author: juye-ops
 date: 2022-11-10 10:00:00 +0900
 categories: ["AI", "MLOps"]

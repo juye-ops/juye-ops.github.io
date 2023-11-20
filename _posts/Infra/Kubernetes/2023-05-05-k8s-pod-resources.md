@@ -1,5 +1,5 @@
 ---
-title: '[Kubernetes] Pod: Resources 할당'
+title: '[Kubernetes]Pod: Resources 할당'
 author: juye-ops
 date: 2023-05-05 00:00:00 +0900
 categories: ['Infra', 'Kubernetes']

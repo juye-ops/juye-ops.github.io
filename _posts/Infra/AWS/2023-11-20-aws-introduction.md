@@ -1,5 +1,5 @@
 ---
-title: '[AWS]기초'
+title: '[AWS]소개'
 author: juye-ops
 date: 2023-01-23 10:00:00 +0900
 categories: ['Infra', 'AWS']

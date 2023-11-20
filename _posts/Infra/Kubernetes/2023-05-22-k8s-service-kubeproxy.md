@@ -1,5 +1,5 @@
 ---
-title: '[Kubernetes] Kube Proxy'
+title: '[Kubernetes]Kube Proxy'
 author: juye-ops
 date: 2023-05-22 01:00:00 +0900
 categories: ['Infra', 'Kubernetes']

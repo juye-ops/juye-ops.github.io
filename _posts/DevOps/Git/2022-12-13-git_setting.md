@@ -1,5 +1,5 @@
 ---
-title: '[Git] 기본 설정'
+title: '[Git]기본 설정'
 author: juye-ops
 date: 2022-12-13 10:00:00 +0900
 categories: ['DevOps', 'Git']

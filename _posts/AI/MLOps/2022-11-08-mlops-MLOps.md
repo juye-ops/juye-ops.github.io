@@ -1,5 +1,5 @@
 ---
-title: '[MLOps] MLOps란'
+title: '[MLOps]MLOps란'
 author: juye-ops
 date: 2022-11-08 10:00:00 +0900
 categories: ["AI", "MLOps"]

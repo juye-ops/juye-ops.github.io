@@ -1,5 +1,5 @@
 ---
-title: '[Kubernetes] Controller: Deployment 실습'
+title: '[Kubernetes]Controller: Deployment 실습'
 author: juye-ops
 date: 2023-05-09 01:00:00 +0900
 categories: ['Infra', 'Kubernetes']

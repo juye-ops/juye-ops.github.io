@@ -1,5 +1,5 @@
 ---
-title: '[Kubernetes] Pod: 환경 변수 설정'
+title: '[Kubernetes]Pod: 환경 변수 설정'
 author: juye-ops
 date: 2023-05-07 00:00:00 +0900
 categories: ['Infra', 'Kubernetes']

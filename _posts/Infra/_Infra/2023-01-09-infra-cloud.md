@@ -1,5 +1,5 @@
 ---
-title: '[Infra] Cloud'
+title: '[Infra]Cloud'
 author: juye-ops
 date: 2022-01-01 10:00:00 +0900
 categories: ['Infra', '_Infra']

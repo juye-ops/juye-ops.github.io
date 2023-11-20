@@ -1,5 +1,5 @@
 ---
-title: '[Kubernetes] Controller: ReplicaSet 실습'
+title: '[Kubernetes]Controller: ReplicaSet 실습'
 author: juye-ops
 date: 2023-05-08 03:00:00 +0900
 categories: ['Infra', 'Kubernetes']

@@ -1,5 +1,5 @@
 ---
-title: '[Infra] 기초'
+title: '[Infra]기초'
 author: juye-ops
 date: 2022-09-12 10:00:00 +0900
 categories: ['Infra', '_Infra']

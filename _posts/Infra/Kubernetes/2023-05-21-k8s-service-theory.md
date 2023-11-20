@@ -1,5 +1,5 @@
 ---
-title: '[Kubernetes] Service 개념'
+title: '[Kubernetes]Service 개념'
 author: juye-ops
 date: 2023-05-21 00:00:00 +0900
 categories: ['Infra', 'Kubernetes']

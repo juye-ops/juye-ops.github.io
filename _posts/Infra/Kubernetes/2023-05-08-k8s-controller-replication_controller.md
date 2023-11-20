@@ -1,5 +1,5 @@
 ---
-title: '[Kubernetes] Controller: Replication controller'
+title: '[Kubernetes]Controller: Replication controller'
 author: juye-ops
 date: 2023-05-08 00:00:00 +0900
 categories: ['Infra', 'Kubernetes']
