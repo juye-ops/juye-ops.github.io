@@ -1,7 +1,7 @@
 ---
 title: '[AWS]AWS Network 소개'
 author: juye-ops
-date: 2023-11-20 00:00:00 +0900
+date: 2023-11-20 01:00:00 +0900
 categories: ['Infra', 'AWS']
 tags: ['AWS']
 render_with_liquid: false
