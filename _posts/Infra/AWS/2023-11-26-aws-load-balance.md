@@ -1,7 +1,7 @@
 ---
 title: '[AWS]부하 분산'
 author: juye-ops
-date: 2023-11-25 00:00:00 +0900
+date: 2023-11-26 00:00:00 +0900
 categories: ['Infra', 'AWS']
 tags: ['AWS']
 render_with_liquid: false
