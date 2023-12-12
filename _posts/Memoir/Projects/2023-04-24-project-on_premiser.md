@@ -1,5 +1,5 @@
 ---
-title: 'On Premiser - Docker (진행 중)'
+title: 'On Premiser'
 author: juye-ops
 date: 2023-04-24 10:00:00 +0900
 categories: ['Memoir', 'Projects']
@@ -10,7 +10,7 @@ render_with_liquid: false
 |**분류**|팀 프로젝트|
 |**참여 인원**|2명|
 |**소속**|Haemu|
-|**개발 기간**|2023.04. ~ |
+|**개발 기간**|2023.04. ~ 2023.09.|
 |**비고**||
 
 # 📘 **상세 설명**
@@ -42,6 +42,8 @@ _프로젝트 구조도_
   - container: 클라이언트가 생성한 컨테이너를 관리하기 위한 Docker in docker 및 `Nginx` Proxying을 통한 `Code-server` IDE 제공
   - database: 지원하는 앱 버전, 클라이언트가 생성한 사용자/프로젝트/개발 컨테이너 정보 등을 관리
 
+<img src="/static/img/Projects/Premiser/premiser-network-architecture.svg">
+
 ## **Load balancer**
 - `Nginx` 기반 Frontend 및 IDE 페이지로 Proxying
 - IDE 페이지에서 80포트에 대한 WS만 취급하는 문제점 해결
@@ -65,6 +67,8 @@ _프로젝트 구조도_
 ## **Database**
 - `MySQL` 스키마 제작
   - MySQL Workbench를 통한 모델링
+
+<img src="/static/img/Projects/Premiser/premiser-erd.png">
 
 ## **Frontend**
 - 로그인
