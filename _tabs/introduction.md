@@ -4,6 +4,7 @@ icon: fa-fw fas fa-home ml-xl-3 mr-xl-3
 order: 1
 ---
 
+
 # **김주엽**
 ## **경험**으로 **설계**하는 엔지니어
 학부생으로서 다양한 프레임워크 활용 경험을 축적하여 **배경지식이 풍부**합니다.  
@@ -17,19 +18,4 @@ order: 1
 협업에 있어 기꺼이 도움을 제공하거나, 커뮤니케이션을 수시로 진행해왔습니다.  
 이러한 습관 덕에 Boostcamp 활동 당시 좋은 분위기로 주도하여 협업에 우수한 팀으로 칭송받을 수 있었습니다.  
 
-현재는 다양한 개발 프로세스나 플랫폼에서 더욱 최적화된 환경을 제공하기 위한 **Cloud**에 관심이 있습니다.  
-
-# **Skills**
-
-<img src="https://cdn.simpleicons.org/ubuntu/E95420" alt="ubuntu" width="64px"/>
-<img src="https://cdn.simpleicons.org/kubernetes/326CE5"  alt="kubernetes" width="64px"/>
-<img src="https://cdn.simpleicons.org/docker/2496ED"  alt="docker" width="64px"/>
-<img src="https://cdn.simpleicons.org/amazonaws/232F3E"  alt="amazonaws" width="64px"/>
-
-<img src="https://cdn.simpleicons.org/python/3776AB"  alt="python" width="64px"/>
-<img src="https://cdn.simpleicons.org/pytorch/EE4C2C"  alt="pytorch" width="64px"/>
-<img src="https://cdn.simpleicons.org/tensorflow/FF6F00"  alt="tensorflow" width="64px"/>
-<img src="https://cdn.simpleicons.org/keras/D00000"  alt="keras" width="64px"/>
-
-<img src="https://cdn.simpleicons.org/github/181717"  alt="github" width="64px"/>
-<img src="https://cdn.simpleicons.org/gitlab/FC6D26"  alt="gitlab" width="64px"/>
+현재는 더욱 최적화된 환경을 제공하기 위한 **Cloud**에 관심이 있습니다.  
