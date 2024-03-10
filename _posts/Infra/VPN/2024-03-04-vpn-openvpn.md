@@ -2,7 +2,7 @@
 title: 'AWS - VM 간에 OpenVPN 연결'
 author: juye-ops
 date: 2024-03-04 00:00:00 +0900
-categories: [Infra, Network]
+categories: [Infra, VPN]
 tags: ["VPN", "AWS", "Hyper-V"]
 render_with_liquid: false
 ---
@@ -11,7 +11,6 @@ VPN은 기본적으로 Server-client 형태로 운영된다.
 두 대의 컴퓨터가 있으면 한 대는 Server, 나머지 한 대는 Client인 것이다.
 
 # VPN Server (AWS-Ubuntu)
-AWS에서 OpenVPN을 사용하면 CGW, VGW, VPN에 대한 설정이 필요없는 것 같다.
 - 서버 단에서는 아래의 오픈소스를 통해서 받을 것이다.
   - [OpenVPN Install](https://github.com/Nyr/openvpn-install)
 
