@@ -1,8 +1,8 @@
 ---
-title: 'AWS - VM 간에 Site-to-Site 연결'
+title: 'AWS - VM 간에 Site-to-Site(IPSec) 연결'
 author: juye-ops
 date: 2024-03-04 00:00:00 +0900
-categories: [Infra, VPN]
+categories: [Infra, Network]
 tags: ["VPN", "AWS", "Hyper-V", "Libreswan"]
 render_with_liquid: false
 ---

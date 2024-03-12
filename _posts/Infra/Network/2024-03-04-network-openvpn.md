@@ -2,7 +2,7 @@
 title: 'AWS - VM 간에 OpenVPN 연결'
 author: juye-ops
 date: 2024-03-04 00:00:00 +0900
-categories: [Infra, VPN]
+categories: [Infra, Network]
 tags: ["VPN", "AWS", "Hyper-V"]
 render_with_liquid: false
 ---
