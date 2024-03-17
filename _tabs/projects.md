@@ -32,6 +32,7 @@ GAN 및 Object Tracking 기반 특정 인물 만화화
 - Python의 Flask 프레임워크를 통한 REST API 개발
 - Proxy 및 방화벽 제어
 - 키오스크의 웹 소켓 기반 로그인 기능 구현
+- 협력사와 개발 범위 및 솔루션 조율
 
 ## [객체 탐지 데이터 및 학습 관리를 위한 웹 기반 딥러닝 지원 시스템](/posts/project-web-based_dl_platform/)
 웹 기반 Object detection 분야 MLOps 시각화 툴
@@ -39,6 +40,7 @@ GAN 및 Object Tracking 기반 특정 인물 만화화
 - Python의 Flask 프레임워크를 통한 REST API 제어
 - 6개의 서비스에 대해 Docker 기반 컨테이너 인프라 및 네트워크 제어
 - 구미시 4차 산업혁명 핵심 기술 개발 사업 프로젝트
+- 협력사와 개발 범위 및 솔루션 조율
 
 ## ETC
 - [GRU 기반 행동 분석 모델을 이용한 어린이 이상 행동 검출 시스템](/posts/project-GRU_behavioral_analysis/)
