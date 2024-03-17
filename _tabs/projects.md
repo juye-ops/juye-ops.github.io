@@ -5,7 +5,7 @@ icon: fa-solid fa-newspaper
 order: 3
 ---
 
-## [Cloud Env Management](/posts/project-cloud-env-management/)
+## [Cloud Env Management](/posts/project-cloud-architecture-craft/)
 개인 클라우드 솔루션 아키텍처 구축
 - Hypervisor 및 클라우드 플랫폼 비교 분석
 - AWS 기반 클라우드 환경 구축
