@@ -1,1 +1,0 @@
-export { useSwipeButtonLogic } from './SwipeButtonLogic';

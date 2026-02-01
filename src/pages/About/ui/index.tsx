@@ -1,5 +1,5 @@
 import { cn } from '../../../shared/utils/cn';
-import * as m from '../../../features/Swipe';
+import * as m from '../../../features/Nav';
 
 export function About() {
   const button_data = [
@@ -16,7 +16,7 @@ export function About() {
         </a>
       </div>
       <div>
-        <m.SwipeBoard data={button_data} />
+        <m.NavBoard data={button_data} />
       </div>
     </div>
   );

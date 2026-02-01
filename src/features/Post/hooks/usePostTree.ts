@@ -9,7 +9,6 @@ export function usePostTree(): TreeNode[] {
   Object.keys(modules).forEach((path) => {
     // 폴더 경로 분리
     const parts = path.replace(/^\/posts\//, '').split('/');
-    console.log('parts', parts);
     let currentLevel = tree;
 
     parts.forEach((part, idx) => {
@@ -19,6 +18,7 @@ export function usePostTree(): TreeNode[] {
         const newNode: TreeNode = {
           name: part,
           type: idx === parts.length - 1 ? 'file' : 'folder',
+          path: parts.join('/'),
           children: idx === parts.length - 1 ? undefined : []
         };
 

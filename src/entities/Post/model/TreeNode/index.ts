@@ -1,6 +1,7 @@
 interface TreeNode {
   name: string;
   type: 'folder' | 'file';
+  path: string;
   children?: TreeNode[];
 }
 

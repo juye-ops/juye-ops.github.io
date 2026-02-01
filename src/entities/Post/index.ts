@@ -1,1 +1,1 @@
-export type { TreeNode, TreeNodeProps } from './model';
+export * from './model';

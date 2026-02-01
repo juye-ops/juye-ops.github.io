@@ -1,1 +1,0 @@
-export type { SwipeBoardProps, SwipeButtonProps } from './model';
