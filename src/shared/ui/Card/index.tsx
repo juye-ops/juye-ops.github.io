@@ -1,5 +1,5 @@
 import React from 'react';
-import type { CoverflowCardItem } from '@/entities/CoverflowCard';
+import type { CoverflowCardItem } from '@/entities/CoverflowCard/ui';
 
 interface CardProps {
   item: CoverflowCardItem;

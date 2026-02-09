@@ -1,1 +1,1 @@
-export { usePostTree } from './hooks/usePostTree';
+export { usePostTree } from './lib/usePostTree';

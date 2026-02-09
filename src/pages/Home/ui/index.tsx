@@ -1,6 +1,5 @@
-import { cn } from '../../../shared/utils/cn';
-import * as m from '../../../features/Nav';
-import { CoverflowWidget } from '@/widgets/Home/Coverflow';
+import { cn } from '@/shared/utils/cn';
+import { Coverflow } from './Coverflow';
 
 const MOCK_POSTS = Array.from({ length: 10 }).map((_, i) => ({
   id: String(i),
@@ -13,21 +12,11 @@ const MOCK_POSTS = Array.from({ length: 10 }).map((_, i) => ({
 
 
 export function Home() {
-  const button_data = [
-    { label: "ABOUT", path: "/about" },
-    { label: "PORTFOLIO", path: "/portfolio" },
-    { label: "BLOG", path: "/blog" }
-  ];
 
   return (
-    <div className={cn("bg-[#bb4444] items-center justify-center h-screen fade-in")}>
-      {/* 네비게이션 바 */}
-      <div className="absolute top-0 left-0 right-0 z-50 bg-blue-100">
-        <m.NavBoard data={button_data} />
-      </div>
-
+    <div className={cn("items-center justify-center h-screen fade-in absolute inset-0")}>
       {/* Coverflow 영역 */}
-      <CoverflowWidget
+      <Coverflow
         items={MOCK_POSTS}
         onItemChange={(post) => {
           console.log("active home cover post:", post.title);
