@@ -4,7 +4,8 @@ import { Portfolio } from '../../pages/Portfolio/ui';
 import { Blog } from '../../pages/Blog/ui';
 import { StickyNavBar } from '../../widgets/Layout';
 import { About } from '../../pages/About/ui';
-import { Post } from '../../pages/Post/ui/Post';
+import { PostListPage } from '@/pages/Blog/ui/PostList';
+import { PostPage } from '@/pages/Blog/ui/PostPage';
 
 const router = createBrowserRouter([
   {
@@ -13,8 +14,15 @@ const router = createBrowserRouter([
       { path: '/', element: <Home />, },
       { path: '/about', element: <About />, },
       { path: '/portfolio', element: <Portfolio />, },
-      { path: '/blog/:tab?', element: <Blog />, },
-      { path: '/post', element: <Post />, },
+      {
+        path: 'blog',
+        children: [
+          { index: true, element: <Blog /> },           // /blog
+          { path: ':domain', element: <PostListPage /> },       // /blog/Docker
+          { path: ':domain/:category', element: <PostListPage /> },  // /blog/Docker/Volume
+          { path: ':domain/:category/:slug', element: <PostPage /> }, // /blog/Docker/Volume/post-slug
+        ],
+      },
     ],
   }
 ]);

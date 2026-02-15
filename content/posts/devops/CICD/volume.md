@@ -1,7 +1,7 @@
 ---
 title: Blogging Like a Hacker
-domain: Docker
-category: Volume
+domain: DevOps
+category: CI/CD
 ---
 
 # docker
