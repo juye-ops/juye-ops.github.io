@@ -1,4 +1,4 @@
-import { Link, NavLink, Outlet } from "react-router";
+import { Link, NavLink } from "react-router";
 
 // SPALayout.jsx - About/Portfolio/Blog 공통 레이아웃
 export function StickyNavBar() {
@@ -24,7 +24,6 @@ export function StickyNavBar() {
           </ul>
         </nav>
       </header>
-      <Outlet />
     </>
   );
 }
