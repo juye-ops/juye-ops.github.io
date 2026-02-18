@@ -1,9 +1,9 @@
 import { createBrowserRouter } from 'react-router';
-import { Home } from '../../pages/Home/ui';
-import { Portfolio } from '../../pages/Portfolio/ui';
-import { Blog } from '../../pages/Blog/ui';
-import { StickyNavBar } from '../../widgets/Layout';
-import { About } from '../../pages/About/ui';
+import { Home } from '@/pages/Home/ui';
+import { Portfolio } from '@/pages/Portfolio/ui';
+import { Blog } from '@/pages/Blog/ui';
+import { StickyNavBar } from '@/widgets/Layout/ui/StickyNavBar';
+import { About } from '@/pages/About/ui';
 import { PostListPage } from '@/pages/Blog/ui/PostList';
 import { PostPage } from '@/pages/Blog/ui/PostPage';
 
