@@ -11,7 +11,8 @@ import { usePortfolioProjects } from '@/pages/Portfolio/lib';
 import { Project } from '@/pages/Portfolio/ui/Project';
 
 export function Portfolio() {
-  const { projects, loading } = usePortfolioProjects();
+  // const { projects, loading } = usePortfolioProjects();
+  const { projects } = usePortfolioProjects();
   const [activeIndex, setActiveIndex] = useState(0);
 
   // if (loading) return <LoadingSpinner />;

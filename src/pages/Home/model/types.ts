@@ -1,4 +1,4 @@
-import type { CoverflowItem } from "./CoverflowCard/types";
+import type { CoverflowItem } from "./Coverflow/types";
 
 export interface CoverflowWidgetProps {
   items: CoverflowItem[];

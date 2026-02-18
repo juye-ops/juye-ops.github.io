@@ -1,5 +1,5 @@
 // entities/portfolio/model/types.ts
-interface PortfolioFrontmatter {
+export interface PortfolioFrontmatter {
   index: number;
   title: string;
   organization: string;
@@ -8,7 +8,7 @@ interface PortfolioFrontmatter {
   images: string[];
 }
 
-interface PortfolioProject extends PortfolioFrontmatter {
+export interface PortfolioProject extends PortfolioFrontmatter {
   slug: string;
   body: string; // markdown 원문
 }

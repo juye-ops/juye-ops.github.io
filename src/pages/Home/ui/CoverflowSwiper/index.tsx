@@ -1,7 +1,7 @@
 
 import { useMemo, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCoverflow, Mousewheel, Keyboard } from "swiper/modules";
+import { EffectCoverflow, Keyboard } from "swiper/modules";
 import type { Swiper as SwiperInstance } from "swiper";
 
 import "swiper/css";

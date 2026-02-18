@@ -1,7 +1,5 @@
 // entities/portfolio/ui/PortfolioHero.tsx
 "use client";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
 import type { PortfolioProjectProps } from "../../model/ProjectContent/types";
 
 import "swiper/css";
