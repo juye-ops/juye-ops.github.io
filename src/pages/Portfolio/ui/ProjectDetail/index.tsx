@@ -3,8 +3,9 @@ import { useState } from "react";
 import { Modal } from "@/shared/ui/Modal";
 import ReactMarkdown from "react-markdown";
 import type { PortfolioProjectProps } from "../../model/ProjectContent/types";
+import styles from "./ProjectDetail.module.css"
 
-const PREVIEW_MAX_HEIGHT = 400; // px
+const PREVIEW_MAX_HEIGHT = 360; // px
 
 export function PortfolioDetail({ project }: PortfolioProjectProps) {
   const [open, setOpen] = useState(false);
@@ -13,9 +14,8 @@ export function PortfolioDetail({ project }: PortfolioProjectProps) {
     <section className="mt-8">
       <div className="relative">
         {/* 미리보기 영역 */}
-        <div
-          className="prose prose-sm md:prose-base dark:prose-invert max-w-none
-                     overflow-hidden pb-16"
+        <div 
+          className={styles.sectionContent}
           style={{ maxHeight: PREVIEW_MAX_HEIGHT }}
         >
           <ReactMarkdown>{project.body}</ReactMarkdown>
@@ -38,7 +38,8 @@ export function PortfolioDetail({ project }: PortfolioProjectProps) {
         onClose={() => setOpen(false)}
         title={project.title}
       >
-        <article className="prose prose-sm md:prose-base dark:prose-invert max-w-none">
+        {/* <article className="prose prose-sm md:prose-base dark:prose-invert max-w-none"> */}
+        <article className={styles.sectionContent}>
           <ReactMarkdown>{project.body}</ReactMarkdown>
         </article>
       </Modal>

@@ -19,8 +19,9 @@ export function About() {
       modules={[Mousewheel, Pagination]}
       mousewheel={{ forceToAxis: true }}
       pagination={{ clickable: true, dynamicBullets: true }}
+      keyboard={{ enabled: true }}
       style={{ position: 'absolute', inset: 0 }}
-      >
+    >
       <SwiperSlide className={styles.slide}>
         {frontmatter && <Profile frontmatter={frontmatter} />}
       </SwiperSlide>

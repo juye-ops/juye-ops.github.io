@@ -40,7 +40,7 @@ export function Portfolio() {
           </SwiperSlide>
         ))}
       </Swiper>
-
+        
       {/* 글로벌 네비게이션 */}
       <div className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 flex items-center gap-4 bg-white/90 dark:bg-neutral-900/90 backdrop-blur-xl px-6 py-3 rounded-2xl shadow-2xl border">
         <div className="text-sm font-semibold min-w-[60px] text-center">

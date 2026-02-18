@@ -47,7 +47,8 @@ tagline: "DevOps 엔지니어로서 클라우드 인프라를 자동화하고 �
 - Kubernetes 관리자 자격증 (CKA)
 - AWS Solutions Architect Associate
 
----
+
+<div className="page"/>
 
 # 경력
 
@@ -61,7 +62,7 @@ tagline: "DevOps 엔지니어로서 클라우드 인프라를 자동화하고 �
 | (인프라 팀) | |
 | 온프레미스 애플리케이션을 AWS로 마이그레이션. 다운타임 0 달성 및 월 30% 인프라 비용 절감. | 기술스택: AWS, Terraform, Docker, RDS |
 
----
+<div className="page"/>
 
 # 프로젝트
 
