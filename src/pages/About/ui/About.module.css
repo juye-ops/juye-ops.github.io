@@ -1,0 +1,121 @@
+/* src/pages/About/ui/About.module.css */
+
+.aboutContainer {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.header {
+  padding: 3rem 0 2rem;
+  border-bottom: 2px solid #f0f0f0;
+  margin-bottom: 3rem;
+}
+
+.profile {
+  text-align: center;
+}
+
+.name {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 0 0 0.5rem 0;
+  color: #1a1a1a;
+}
+
+.tagline {
+  font-size: 1.1rem;
+  color: #666;
+  margin: 0 0 2rem 0;
+  line-height: 1.6;
+}
+
+.contactInfo {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.contact {
+  text-decoration: none;
+  color: #0066cc;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.contact:hover {
+  color: #0052a3;
+  text-decoration: underline;
+}
+
+.content {
+  line-height: 1.8;
+  color: #333;
+}
+
+.content table {
+  width: 100%;
+  margin: 2rem 0;
+  border-collapse: collapse;
+}
+
+.content th,
+.content td {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.content th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.content tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+.content tr:hover {
+  background-color: #f0f5ff;
+}
+
+.loading,
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  font-size: 1.1rem;
+}
+
+.error {
+  color: #d32f2f;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .name {
+    font-size: 2rem;
+  }
+
+  .contactInfo {
+    gap: 1rem;
+  }
+
+  .contact {
+    font-size: 0.9rem;
+  }
+
+  .content table {
+    font-size: 0.9rem;
+  }
+
+  .content th,
+  .content td {
+    padding: 0.75rem;
+  }
+}

@@ -1,0 +1,1 @@
+export { useWheelSwipe } from "./useWheelSwipe"

@@ -1,18 +1,28 @@
 import { createBrowserRouter } from 'react-router';
-import Home from '../../pages/Home';
-import Portfolio from '../../pages/Portfolio';
-import Blog from '../../pages/Blog';
-import { Layout } from '../../widgets/layout';
-import About from '../../pages/About';
+import { Layout } from '@/widgets/Layout/ui';
+import { Home } from '@/pages/Home/ui';
+import { Portfolio } from '@/pages/Portfolio/ui';
+import { Blog } from '@/pages/Blog/ui';
+import { About } from '@/pages/About/ui';
+import { PostListPage } from '@/pages/Blog/ui/PostList';
+import { PostPage } from '@/pages/Blog/ui/PostPage';
 
 const router = createBrowserRouter([
-  { path: '/', element: <Home />, },
   {
     element: <Layout />,
     children: [
+      { path: '/', element: <Home />, },
       { path: '/about', element: <About />, },
       { path: '/portfolio', element: <Portfolio />, },
-      { path: '/blog', element: <Blog />, },
+      {
+        path: 'blog',
+        children: [
+          { index: true, element: <Blog /> },           // /blog
+          { path: ':domain', element: <PostListPage /> },       // /blog/Docker
+          { path: ':domain/:category', element: <PostListPage /> },  // /blog/Docker/Volume
+          { path: ':domain/:category/:slug', element: <PostPage /> }, // /blog/Docker/Volume/post-slug
+        ],
+      },
     ],
   }
 ]);
