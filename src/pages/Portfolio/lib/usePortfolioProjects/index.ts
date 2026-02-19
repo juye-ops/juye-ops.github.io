@@ -19,7 +19,7 @@ export function usePortfolioProjects() {
         const projectList: PortfolioProject[] = [];
 
         for (const fileName of files) {
-          const response = await fetch(`/content/portfolio/${fileName}`);
+          const response = await fetch( `${import.meta.env.BASE_URL}content/portfolio/${fileName}`);
           if (!response.ok) continue;
 
           const rawContent = await response.text();
