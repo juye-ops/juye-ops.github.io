@@ -16,8 +16,6 @@ export async function PostPage({ params }: { params: Promise<{ domain: string; c
   const decodedSlug = decodeURIComponent(slug);
   const currentPost = allPosts.find(p => p.slug === decodedSlug);
 
-  console.log("🎯 매칭된 포스트:", currentPost);
-
   if (!currentPost || !currentPost.postPath) {
     return notFound();
   }

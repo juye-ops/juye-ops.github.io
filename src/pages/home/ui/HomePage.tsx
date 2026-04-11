@@ -20,9 +20,6 @@ export function HomePage() {
       {/* Coverflow 영역 */}
       <Coverflow
         items={MOCK_POSTS}
-        onItemChange={(post) => {
-          console.log("active home cover post:", post.title);
-        }}
       />
 
     </div>

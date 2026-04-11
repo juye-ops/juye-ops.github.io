@@ -20,7 +20,6 @@ export async function PostListPage({ params }: PostListPageProps) {
 
   // 3. 서버에서 전체 트리 데이터 로드
   const tree = await getCategoryTree();
-  console.log(tree)
 
   // 4. 디코딩된 텍스트로 트리에서 데이터를 찾습니다.
   const currentDomain = tree.find((d) => d.domain === decodedDomain);
