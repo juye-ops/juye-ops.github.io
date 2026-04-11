@@ -1,0 +1,1 @@
+export { PostPage as default } from "@/pages/blog/ui/PostPage";

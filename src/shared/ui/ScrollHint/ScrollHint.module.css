@@ -1,0 +1,67 @@
+.scrollHint {
+  position: absolute;
+  bottom: -1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  animation: bounce 2s infinite;
+}
+
+.scrollHint p {
+  color: white;
+  font-size: 0.95rem;
+  opacity: 0.8;
+}
+
+.scrollIndicator {
+  width: 24px;
+  height: 40px;
+  border: 2px solid white;
+  border-radius: 12px;
+  position: relative;
+  opacity: 0.6;
+}
+
+.scrollIndicator::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 8px;
+  background: white;
+  border-radius: 1px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 8px;
+  animation: scrollDown 1.5s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes scrollDown {
+  0% {
+    opacity: 1;
+    top: 8px;
+  }
+  100% {
+    opacity: 0;
+    top: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .scrollHint {
+    bottom: 1rem;
+  }
+
+  .scrollHint p {
+    font-size: 0.85rem;
+  }
+}

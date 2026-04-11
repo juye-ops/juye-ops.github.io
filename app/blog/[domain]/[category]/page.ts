@@ -1,0 +1,1 @@
+export { PostListPage as default } from "@/pages/blog/ui/PostListPage";

@@ -1,0 +1,1 @@
+export { DomainPage as default } from "@/pages/blog/ui/DomainPage";
