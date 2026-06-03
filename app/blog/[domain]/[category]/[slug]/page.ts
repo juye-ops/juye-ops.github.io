@@ -1,4 +1,4 @@
-import { getCategoryTree } from "@/widgets/blog";
+import { getCategoryTree } from "@/domain/blog/utils/getCategoryTree";
 
 export async function generateStaticParams() {
   const tree = await getCategoryTree();
@@ -17,4 +17,4 @@ export async function generateStaticParams() {
 
 export const dynamicParams = false;
 
-export { PostPage as default } from "@/pages/blog/ui/PostPage";
+export { PostPage as default } from "@/domain/blog/pages/PostPage";
