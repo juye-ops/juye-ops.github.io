@@ -1,26 +1,22 @@
-export interface Category {  // 하위 Category
-  id: string;
-  name: string;
-  slug: string;
-  postCount?: number;
-}
+import { DomainNode } from "./domain.types";
+
 
 export interface PostLeaf {
   title: string;
   slug: string;      // URL에 사용될 식별자 (파일명에서 추출)
   postPath: string;  // 실제 파일 읽기용 경로
+  content: string;
   date?: string;     // 있으면 좋음
 }
 
-export interface CategoryNode {
+export interface CategoryLeaf {
   category: string;
-  posts: PostLeaf[];
+  categorySlug: string; // 🌟 새로 추가된 주소용 필드
+  posts: any[];
 }
 
-export interface DomainNode {
-  domain: string;
-  categories: CategoryNode[];
+export interface CategoryPanelProps {
+  domains: DomainNode[];
+  selectedDomain: string | null;
+  selectedCategory: string | null; // 🌟 부모로부터 'ci-cd' 같은 주소창 slug가 넘어옵니다.
 }
-
-// 최종적으로 반환할 트리 타입
-export type CategoryTree = DomainNode[];

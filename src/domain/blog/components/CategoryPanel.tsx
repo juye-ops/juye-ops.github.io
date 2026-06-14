@@ -1,27 +1,22 @@
 'use client';
 
 import { useState, useEffect, useCallback } from 'react';
-import { useRouter } from 'next/navigation'; // Path 이동을 위해 추가
+import { useRouter } from 'next/navigation';
 import Link from 'next/link';
-import { DomainNode } from '../types/category.types';
+import { CategoryPanelProps } from '../types/category.types';
 
-interface CategoryPanelProps {
-  domains: DomainNode[];
-  selectedDomain: string | null;
-  selectedCategory: string | null;
-}
 
 export function CategoryPanel({
   domains,
   selectedDomain,
-  selectedCategory
+  selectedCategory // 💡 이제 이 값은 주소창에서 온 categorySlug입니다.
 }: CategoryPanelProps) {
   const router = useRouter();
 
   // 1. 도메인별 열림/닫힘 상태 관리
   const [openStates, setOpenStates] = useState<Record<string, boolean>>({});
 
-  // 2. [추가] 선택된 도메인이 URL에 있다면 해당 아코디언을 자동으로 엽니다.
+  // 2. 선택된 도메인이 URL에 있다면 해당 아코디언을 자동으로 엽니다.
   useEffect(() => {
     if (selectedDomain) {
       setOpenStates((prev) => ({
@@ -39,10 +34,10 @@ export function CategoryPanel({
     }));
   }, []);
 
-  // 4. [추가] Path Parameter로 이동하는 핸들러
-  const handleCategoryClick = useCallback((domain: string, category: string) => {
-    // 한글이나 공백이 있을 수 있으므로 인코딩하여 경로 생성
-    const path = `/blog/${encodeURIComponent(domain)}/${encodeURIComponent(category)}`;
+  // 4. [수정] Path Parameter로 이동하는 핸들러
+  const handleCategoryClick = useCallback((domainSlug: string, categorySlug: string) => {
+    // 🌟 catNode.category("CI/CD") 대신 categorySlug("ci-cd")를 인코딩하여 주소를 만듭니다.
+    const path = `/blog/${encodeURIComponent(domainSlug)}/${encodeURIComponent(categorySlug)}`;
     router.push(path, { scroll: false });
   }, [router]);
 
@@ -57,6 +52,7 @@ export function CategoryPanel({
             <div key={domainNode.domain}>
               {/* 도메인 버튼 */}
               <button
+                type="button" // 접근성 보장
                 onClick={() => toggleDomain(domainNode.domain)}
                 className={`w-full flex justify-between items-center py-4 px-6 text-left rounded-2xl transition-all duration-300 text-lg font-medium ${isSelected
                     ? 'bg-indigo-50 text-indigo-700 shadow-md border-2 border-indigo-200'
@@ -65,7 +61,7 @@ export function CategoryPanel({
               >
                 <Link
                   className="hover:text-indigo-500 hover:underline decoration-2 underline-offset-4 transition-colors cursor-pointer"
-                  href={`/blog/${encodeURIComponent(domainNode.domain)}`}>
+                  href={`/blog/${encodeURIComponent(domainNode.domainSlug)}`}>
                   {domainNode.domain}
                 </Link>
                 <span className={`text-sm transform transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}>
@@ -76,23 +72,31 @@ export function CategoryPanel({
               {/* 카테고리 아코디언 내용 */}
               {isOpen && (
                 <div className="ml-6 mt-2 space-y-2 border-l-2 border-indigo-200 pl-4 py-2 animate-in fade-in slide-in-from-top-2 duration-300">
-                  {domainNode.categories.map((catNode) => (
-                    <button
-                      key={catNode.category}
-                      onClick={() => handleCategoryClick(domainNode.domain, catNode.category)}
-                      className={`w-full text-left py-2 px-4 text-base rounded-xl transition-all duration-200 ${selectedCategory === catNode.category
-                          ? 'bg-indigo-500 text-white font-semibold shadow-sm'
-                          : 'text-gray-600 hover:bg-indigo-50 hover:text-indigo-600'
-                        }`}
-                    >
-                      <div className="flex justify-between items-center">
-                        <span>{catNode.category}</span>
-                        <span className={`text-xs ${selectedCategory === catNode.category ? 'text-indigo-100' : 'opacity-60'}`}>
-                          {catNode.posts.length}
-                        </span>
-                      </div>
-                    </button>
-                  ))}
+                  {domainNode.categories.map((catNode) => {
+                    // 🌟 [중요] 주소창 slug와 JSON 내부의 categorySlug를 비교하여 활성화 표시를 켭니다.
+                    // 예: "ci-cd" === "ci-cd"
+                    const isCategorySelected = selectedCategory === catNode.categorySlug;
+
+                    return (
+                      <button
+                        key={catNode.category}
+                        type="button"
+                        onClick={() => handleCategoryClick(domainNode.domainSlug, catNode.categorySlug)}
+                        className={`w-full text-left py-2 px-4 text-base rounded-xl transition-all duration-200 ${isCategorySelected
+                            ? 'bg-indigo-500 text-white font-semibold shadow-sm'
+                            : 'text-gray-600 hover:bg-indigo-50 hover:text-indigo-600'
+                          }`}
+                      >
+                        <div className="flex justify-between items-center">
+                          {/* 🌟 화면에는 원래 이름인 "CI/CD"가 기가 막히게 출력됩니다. */}
+                          <span>{catNode.category}</span>
+                          <span className={`text-xs ${isCategorySelected ? 'text-indigo-100' : 'opacity-60'}`}>
+                            {catNode.posts.length}
+                          </span>
+                        </div>
+                      </button>
+                    );
+                  })}
                 </div>
               )}
             </div>

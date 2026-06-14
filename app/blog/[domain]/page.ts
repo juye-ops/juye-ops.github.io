@@ -1,12 +1,8 @@
-import { getCategoryTree } from "@/domain/blog/utils/getCategoryTree";
+import categoryTree from "@/shared/metadata/categoryTree.json";
 
 export async function generateStaticParams() {
-  const tree = await getCategoryTree();
-  
-  const domains = Array.from(new Set(tree.map((post) => post.domain)));
-
-  return domains.map((domain) => ({
-    domain: encodeURIComponent(domain),
+  return categoryTree.map((node) => ({
+    domain: encodeURIComponent(node.domainSlug),
   }));
 }
 

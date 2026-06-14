@@ -1,14 +1,13 @@
-import { getCategoryTree } from "@/domain/blog/utils/getCategoryTree";
+// app/blog/[domain]/[category]/[slug]/page.tsx
+
+import categoryTree from "@/shared/metadata/categoryTree.json";
 
 export async function generateStaticParams() {
-  const tree = await getCategoryTree();
-  
-  // 3중 중첩 구조를 하나의 배열로 쫙 펼치기
-  return tree.flatMap((domainNode) =>
+  return categoryTree.flatMap((domainNode) =>
     domainNode.categories.flatMap((categoryNode) =>
       categoryNode.posts.map((post) => ({
-        domain: encodeURIComponent(domainNode.domain),
-        category: encodeURIComponent(categoryNode.category),
+        domain: encodeURIComponent(domainNode.domainSlug),
+        category: encodeURIComponent(categoryNode.categorySlug), 
         slug: encodeURIComponent(post.slug),
       }))
     )
@@ -16,5 +15,4 @@ export async function generateStaticParams() {
 }
 
 export const dynamicParams = false;
-
 export { PostPage as default } from "@/domain/blog/pages/PostPage";
