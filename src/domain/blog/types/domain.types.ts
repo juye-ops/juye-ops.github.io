@@ -1,11 +1,7 @@
-import { Category } from "./category.types";
+import { CategoryLeaf } from "./category.types";
 
-export interface Domain {  // 상위 Domain
-  id: string;
-  name: string;
-  slug: string;
-  isOpen: boolean;
-  categories: Category[];  // 하위 Category들
+export interface DomainNode {
+  domain: string;
+  domainSlug: string;
+  categories: CategoryLeaf[];
 }
-
-export type Domains = Domain[];

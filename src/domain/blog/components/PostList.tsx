@@ -1,65 +1,75 @@
+// @/domain/blog/components/PostList.tsx
 'use client';
 
 import Link from "next/link";
 import { PostLeaf } from "../types/category.types";
+import categoryTree from "@/shared/metadata/categoryTree.json";
 
 interface PostListProps {
   posts: PostLeaf[];
-  domain: string;
-  category: string;
+  domain: string;    
+  category: string;  
 }
 
 export const PostList = ({ posts, domain, category }: PostListProps) => {
-  // 1. URL 안전을 위해 도메인과 카테고리를 미리 인코딩합니다.
-  const encodedDomain = encodeURIComponent(domain);
-  const encodedCategory = encodeURIComponent(category);
-
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    // 🌟 3열 그리드를 과감히 폐기하고, 세로로 단단하게 쌓이는 와이드 카드 레이아웃
+    <div className="flex flex-col gap-6 sm:gap-8">
       {posts.map((post) => {
-        // 2. 이미 getCategoryTree에서 slug를 만들어 보냈으므로 그대로 사용합니다.
-        // 혹시 모르니 slug도 인코딩 처리해줍니다.
         const encodedSlug = encodeURIComponent(post.slug);
-        const postHref = `/blog/${encodedDomain}/${encodedCategory}/${encodedSlug}`;
+        const postHref = `/blog/${domain}/${category}/${encodedSlug}`;
+
+        const decodedDomain = decodeURIComponent(domain);
+        const decodedCategory = decodeURIComponent(category);
+
+        const currentDomain = categoryTree.find((d) => d.domainSlug === decodedDomain);
+        const currentCategory = currentDomain?.categories.find(
+          (c) => c.categorySlug === decodedCategory 
+        );
 
         return (
           <article
             key={post.postPath}
-            className="group relative bg-white rounded-3xl shadow-lg hover:shadow-2xl overflow-hidden hover:-translate-y-3 transition-all duration-500 border border-gray-100 hover:border-indigo-200"
+            // 🌟 과한 그림자와 라운딩을 다듬어, 정갈하고 넓은 가로형 캡슐 카드로 재탄생
+            className="group relative bg-white border border-slate-100 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden"
           >
-            {/* 3. 카드 전체를 클릭 가능하게 만드는 Link (가장 깔끔한 방식) */}
-            <Link href={postHref} className="absolute inset-0 z-10">
-              <span className="sr-only">{post.title} 읽기</span>
-            </Link>
-
-            <div className="p-8">
-              {/* 태그 영역 */}
-              <div className="flex flex-wrap gap-2 mb-6 relative z-20">
-                <span className="px-3 py-1 bg-indigo-50 text-indigo-700 text-xs font-medium rounded-full">
-                  {domain}
-                </span>
-                <span className="px-3 py-1 bg-gray-50 text-gray-700 text-xs font-medium rounded-full">
-                  {category}
-                </span>
-              </div>
-
-              {/* 제목 영역 */}
-              <div className="mb-8">
-                <h3 className="text-2xl font-bold text-gray-900 group-hover:text-indigo-600 transition-colors line-clamp-2 leading-tight">
-                  {post.title}
-                </h3>
-              </div>
-
-              {/* 하단 푸터 영역 */}
-              <div className="flex items-center justify-between pt-4 border-t border-gray-100 relative z-20">
-                <time className="text-sm text-gray-500 font-mono">
-                  {post.date || '2026.03.29'}
+            <Link href={postHref} className="block p-6 sm:p-8">
+              
+              {/* 1. 상단 메타 정보 영역 (날짜 + 카테고리 배지) */}
+              <div className="flex flex-wrap items-center gap-2 text-xs font-mono mb-4 select-none">
+                <time dateTime={post.date} className="text-slate-400">
+                  {post.date || '2026-06-14'}
                 </time>
-                <span className="text-indigo-600 font-bold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
-                  읽기 <span className="transition-transform group-hover:translate-x-1">→</span>
+                <span className="text-slate-200">•</span>
+                <span className="bg-indigo-50 text-indigo-600 px-2.5 py-0.5 rounded-md font-medium text-[11px]">
+                  {currentDomain?.domain}
+                </span>
+                <span className="bg-slate-50 text-slate-500 px-2.5 py-0.5 rounded-md font-medium text-[11px]">
+                  {currentCategory?.category}
                 </span>
               </div>
-            </div>
+
+              {/* 2. 제목 영역 (가로폭을 100% 사용하여 절대 찌그러지지 않음) */}
+              <h3 className="text-xl sm:text-2xl font-bold text-slate-900 group-hover:text-indigo-600 transition-colors tracking-tight leading-snug mb-3">
+                {post.title}
+              </h3>
+
+              {/* 3. 본문 요약 (Prebuild 텍스트 매칭) */}
+              {post.content && (
+                <p className="text-sm text-slate-500 line-clamp-2 leading-relaxed font-normal">
+                  {post.content}
+                </p>
+              )}
+
+              {/* 4. 우측 하단 미세한 화살표 인디케이터 */}
+              <div className="mt-4 flex justify-end">
+                <span className="text-xs font-mono font-bold text-slate-400 group-hover:text-indigo-600 transition-colors flex items-center gap-1">
+                  Read article 
+                  <span className="transform group-hover:translate-x-1 transition-transform">→</span>
+                </span>
+              </div>
+
+            </Link>
           </article>
         );
       })}
