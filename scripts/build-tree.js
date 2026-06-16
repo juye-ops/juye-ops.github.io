@@ -4,7 +4,7 @@ const fs = require('fs');
 const matter = require('gray-matter'); 
 const { globSync } = require('glob'); 
 
-const POSTS_DIR = path.join(process.cwd(), 'public/content/posts');
+const POSTS_DIR = path.join(process.cwd(), 'public/posts');
 
 function getMarkdownFiles(dir) {
   return globSync(`${dir}/**/*.md`);

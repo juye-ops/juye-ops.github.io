@@ -5,7 +5,6 @@
   --color-prose-links: var(--color-indigo-600);
 }
 
-@import "prismjs/themes/prism-tomorrow.css";
 .code-highlight {
   float: left;
   min-width: 100%;
@@ -47,4 +46,3 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
-
