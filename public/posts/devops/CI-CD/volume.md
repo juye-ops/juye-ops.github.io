@@ -18,3 +18,16 @@ sudo kubectl get pods -A
 ```txt
 sudo kubectl get pods -A
 ```
+
+ ==highlight==
+
+> [!note]- a sd
+> hihi
+
+- asd
+- [x] asd
+
+$$ 123123 + 123 \lim(x->y) $$
+
+![[/assets/images/image.png]]
+[[../../docker/volume.md]]

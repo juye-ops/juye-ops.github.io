@@ -4,7 +4,7 @@ import path from "path";
 import { fetchRaw } from "@/shared/utils/common/fetchRaw";
 
 export async function getAbout() {
-  const filePath = path.join(process.cwd(), 'public/content/about.md');
+  const filePath = path.join(process.cwd(), 'public/about.md');
   const rawData = await fetchRaw(filePath);
 
   const { frontmatter, content } = parseMarkdown(rawData);
