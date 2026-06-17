@@ -10,6 +10,7 @@ import { CoverflowSwiperProps } from "../types/coverflow-swiper.types";
 import { CoverflowCard } from "./CoverflowCard";
 import { useWheelScroll } from "../hooks/useWheelScroll";
 import { COVERFLOW_CONFIG } from "../utils/config";
+import Link from "next/link";
 
 export function CoverflowSwiper({
   items,
@@ -29,19 +30,13 @@ export function CoverflowSwiper({
     totalSlides: slides.length,
   });
 
-  const handleCardClick = (clickedDataIndex: number) => {
-    if (!swiperRef.current) return;
-    const targetRealIndex = clickedDataIndex % slides.length;
-    swiperRef.current.slideToLoop(targetRealIndex, 300);
-  };
-
   return (
     <div ref={internalContainerRef}>
       <Swiper
-        onSwiper={(swiper) => {
-          swiperRef.current = swiper;
-        }}
-        modules={[EffectCoverflow, Keyboard]}  // ← Mousewheel 제거!
+        onSwiper={
+          (swiper) => { swiperRef.current = swiper; }
+        }
+        modules={[EffectCoverflow, Keyboard]}
         effect="coverflow"
         grabCursor
         centeredSlides={true}
@@ -60,7 +55,9 @@ export function CoverflowSwiper({
       >
         {slides.map((item, index) => (
           <SwiperSlide key={index} className="swiper-slide-coverflow !w-[200px] sm:!w-[300px] md:!w-[400px]">
-            <CoverflowCard item={item} onClick={() => handleCardClick(index)} />
+            <Link href={`blog/${item.domainSlug}/${item.categorySlug}/${item.slug}`}>
+              <CoverflowCard item={item} />
+            </Link>
           </SwiperSlide>
         ))}
       </Swiper>

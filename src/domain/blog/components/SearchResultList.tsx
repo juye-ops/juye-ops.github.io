@@ -16,21 +16,26 @@ export function SearchResultList({ posts }: SearchResultListProps) {
     );
   }
 
-return (
-    <div className="flex flex-col gap-4 animate-in fade-in duration-300"> {/* grid -> flex-col */}
+  return (
+    <div className="flex flex-col gap-4 animate-in fade-in duration-300">
       {posts.map((post) => (
-        <article
-          key={post.postPath}
-          // 🌟 PostList와 동일한 클래스 구조로 변경
-          className="group flex items-center justify-between p-6 bg-white border border-slate-200/60 rounded-2xl shadow-sm shadow-slate-100/80 hover:border-indigo-200 transition-all"
+        // 🌟 Link를 article의 부모로 배치
+        <Link 
+          key={post.postPath} 
+          href={`/blog/${post.domainSlug}/${post.categorySlug}/${post.slug}`}
+          className="block group" // 블록 요소로 만들어 클릭 영역 확보
         >
-          {/* 일렬 배치의 상세 레이아웃을 여기에 작성 */}
-          <div className="flex flex-col gap-2">
-            <span className="text-xs font-medium text-indigo-600">{post.domain} / {post.category}</span>
-            <h3 className="text-lg font-semibold text-slate-800">{post.title}</h3>
-          </div>
-          <span className="text-slate-300 group-hover:text-indigo-600 transition-colors">→</span>
-        </article>
+          <article
+            className="flex items-center justify-between p-6 bg-white border border-slate-200/60 rounded-2xl shadow-sm shadow-slate-100/80 hover:border-indigo-200 transition-all"
+          >
+            <div className="flex flex-col gap-2">
+              <span className="text-xs font-medium text-indigo-600">{post.domain} / {post.category}</span>
+              <h3 className="text-lg font-semibold text-slate-800">{post.title}</h3>
+            </div>
+            <span className="text-slate-300 group-hover:text-indigo-600 transition-colors">→</span>
+          </article>
+        </Link>
       ))}
     </div>
-  );}
+  );
+}

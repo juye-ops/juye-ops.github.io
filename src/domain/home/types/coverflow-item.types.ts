@@ -1,9 +1,11 @@
 export interface CoverflowItem {
-  id: string;
   title: string;
   description: string;
-  thumbnailUrl: string;
+  thumbnail: string;
   tags?: string[];
-  isFeatured?: boolean;
-  createdAt: string;
+  featured?: boolean;
+  date: string;
+  domainSlug: string;
+  categorySlug: string;
+  slug: string;
 }

@@ -1,8 +1,8 @@
 // scripts/build-tree.js
 const path = require('path');
 const fs = require('fs');
-const matter = require('gray-matter'); 
-const { globSync } = require('glob'); 
+const matter = require('gray-matter');
+const { globSync } = require('glob');
 
 const POSTS_DIR = path.join(process.cwd(), 'public/posts');
 
@@ -39,20 +39,23 @@ async function generateTree() {
       .slice(0, 1500);
 
     return {
+      title: data.title || "제목 없음",
+      date: postDate,
+      domain: data.domain || "NoDomain",
+      category: data.category || "Uncategorized",
+      description: data.description,
+      thumbnail: data.thumbnail,
+      featured: data.featured || false,
       postPath: relativePostPath,
       slug,
-      title: data.title || "제목 없음",
-      domain: data.domain || "NoDomain",
-      date: postDate,                 
-      category: data.category || "Uncategorized",
-      rawContent: sanitizedContent,   
+      rawContent: sanitizedContent,
     };
   });
 
   // 4. 트리 구조로 데이터 가공 (reduce)
   const tree = allPosts.reduce((acc, curr) => {
     const originalDomain = curr.domain;
-    const domainSlug = curr.domain.toLowerCase(); 
+    const domainSlug = curr.domain.toLowerCase();
 
     let domainNode = acc.find((d) => d.domain === originalDomain);
     if (!domainNode) {
@@ -80,9 +83,12 @@ async function generateTree() {
     // 🌟 5. 최종 카테고리 트리 파일 내부 객체에도 date를 유실 없이 집어넣어 줍니다.
     categoryNode.posts.push({
       title: curr.title,
+      date: curr.date, // 👈 이 줄이 들어가야 PostPage와 블로그 메인 리스트에서 꺼내 쓸 수 있습니다.
+      description: curr.description,
+      thumbnail: curr.thumbnail,
+      featured: curr.featured,
       postPath: curr.postPath,
       slug: curr.slug,
-      date: curr.date, // 👈 이 줄이 들어가야 PostPage와 블로그 메인 리스트에서 꺼내 쓸 수 있습니다.
       content: curr.rawContent
     });
 
