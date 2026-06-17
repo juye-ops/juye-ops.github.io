@@ -6,7 +6,7 @@ import { ContentProps } from '@/domain/about/types/content.types';
 
 export function Content({ section }: ContentProps) {
   return (
-    <div className={styles.contentSlide}>
+    <div className={styles.contentSlide + " max-w-7xl mx-auto"}>
       <article className={styles.sectionContent}>
         <ReactMarkdown
           remarkPlugins={[remarkGfm]}
