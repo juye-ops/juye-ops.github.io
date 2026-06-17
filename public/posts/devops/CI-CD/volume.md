@@ -1,8 +1,11 @@
 ---
-title: Blogging Like a Hacker
+title: Blogging Like a Hacker 1
 domain: DevOps
 category: CI/CD
 date: 2026-06-12
+thumbnail: /assets/images/image.png
+description: "본문 요약"
+featured: true
 ---
 
 # docker
@@ -29,5 +32,4 @@ sudo kubectl get pods -A
 
 $$ 123123 + 123 \lim(x->y) $$
 
-![[/assets/images/image.png]]
-[[../../docker/volume.md]]
+![alt text](/assets/images/image.png)

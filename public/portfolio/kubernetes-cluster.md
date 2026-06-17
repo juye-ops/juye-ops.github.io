@@ -6,9 +6,9 @@ due: "2025.03 ~ 2026.01"
 description: "3개 클러스터를 아크로스 클러스터 관리를 위해 Istio + ArgoCD를 도입하여 배포/모니터링을 통합한 시스템 구축"
 skills: [Kubernetes, React, Spring, ArgoCD, Istio]
 images: 
-  - "/images/portfolio/k8s-cluster-1.png"
-  - "/images/portfolio/k8s-cluster-2.png"
-  - "/images/portfolio/k8s-cluster-3.png"
+  - "/assets/images/portfolio/k8s-cluster-1.png"
+  - "/assets/images/portfolio/k8s-cluster-2.png"
+  - "/assets/images/portfolio/k8s-cluster-3.png"
 ---
 
 ## 프로젝트 개요

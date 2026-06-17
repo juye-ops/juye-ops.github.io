@@ -8,7 +8,6 @@ import rehypeKatex from 'rehype-katex';
 import rehypePrettyCode from 'rehype-pretty-code';
 import rehypeStringify from 'rehype-stringify';
 import remarkCallout from '@r4ai/remark-callout'
-import wikiLinkPlugin from "@flowershow/remark-wiki-link";
 
 import { remarkMark as remarkHighlight} from 'remark-mark-highlight'
 
@@ -19,7 +18,6 @@ export async function processMarkdown(content: string) {
     .use(remarkMath)
     .use(remarkCallout)
     .use(remarkHighlight)
-    .use(wikiLinkPlugin)
     .use(remarkRehype, { allowDangerousHtml: true })
     .use(rehypeRaw)
     .use(rehypeKatex)

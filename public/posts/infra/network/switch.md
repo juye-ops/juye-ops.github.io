@@ -1,5 +1,9 @@
 ---
-title: Blogging Like a Hacker
+title: Blogging Like a Hacker 5
+date: 2026-06-12
+thumbnail: /assets/images/image.png
+description: "본문 요약"
+featured: true
 ---
 
 hi
