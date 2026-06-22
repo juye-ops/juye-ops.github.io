@@ -1,20 +1,13 @@
-import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
-import styles from './Content.module.css';
-import { CustomComponents } from '@/shared/components/CustomComponents';
 import { ContentProps } from '@/domain/about/types/content.types';
+import "@/shared/styles/markdown.css";
+import 'katex/dist/katex.min.css';
 
 export function Content({ section }: ContentProps) {
   return (
-    <div className={styles.contentSlide + " max-w-7xl mx-auto"}>
-      <article className={styles.sectionContent}>
-        <ReactMarkdown
-          remarkPlugins={[remarkGfm]}
-          components={CustomComponents}
-        >
-          {section}
-        </ReactMarkdown>
-      </article>
+    <div>
+      <article
+        className={"prose prose-slate max-w-6xl mx-auto px-8 py-20"}
+        dangerouslySetInnerHTML={{ __html: section }} />
     </div>
   );
 }

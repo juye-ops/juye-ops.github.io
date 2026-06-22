@@ -14,6 +14,7 @@ interface AboutSwiperProps {
 }
 
 export function AboutSwiper({ frontmatter, sections }: AboutSwiperProps) {
+  
   return (
     <Swiper
       direction="vertical"

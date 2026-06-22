@@ -7,9 +7,9 @@ import { notFound } from "next/navigation";
 import categoryTree from "@/shared/metadata/categoryTree.json";
 import matter from "gray-matter";
 import { BlogHeader } from "../components/BlogHeader";
-import "./markdown.css"; import 'katex/dist/katex.min.css';
+import "@/shared/styles/markdown.css"; import 'katex/dist/katex.min.css';
 
-import { processMarkdown } from "../utils/processMarkdown"; // 위에서 만든 함수
+import { processMarkdown } from "@/shared/utils/markdown/processMarkdown"; // 위에서 만든 함수
 
 
 interface PostPageProps {

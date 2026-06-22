@@ -1,5 +1,5 @@
-import fs from 'fs/promises';
+import fs from 'fs';
 
-export async function fetchRaw(absPath: string) {
-  return await fs.readFile(absPath, 'utf8');
+export function fetchRaw(absPath: string) {
+  return fs.readFileSync(absPath, 'utf8');
 }
