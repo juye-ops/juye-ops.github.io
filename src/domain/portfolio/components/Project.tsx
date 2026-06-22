@@ -11,7 +11,7 @@ interface ProjectProps {
 
 export function Project({ frontmatter, content }: ProjectProps) {
   return (
-    <div className="h-screen flex flex-col overflow-hidden max-w-7xl mx-auto p-20">
+    <div className="h-screen flex flex-col overflow-hidden max-w-6xl mx-auto px-8 py-20">
       <div className="flex-shrink-0">
         <ProjectContent frontmatter={frontmatter} />
       </div>

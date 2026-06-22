@@ -21,7 +21,7 @@ export function StickyNavBar() {
     <header className="fixed right-0 left-0 top-0 z-40 backdrop-blur-md bg-white/80">
       <nav className="max-w-6xl mx-auto px-8 py-4 flex justify-between items-center">
         <Link href="/" className="text-xl font-bold">
-          YourLogo
+          Juye-Ops
         </Link>
 
         <ul className="flex gap-8">

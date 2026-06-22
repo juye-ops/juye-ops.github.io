@@ -1,4 +1,4 @@
-import { unified } from 'unified';
+import { unified, Plugin } from 'unified';
 import remarkParse from 'remark-parse';
 import remarkGfm from 'remark-gfm';
 import remarkMath from 'remark-math';
@@ -8,12 +8,14 @@ import rehypeKatex from 'rehype-katex';
 import rehypePrettyCode from 'rehype-pretty-code';
 import rehypeStringify from 'rehype-stringify';
 import remarkCallout from '@r4ai/remark-callout'
-
-import { remarkMark as remarkHighlight} from 'remark-mark-highlight'
+import { remarkMark as remarkHighlight } from 'remark-mark-highlight'
+import remarkBreaks from 'remark-breaks';
 
 export async function processMarkdown(content: string) {
+
   const file = await unified()
     .use(remarkParse)
+    .use(remarkBreaks)
     .use(remarkGfm)
     .use(remarkMath)
     .use(remarkCallout)
