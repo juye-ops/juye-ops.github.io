@@ -397,23 +397,44 @@ mark {
 
     ::before,
     ::after {
-      content: none;
+      @apply content-none;
     }
 
-    font-style: normal;
+    @apply not-italic mb-4;
+  }
+
+  code {
+
+    &::before,
+    &::after {
+      @apply not-italic;
+    }
+
+    @apply inline-block px-0.5 bg-gray-50 font-medium rounded-lg;
   }
 
   ul,
-  ol {
-    margin: 0;
+  ol,
+  li {
+    @apply m-0;
   }
 
   h1,
   h2,
   h3,
   h4 {
-    margin-top: 2rem;
-    margin-bottom: 0.5rem;
-    line-height: 1.2;
+    @apply mt-4 mb-2;
+  }
+
+  p {
+    @apply mt-2 mb-0;
+  }
+
+  img {
+    @apply inline-block my-0.5
+  }
+
+  hr {
+    @apply my-6 border-gray-300
   }
 }

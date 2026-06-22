@@ -13,9 +13,9 @@ export function Profile({ frontmatter }: ProfileProps) {
           <a href={`mailto:${frontmatter.email}`} className={styles.contact}>
             ✉️ {frontmatter.email}
           </a>
-          <a href={`tel:${frontmatter.phone}`} className={styles.contact}>
+          {/* <a href={`tel:${frontmatter.phone}`} className={styles.contact}>
             📱 {frontmatter.phone}
-          </a>
+          </a> */}
           <a href={frontmatter.blog} target="_blank" rel="noopener noreferrer" className={styles.contact}>
             🌐 Blog
           </a>
