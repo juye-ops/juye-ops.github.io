@@ -1,5 +1,5 @@
 import { AboutSwiper } from "@/domain/about/components/AboutSwiper";
-import { getAbout } from "../types/getAbout";
+import { getAbout } from "../utils/getAbout";
 
 export async function AboutPage() {
   const aboutData = await getAbout();
