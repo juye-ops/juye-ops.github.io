@@ -1,8 +1,7 @@
 import { useState } from "react";
-import ReactMarkdown from "react-markdown";
 import styles from "./ProjectDetail.module.css"
-import { CustomComponents } from "@/shared/components/CustomComponents";
 import { Modal } from "@/shared/components/Modal";
+import "@/shared/styles/markdown.css"
 
 const PREVIEW_MAX_HEIGHT = 360; // px
 
@@ -15,14 +14,15 @@ export function ProjectDetail({ title, content }: ProjectDetailProps) {
   const [open, setOpen] = useState(false);
 
   return (
-    <section className="mt-8">
       <div className="relative">
         {/* 미리보기 영역 */}
         <div
           className={styles.sectionContent}
           style={{ maxHeight: PREVIEW_MAX_HEIGHT }}
         >
-          <ReactMarkdown components={CustomComponents}>{content}</ReactMarkdown>
+          <article
+            className={"prose prose-slate max-w-6xl mx-auto "}
+            dangerouslySetInnerHTML={{ __html: content }} />
         </div>
 
         {/* 그라데이션 + 버튼 (더 보기) */}
@@ -35,7 +35,6 @@ export function ProjectDetail({ title, content }: ProjectDetailProps) {
             더 보기
           </button>
         </div>
-      </div>
 
       <Modal
         open={open}
@@ -43,10 +42,11 @@ export function ProjectDetail({ title, content }: ProjectDetailProps) {
         title={title}
       >
         {/* <article className="prose prose-sm md:prose-base dark:prose-invert max-w-none"> */}
-        <article className={styles.sectionContent}>
-          <ReactMarkdown components={CustomComponents}>{content}</ReactMarkdown>
-        </article>
+        <article
+          className={"prose prose-slate max-w-6xl mx-auto "}
+          dangerouslySetInnerHTML={{ __html: content }} />
+
       </Modal>
-    </section>
+      </div>
   );
 }

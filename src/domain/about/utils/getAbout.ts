@@ -1,5 +1,5 @@
 import { parseMarkdown, parseSections } from "@/shared/utils/markdown";
-import { AboutFrontmatter } from "./about.types";
+import { AboutFrontmatter } from "../types/about.types";
 import path from "path";
 import { fetchRaw } from "@/shared/utils/common/fetchRaw";
 import { processMarkdown } from "@/shared/utils/markdown/processMarkdown"; // 추가

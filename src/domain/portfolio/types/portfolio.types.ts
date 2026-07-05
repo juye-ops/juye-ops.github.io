@@ -5,7 +5,10 @@ organization: string;
 due: string;
 description: string;
 skills: string[];
-images: string[];
+images?: {
+    src: string;
+    caption?: string;
+  }[];
 }
 
 export interface PortfolioState {
