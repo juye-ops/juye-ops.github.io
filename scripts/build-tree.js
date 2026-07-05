@@ -68,8 +68,10 @@ async function generateTree() {
     }
 
     const originalCategory = curr.category;
-    const categorySlug = curr.category.toLowerCase().replace(/\//g, '-');
-
+    const categorySlug = curr.category
+      .toLowerCase()
+      .trim()                        // 앞뒤 공백 제거
+      .replace(/[\/\s]+/g, '-');     // 슬래시나 공백이 연속되어도 하나의 하이픈으로 변경
     let categoryNode = domainNode.categories.find((c) => c.category === originalCategory);
     if (!categoryNode) {
       categoryNode = {
