@@ -4,7 +4,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Mousewheel, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import styles from './About.module.css';
 import { Content } from './Content';
 import { Profile } from './Profile';
 
@@ -24,11 +23,11 @@ export function AboutSwiper({ frontmatter, sections }: AboutSwiperProps) {
       keyboard={{ enabled: true }}
       style={{ position: 'absolute', inset: 0 }}
     >
-      <SwiperSlide className={styles.slide}>
+      <SwiperSlide>
         {frontmatter ? <Profile key="profile" frontmatter={frontmatter} /> : null}
       </SwiperSlide>
       {sections.map((section) => (
-        <SwiperSlide className={styles.slide}>
+        <SwiperSlide>
           <Content section={section} />
         </SwiperSlide>
       ))}

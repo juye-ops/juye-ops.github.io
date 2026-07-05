@@ -5,7 +5,7 @@ export async function AboutPage() {
   const aboutData = await getAbout();
 
   return (
-    <main className="relative h-screen">
+    <main className="relative h-dvh">
       <AboutSwiper {...aboutData} />
     </main>
   );
