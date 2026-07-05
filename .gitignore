@@ -43,3 +43,5 @@ next-env.d.ts
 
 ### Custom Ignores ###
 /src/shared/metadata/*
+
+.obsidian
