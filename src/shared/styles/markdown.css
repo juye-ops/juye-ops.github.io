@@ -393,11 +393,11 @@ details[data-callout][open]>summary[data-callout-title]::after {
   position: relative !important;
   margin: 1.5rem 0 !important;
   border-radius: 8px !important;
-  overflow: hidden !important; 
+  overflow: hidden !important;
   display: flex !important;
   flex-direction: column !important;
   gap: 0 !important;
-  
+
   background-color: #1a1a1a !important;
   border: 1px solid rgba(255, 255, 255, 0.06) !important;
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45) !important;
@@ -406,7 +406,7 @@ details[data-callout][open]>summary[data-callout-title]::after {
 /* 2. 맥OS 윈도우 상단 바 스타일의 타이틀 */
 .remark-code-title {
   position: relative !important;
-  padding: 12px 64px !important; 
+  padding: 12px 64px !important;
   font-size: 0.8rem !important;
   font-weight: 600 !important;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
@@ -414,7 +414,7 @@ details[data-callout][open]>summary[data-callout-title]::after {
   background-color: #181818 !important;
   color: #94a3b8 !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
-  
+
   white-space: nowrap !important;
   overflow: hidden !important;
   text-overflow: ellipsis !important;
@@ -431,7 +431,7 @@ details[data-callout][open]>summary[data-callout-title]::after {
   height: 10px !important;
   border-radius: 50% !important;
   background-color: #ff5f56 !important;
-  box-shadow: 16px 0 0 #ffbd2e, 32px 0 0 #27c93f !important; 
+  box-shadow: 16px 0 0 #ffbd2e, 32px 0 0 #27c93f !important;
   pointer-events: none !important;
 }
 
@@ -444,7 +444,7 @@ figure[data-rehype-pretty-code-figure] {
 }
 
 /* 3-1. 타이틀이 없는 단독 코드블록(```yaml)일 경우 예외 보정 */
-:not(.remark-code-container) > figure[data-rehype-pretty-code-figure] {
+:not(.remark-code-container)>figure[data-rehype-pretty-code-figure] {
   position: relative !important;
   margin: 1.5rem 0 !important;
   border-radius: 8px !important;
@@ -469,11 +469,11 @@ figure[data-rehype-pretty-code-figure] pre {
 figure[data-rehype-pretty-code-figure] pre[data-language]::before {
   content: attr(data-language) !important;
   position: absolute !important;
-  
+
   /* 위로 억지로 올리지 않고, 무조건 노출되는 pre 영역 내부 우측 상단에 안착시킵니다. */
   top: 12px !important;
   right: 16px !important;
-  
+
   font-size: 0.68rem !important;
   font-weight: 700 !important;
   text-transform: uppercase !important;
@@ -482,25 +482,45 @@ figure[data-rehype-pretty-code-figure] pre[data-language]::before {
   letter-spacing: 0.06em !important;
   pointer-events: none !important;
   z-index: 10 !important;
-  
+
   background: rgba(255, 255, 255, 0.05) !important;
   padding: 2px 6px !important;
   border-radius: 4px !important;
   border: 1px solid rgba(255, 255, 255, 0.03) !important;
 }
 
-/* 6. 내부 code 태그 그리드 정렬 초기화 */
+/* 6. [수정] 코드 블록 내부의 code 태그로 범위를 확실히 제한 */
+figure[data-rehype-pretty-code-figure] pre>code[data-language],
 figure[data-rehype-pretty-code-figure] pre>code {
   display: grid !important;
   background: transparent !important;
-  background-color: transparent !important;
   padding: 0 !important;
   margin: 0 !important;
   border: none !important;
-  border-radius: 0 !important;
-  white-space: pre !important;
-  word-wrap: normal !important;
+  /* ... 나머지 속성 ... */
 }
+
+/* 추가: 인라인 코드가 스타일을 상속받지 않도록 초기화 (필요시) */
+/* 본문 내의 인라인 코드 (pre 태그 안에 없는 것) */
+:not(pre)>code {
+  /* Tailwind의 @apply 대신 표준 CSS를 사용해 우선순위 확보 */
+  display: inline-block !important;
+  padding: 0.1rem 0.3rem !important;
+  background-color: #f0f0f0 !important;
+  /* gray-100 느낌 */
+  border-radius: 4px !important;
+  font-size: 0.9em !important;
+  font-weight: 500 !important;
+  color: rgb(255, 128, 128) !important;
+  border: none !important;
+}
+
+/* 혹시라도 붙어 있을 수 있는 before/after 제거 */
+:not(pre)>code::before,
+:not(pre)>code::after {
+  content: none !important;
+}
+
 
 
 
@@ -521,15 +541,6 @@ mark {
     @apply not-italic mb-4;
   }
 
-  code {
-
-    &::before,
-    &::after {
-      @apply not-italic content-none;
-    }
-
-    @apply inline-block px-0.5 bg-gray-50 font-medium rounded-lg;
-  }
 
   ul,
   ol,
