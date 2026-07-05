@@ -6,7 +6,7 @@ export function Content({ section }: ContentProps) {
   return (
     <div>
       <article
-        className={"prose prose-slate max-w-6xl mx-auto px-8 py-20"}
+        className={"prose prose-slate max-w-6xl mx-auto px-8 py-20 h-dvh overflow-hidden"}
         dangerouslySetInnerHTML={{ __html: section }} />
     </div>
   );
