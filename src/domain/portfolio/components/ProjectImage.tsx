@@ -10,7 +10,7 @@ import { ProjectFrontmatter } from "@/domain/portfolio/types/portfolio.types";
 
 interface ProjectImageProps {
   frontmatter: Omit<ProjectFrontmatter, "images"> & {
-    images?: { src: string; caption?: string }[];
+    images?: { src?: string; caption?: string }[];
   };
 }
 
@@ -30,7 +30,7 @@ export function ProjectImage({ frontmatter }: ProjectImageProps) {
   return (
     <div className="w-full max-w-md flex flex-col gap-2">
       {/* 1. 메인 이미지 슬라이더 (16:9 고정 및 초소형 핏) */}
-      <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-2xs bg-neutral-100 dark:bg-neutral-800 border border-neutral-200/50 dark:border-neutral-700/50 group">
+      <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-2xs bg-white dark:bg-neutral-800 border border-neutral-200/50 dark:border-neutral-700/50 group">
         <Swiper
           modules={[Navigation]}
           spaceBetween={0}
@@ -40,8 +40,8 @@ export function ProjectImage({ frontmatter }: ProjectImageProps) {
           onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
           className="h-full w-full"
           navigation={{
-            nextEl: '.swiper-button-prev-custom',
-            prevEl: '.swiper-button-next-custom',
+            prevEl: '.swiper-button-prev-custom',
+            nextEl: '.swiper-button-next-custom',
           }}
         >
           {frontmatter.images!.map((image, idx) => (
@@ -49,7 +49,7 @@ export function ProjectImage({ frontmatter }: ProjectImageProps) {
               <img
                 src={image.src}
                 alt={image.caption || `${frontmatter.title} ${idx + 1}`}
-                className="h-full w-full object-cover select-none"
+                className="h-full w-full object-contain mx-auto select-none"
               />
             </SwiperSlide>
           ))}

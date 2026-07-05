@@ -384,12 +384,12 @@ details[data-callout][open]>summary[data-callout-title]::after {
 }
 
 
+
+
+/* Customization Below */
+
 mark {
-  background-color: #fef08a;
-  /* 연한 노란색 */
-  color: inherit;
-  padding: 0 2px;
-  border-radius: 2px;
+  @apply bg-[#fef08a] text-inherit px-0.5 rounded-[2px];
 }
 
 .prose {
@@ -407,7 +407,7 @@ mark {
 
     &::before,
     &::after {
-      @apply not-italic;
+      @apply not-italic content-none;
     }
 
     @apply inline-block px-0.5 bg-gray-50 font-medium rounded-lg;

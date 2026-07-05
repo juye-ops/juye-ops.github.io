@@ -1,8 +1,7 @@
 import { useState } from "react";
-import ReactMarkdown from "react-markdown";
 import styles from "./ProjectDetail.module.css"
-import { CustomComponents } from "@/shared/components/CustomComponents";
 import { Modal } from "@/shared/components/Modal";
+import "@/shared/styles/markdown.css"
 
 const PREVIEW_MAX_HEIGHT = 360; // px
 

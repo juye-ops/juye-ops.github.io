@@ -15,6 +15,7 @@ export function Project({ frontmatter, content }: ProjectProps) {
       <div className="flex-shrink-0">
         <ProjectContent frontmatter={frontmatter} />
       </div>
+      <hr className="mt-4 border-gray-300"/>
       <div className="flex-shrink-0">
         <ProjectDetail title={frontmatter.title} content={content} />
       </div>
