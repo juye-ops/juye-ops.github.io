@@ -384,6 +384,124 @@ details[data-callout][open]>summary[data-callout-title]::after {
 }
 
 
+/* ==========================================================================
+   --- macOS Dark Style Code Block (Position Fixed) --- 
+   ========================================================================== */
+
+/* 1. 타이틀과 코드블록을 통째로 감싸는 최상위 컨테이너 */
+.remark-code-container {
+  position: relative !important;
+  margin: 1.5rem 0 !important;
+  border-radius: 8px !important;
+  overflow: hidden !important; 
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0 !important;
+  
+  background-color: #1a1a1a !important;
+  border: 1px solid rgba(255, 255, 255, 0.06) !important;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45) !important;
+}
+
+/* 2. 맥OS 윈도우 상단 바 스타일의 타이틀 */
+.remark-code-title {
+  position: relative !important;
+  padding: 12px 64px !important; 
+  font-size: 0.8rem !important;
+  font-weight: 600 !important;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+  letter-spacing: 0.02em !important;
+  background-color: #181818 !important;
+  color: #94a3b8 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+  
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+/* 2-1. 맥OS 신호등 버튼 */
+.remark-code-title::before {
+  content: "" !important;
+  position: absolute !important;
+  left: 16px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 50% !important;
+  background-color: #ff5f56 !important;
+  box-shadow: 16px 0 0 #ffbd2e, 32px 0 0 #27c93f !important; 
+  pointer-events: none !important;
+}
+
+/* 3. 실제 코드 블록 컨테이너 (figure) */
+figure[data-rehype-pretty-code-figure] {
+  position: relative !important;
+  margin: 0 !important;
+  overflow: hidden !important;
+  background-color: #1e1e1e !important;
+}
+
+/* 3-1. 타이틀이 없는 단독 코드블록(```yaml)일 경우 예외 보정 */
+:not(.remark-code-container) > figure[data-rehype-pretty-code-figure] {
+  position: relative !important;
+  margin: 1.5rem 0 !important;
+  border-radius: 8px !important;
+  border: 1px solid rgba(255, 255, 255, 0.06) !important;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45) !important;
+}
+
+/* 4. 실제 스크롤과 여백을 품는 pre 태그 */
+figure[data-rehype-pretty-code-figure] pre {
+  margin: 0 !important;
+  /* ★ 중요: 우측 상단에 배치될 언어 배지 공간(상단 42px)을 미리 확보하여 절대 겹치지 않게 만듭니다. */
+  padding: 16px !important;
+  overflow-x: auto !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+  font-size: 14px !important;
+  line-height: 1.6 !important;
+}
+
+/* 5. ★ 위치 원천 교정: 언어 배지 (미니멀 투명 라벨 칩) */
+figure[data-rehype-pretty-code-figure] pre[data-language]::before {
+  content: attr(data-language) !important;
+  position: absolute !important;
+  
+  /* 위로 억지로 올리지 않고, 무조건 노출되는 pre 영역 내부 우측 상단에 안착시킵니다. */
+  top: 12px !important;
+  right: 16px !important;
+  
+  font-size: 0.68rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  color: rgba(255, 255, 255, 0.35) !important;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+  letter-spacing: 0.06em !important;
+  pointer-events: none !important;
+  z-index: 10 !important;
+  
+  background: rgba(255, 255, 255, 0.05) !important;
+  padding: 2px 6px !important;
+  border-radius: 4px !important;
+  border: 1px solid rgba(255, 255, 255, 0.03) !important;
+}
+
+/* 6. 내부 code 태그 그리드 정렬 초기화 */
+figure[data-rehype-pretty-code-figure] pre>code {
+  display: grid !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  border-radius: 0 !important;
+  white-space: pre !important;
+  word-wrap: normal !important;
+}
+
 
 
 /* Customization Below */

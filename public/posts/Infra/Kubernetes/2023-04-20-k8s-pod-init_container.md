@@ -16,7 +16,7 @@ Main container의 전처리를 수행하는 Container
 [Kubernetes: Init Containers](https://kubernetes.io/docs/concepts/workloads/pods/init-containers/)
 1. myapp-pod: init-container-exam.yaml 작성
    - `myservice`라는 앱과 `mydb`라는 앱이 생성되면 Main container인 `myapp-container`를 수행
-```yaml
+```yaml:init-container-exam.yaml
 # init-container-exam.yaml
 apiVersion: v1
 kind: Pod
