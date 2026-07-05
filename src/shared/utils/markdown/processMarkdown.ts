@@ -10,6 +10,8 @@ import rehypeStringify from 'rehype-stringify';
 import remarkCallout from '@r4ai/remark-callout'
 import { remarkMark as remarkHighlight } from 'remark-mark-highlight'
 import remarkBreaks from 'remark-breaks';
+import remarkCodeTitles from "remark-flexible-code-titles";
+
 
 export async function processMarkdown(content: string) {
 
@@ -20,11 +22,13 @@ export async function processMarkdown(content: string) {
     .use(remarkMath)
     .use(remarkCallout)
     .use(remarkHighlight)
+    .use(remarkCodeTitles)
     .use(remarkRehype, { allowDangerousHtml: true })
     .use(rehypeRaw)
     .use(rehypeKatex)
     .use(rehypePrettyCode, {
-      theme: 'one-dark-pro',
+      theme: 'github-dark',
+      defaultLang: 'text',
     })
     .use(rehypeStringify)
     .process(content);
