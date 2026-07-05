@@ -25,8 +25,9 @@ export async function processMarkdown(content: string) {
     .use(remarkCodeTitles)
     .use(remarkRehype, { allowDangerousHtml: true })
     .use(rehypeRaw)
-    .use(rehypeKatex)
-    .use(rehypePrettyCode, {
+    .use(rehypeKatex, {
+      strict: false, // 경고를 띄우지 않도록 설정
+    }).use(rehypePrettyCode, {
       theme: 'github-dark',
       defaultLang: 'text',
     })
