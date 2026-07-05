@@ -21,16 +21,16 @@ AWS의 퍼블릭 서비스나 직접적으로 생성한 AWS 서비스에 대해 
     - 프라이빗 서브넷에 배치
 - 엔드포인트 서비스: 사용자가 직접 생성한 서비스에 대해 연결
 
-<img src="/assets/images/posts/Infra/aws-endpoint-target_architecture.png">
+<img src="/assets/images/posts/Infra/AWS/2023-11-24-aws-vpc-advanced/aws-endpoint-target_architecture.png">
 _엔드포인트 구조_
 
-<img src="/assets/images/posts/Infra/aws-endpoint-s3_architecture.png">
+<img src="/assets/images/posts/Infra/AWS/2023-11-24-aws-vpc-advanced/aws-endpoint-s3_architecture.png">
 _VPC 게이트웨이 엔드포인트 생성 후 S3 통신 흐름 도식화_
 
-<img src="/assets/images/posts/Infra/aws-endpoint-cloudformation_architecture.png">
+<img src="/assets/images/posts/Infra/AWS/2023-11-24-aws-vpc-advanced/aws-endpoint-cloudformation_architecture.png">
 _VPC 인터페이스 엔드포인트 생성 후 CloudFormation 통신 흐름 도식화_
 
-<img src="/assets/images/posts/Infra/aws-eps_architecture.png">
+<img src="/assets/images/posts/Infra/AWS/2023-11-24-aws-vpc-advanced/aws-eps_architecture.png">
 _VPC 엔드포인트 및 서비스를 통한 프라이빗 링크 통신 흐름_
 
 ## 특징
@@ -52,7 +52,7 @@ _VPC 엔드포인트 및 서비스를 통한 프라이빗 링크 통신 흐름_
 - 하나의 가용영역에 종속
 - 그룹 내 인스턴스는 동일한 인스턴스 유형을 사용하도록 권고
 
-<img src="/assets/images/posts/Infra/aws-placementgroup-cluster.png">
+<img src="/assets/images/posts/Infra/AWS/2023-11-24-aws-vpc-advanced/aws-placementgroup-cluster.png">
 _클러스터 배치 그룹에서 인스턴스 배치_
 
 ### 파티션 배치 그룹
@@ -61,7 +61,7 @@ _클러스터 배치 그룹에서 인스턴스 배치_
 - 가용 영역 당 최대 7개의 파티션 보유 가능
 - 파티션 배치 그룹에서 실행할 수 있는 인스턴스 숫자는 계정 제한의 적용을 받음
 
-<img src="/assets/images/posts/Infra/aws-placementgroup-partition.png">
+<img src="/assets/images/posts/Infra/AWS/2023-11-24-aws-vpc-advanced/aws-placementgroup-partition.png">
 _파티션 배치 그룹에서 인스턴스 배치_
 
 ### 분산형 배치 그룹
@@ -71,7 +71,7 @@ _파티션 배치 그룹에서 인스턴스 배치_
 - 각각 고유한 랙에 배치된 인스턴스 그룹이며, 랙마다 자체 네트워크 및 전원 존재
 - 가용 영역당 7개의 인스턴스로 제한
 
-<img src="/assets/images/posts/Infra/aws-placementgroup-spread.png">
+<img src="/assets/images/posts/Infra/AWS/2023-11-24-aws-vpc-advanced/aws-placementgroup-spread.png">
 _분산형 배치 그룹에서 인스턴스 배치_
 
 # 메타 데이터

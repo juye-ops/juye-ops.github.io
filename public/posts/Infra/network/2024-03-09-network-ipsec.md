@@ -52,7 +52,7 @@ featured: false
 2. 'VPC-Hybrid' 클릭
 3. 하단 대시보드의 리소스맵 클릭 후 아래와 비교
 
-<img src="/assets/images/posts/Infra/hybrid-vpc-resourcemap.png">
+<img src="/assets/images/posts/Infra/Network/2024-03-09-network-ipsec/hybrid-vpc-resourcemap.png">
 _최종 VPC 리소스맵_
 
 # Site-to-Site VPN 설정

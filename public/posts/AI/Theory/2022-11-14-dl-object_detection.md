@@ -36,7 +36,7 @@ featured: false
   - False Positive(FP): 검출되지 말아야할 것이 검출됨
   - False Negative(FN): 검출되어야 할 것이 검출되지 않음
 
-<img src="static/img/confusion_matrix.png" width = 500px>
+<img src="/assets/images/posts/AI/Theory/2022-09-20-ai-basic/confusion_matrix.png" width = 500px>
 
 - Precision
   - $Precision = \frac{TP}{TP + FP} = \frac{TP}{All-Detections}$
@@ -45,7 +45,7 @@ featured: false
   - $Recall = \frac{TP}{TP + FN} = \frac{TP}{All\ Ground\ Truths}$
   - 모든 정답 Label들에 대한 예측 비율
 
-<img src="static/img/precision_recall.png" width=500px>
+<img src="/assets/images/posts/AI/Theory/2022-09-20-ai-basic/precision_recall.png" width=500px>
 
 - PR Curve
   - Ground Truth가 10개라고 가정
@@ -68,7 +68,6 @@ featured: false
     <tr><td>10</td><td>Plastic</td><td>10%</td><td>TP</td><td>6</td><td>-</td><td>6/10 = 0.6</td><td>6/10 = 0.6</td></tr>
 </table>
 
-<img src="static/img/PR_curve.png" width = 500px>
 
 - IoU(Intersection over Union)
   - Ground truth 영역과 predict 영역이 겹친 정도 혹은 비율

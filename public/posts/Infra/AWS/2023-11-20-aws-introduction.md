@@ -70,13 +70,13 @@ featured: false
 - 백본 네트워크는 AWS 글로벌 네트워크망과 연결을 하며, 중국 리전을 제외한 모든 AWS 리전과 연결
 - 서울 리전은 1개의 리전별 엣지 캐시와 4개의 엣지 로케이션으로 총 5개의 엣지 구성
 
-<img src="/assets/images/posts/Infra/aws-edge.png">
+<img src="/assets/images/posts/Infra/AWS/2023-11-20-aws-introduction/aws-edge.png">
 _에지 & 리전 도식화_
 
 ## AWS 인프라 구조
 AWS 사용자는 서비스 구성 시 여러 가용 영역에 분산하여 처리할 수 있도록 구성을 권장
 
-<img src="/assets/images/posts/Infra/aws-infra_structure.png">
+<img src="/assets/images/posts/Infra/AWS/2023-11-20-aws-introduction/aws-infra_structure.png">
 _AWS 인프라 구조_
 
 # AWS 제품

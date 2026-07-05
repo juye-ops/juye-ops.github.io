@@ -18,7 +18,7 @@ featured: false
 2. 인증(Authentication): 식별된 대상에 대한 인증을 수행하여 적합한 대상인지 판단
 3. 권한 부여(Authorization): 정책에 따라 허용, 거부, 제한적인 허용 등의 권한을 부여
 
-<img src="/assets/images/posts/Infra/aws-network-access.png">
+<img src="/assets/images/posts/Infra/AWS/2023-12-05-aws-security-group-acl/aws-network-access.png">
 _네트워크 접근 제어(예시)_
 
 # 보안 그룹과 네트워크 ACL
@@ -26,7 +26,7 @@ IP 주소/프로토콜/포트 번호를 통해 대상을 식별하고 제어 정
 - 보안 그룹(Security Group)
 - 네트워크 ACL(Network Access Control List)
 
-<img src="/assets/images/posts/Infra/aws-in-out-bound.png">
+<img src="/assets/images/posts/Infra/AWS/2023-12-05-aws-security-group-acl/aws-in-out-bound.png">
 _인바운드 규칙과 아웃바운드 규칙 구분_
 
 ## 차이점
@@ -36,7 +36,7 @@ _인바운드 규칙과 아웃바운드 규칙 구분_
 - 네트워크 ACL: 서브넷 레벨의 접근 제어를 수행
   - VPC 내부에 생성한 서브넷 네트워크에 대한 접근 제어 정책
 
-<img src="/assets/images/posts/Infra/aws-security-acl.png">
+<img src="/assets/images/posts/Infra/AWS/2023-12-05-aws-security-group-acl/aws-security-acl.png">
 _보안 그룹과 네트워크 ACL_
 
 ### Stateful vs Stateless

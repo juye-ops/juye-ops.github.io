@@ -8,7 +8,7 @@ description: ""
 featured: false
 ---
 
-<img src="/assets/images/posts/Infra/aws-network-book.jpg">
+<img src="/assets/images/posts/Infra/Theory/2023-12-06-lecture-aws-network/aws-network-book.jpg">
 _따라하며 배우는 AWS 네트워크 입문 표지_
 
 # 학습 목적

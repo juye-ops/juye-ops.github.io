@@ -9,7 +9,7 @@ featured: false
 ---
 *본 학습은 **따라하며 배우는 AWS 네트워크 입문** 서적을 통해 진행했습니다.*
 
-<img src="/assets/images/posts/Infra/aws-vpc_practice1.png">
+<img src="/assets/images/posts/Infra/AWS/2023-11-23-aws-public-vpc-practice/aws-vpc_practice1.png">
 _퍼블릭 서브넷 VPC 실습 목표 구성도_
 
 # VPC 생성
@@ -21,7 +21,7 @@ _퍼블릭 서브넷 VPC 실습 목표 구성도_
 - 이름 태그: "VPC-test"
 - IPv4 CIDR 블록: "10.0.0.0/16"
 
-<img src="/assets/images/posts/Infra/aws-vpc_architecture.png">
+<img src="/assets/images/posts/Infra/AWS/2023-11-23-aws-public-vpc-practice/aws-vpc_architecture.png">
 _VPC 생성 후 도식화_
 
 # 퍼블릭 서브넷 생성
@@ -34,7 +34,7 @@ _VPC 생성 후 도식화_
 - 가용 영역: ap-northeast-2a
 - IPv4 CIDR 블록: 10.0.0.0/24
 
-<img src="/assets/images/posts/Infra/aws-subnet_architecture.png">
+<img src="/assets/images/posts/Infra/AWS/2023-11-23-aws-public-vpc-practice/aws-subnet_architecture.png">
 _Subnet 생성 후 도식화_
 
 # 인터넷 게이트웨이 생성 및 VPC 연결
@@ -50,7 +50,7 @@ _Subnet 생성 후 도식화_
 3. 생성한 VPC 선택 후 "인터넷 게이트웨이 연결" 클릭
 4. 상태 "Attached" 식별
 
-<img src="/assets/images/posts/Infra/aws-igw_architecture.png">
+<img src="/assets/images/posts/Infra/AWS/2023-11-23-aws-public-vpc-practice/aws-igw_architecture.png">
 _IGW 생성 후 도식화_
 
 # 퍼블릭 라우팅
@@ -66,7 +66,7 @@ _IGW 생성 후 도식화_
 2. 명시적 서브넷 연결의 "서브넷 연결 편집" 클릭
 3. 생성한 "test-SN" Subnet 체크 후 연결 저장
 
-<img src="/assets/images/posts/Infra/aws-rt_architecture.png">
+<img src="/assets/images/posts/Infra/AWS/2023-11-23-aws-public-vpc-practice/aws-rt_architecture.png">
 _라우팅 테이블 생성 후 도식화_
 
 ## 퍼블릭 라우팅 테이블 경로 추가
@@ -77,7 +77,7 @@ _라우팅 테이블 생성 후 도식화_
    - 대상 1: "0.0.0.0/0"
    - 대상 2: "인터넷 게이트웨이" 선택 후 생성한 게이트웨이 ID 선택
 
-<img src="/assets/images/posts/Infra/aws-rt-add_architecture.png">
+<img src="/assets/images/posts/Infra/AWS/2023-11-23-aws-public-vpc-practice/aws-rt-add_architecture.png">
 _라우팅 테이블 인터넷 경로 추가 후 도식화_
 
 
@@ -102,5 +102,5 @@ $ ping google.com
 64 bytes from kix07s06-in-f14.1e100.net (142.250.76.142): icmp_seq=1 ttl=46 time=22.2 ms
 ```
 
-<img src="/assets/images/posts/Infra/aws-instance_architecture.png">
+<img src="/assets/images/posts/Infra/AWS/2023-11-23-aws-public-vpc-practice/aws-instance_architecture.png">
 _인스턴스 생성 도식화_

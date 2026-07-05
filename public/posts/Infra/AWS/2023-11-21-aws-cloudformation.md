@@ -9,7 +9,7 @@ featured: false
 ---
 *본 학습은 **따라하며 배우는 AWS 네트워크 입문** 서적을 통해 진행했습니다.*
 
-<img src="/assets/images/posts/Infra/aws-cloudformation.png">
+<img src="/assets/images/posts/Infra/AWS/2023-11-21-aws-cloudformation/aws-cloudformation.png">
 _CloudFormation 스택 실습 목표_
 # CloudFormation
 AWS 인프라에 대해 코드로 개략적인 선언을 하는 방법

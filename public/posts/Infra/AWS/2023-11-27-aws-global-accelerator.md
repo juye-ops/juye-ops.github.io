@@ -14,13 +14,13 @@ featured: false
 - AWS의 글로벌 네트워크를 통해 사용자에서 애플리케이션으로 이어진 경로를 최적화하여 트래픽의 성능을 개선하는 기술
 - 서울 리전의 AWS에 접근 시 국내 ISP의 네트워크 망 대역폭과 지연 상태가 원활하여 Global Accelerator를 사용하더라도 큰 체감을 할 순 없음
 
-<img src="/assets/images/posts/Infra/aws-ga-comparison.png">
+<img src="/assets/images/posts/Infra/AWS/2023-11-27-aws-global-accelerator/aws-ga-comparison.png">
 _Global Accelerator 미적용/적용 차이점_
 
 ## 구성요소
 Global Accelerator의 핵심은 Anycast IP를 제공하여 사용자 입장에서 가장 인접된 대상으로 접근하며, AWS 글로벌 네트워크를 경유하여 안정적이고 빠른 서비스 가능
 
-<img src="/assets/images/posts/Infra/aws-ga-architecture.png">
+<img src="/assets/images/posts/Infra/AWS/2023-11-27-aws-global-accelerator/aws-ga-architecture.png">
 _Global Accelerator 아키텍처_
 
 1. 엔드포인트 그룹: Global Accelerator 대상 애플리케이션이 배포되는 AWS 리전을 정의

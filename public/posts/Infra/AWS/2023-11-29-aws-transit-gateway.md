@@ -13,7 +13,7 @@ featured: false
 VPC나 온프레미스 등의 네트워크를 단일 지점으로 연결할 수 잇는 라우팅 서비스
 - 연결된 네트워크는 다른 네트워크에 연결할 필요 없이 AWS 전송 게이트웨이만 연결하면 되므로 관리를 최소화하고 운영 비용을 크게 감소
 
-<img src="/assets/images/posts/Infra/aws-transit-gateway.png">
+<img src="/assets/images/posts/Infra/AWS/2023-11-29-aws-transit-gateway/aws-transit-gateway.png">
 _AWS 전송 게이트웨이 기본 구성도_
 
 ## 주요 기능
@@ -44,7 +44,7 @@ AWS 전송 게이트웨이는 IAM과 통합되므로, AWS 전송 게이트웨이
 ## 미사용 vs 사용 비교
 다수의 VPC나 VPN, Direct Connect Gateway를 사용하는 환경에서도 중앙 집중형 연결 환경 생성
 
-<img src="/assets/images/posts/Infra/aws-transit-gateway-use-vs-unuse.png">
+<img src="/assets/images/posts/Infra/AWS/2023-11-29-aws-transit-gateway/aws-transit-gateway-use-vs-unuse.png">
 _전송 게이트웨이 미사용과 사용의 차이_
 
 ## 전송 게이트웨이 관련 용어

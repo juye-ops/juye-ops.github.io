@@ -29,7 +29,7 @@ sudo kubeadm init
 sudo kubeadm init --cri-socket /var/run/cri-dockerd.sock
 ```
 
-<img src="/assets/images/posts/Kube/init.png">
+<img src="/assets/images/posts/Infra/Kubernetes/2023-04-18-k8s-initialize/init.png">
 
 - 하단의 Token 및 CertKey 저장
 ```bash
@@ -51,7 +51,7 @@ sudo chown $(id -u):$(id -g) $HOME/.kube/config
 kubectl get nodes
 ```
 
-<img src="/assets/images/posts/Kube/get-nodes.png">
+<img src="/assets/images/posts/Infra/Kubernetes/2023-04-18-k8s-initialize/get-nodes.png">
 
 ## Container Network Interface(CNI) 설정
 ### [WeaveNet](https://www.weave.works/)

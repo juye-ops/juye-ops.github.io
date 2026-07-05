@@ -10,7 +10,7 @@ featured: false
 *본 학습은 **따라하며 배우는 AWS 네트워크 입문** 서적을 통해 진행했습니다.*
 
 
-<img src="/assets/images/posts/Infra/aws-vpc_practice2.png">
+<img src="/assets/images/posts/Infra/AWS/2023-11-23-aws-private-vpc-practice/aws-vpc_practice2.png">
 _퍼블릭 및 프라이빗 서브넷 VPC 실습의 목표 구성도
 
 본 실습은 [Public 서브넷 VPC 실습](/posts/aws-public-vpc-practice) 이후에 진행되었습니다.
@@ -23,7 +23,7 @@ _퍼블릭 및 프라이빗 서브넷 VPC 실습의 목표 구성도
 - 가용 영역: ap-northeast-2c
 - IPv4 CIDR 블록: "10.0.1.0/24"
 
-<img src="/assets/images/posts/Infra/aws-private-subnet_architecture.png">
+<img src="/assets/images/posts/Infra/AWS/2023-11-23-aws-private-vpc-practice/aws-private-subnet_architecture.png">
 _프라이빗 서브넷 생성 도식화_
 
 # NAT 게이트웨이
@@ -35,7 +35,7 @@ _프라이빗 서브넷 생성 도식화_
 - 연결유형: 퍼블릭
 - 탄력적 IP 할당 ID: "탄력적 IP 할당" 클릭
 
-<img src="/assets/images/posts/Infra/aws-nat_architecture.png">
+<img src="/assets/images/posts/Infra/AWS/2023-11-23-aws-private-vpc-practice/aws-nat_architecture.png">
 _NAT 생성 후 도식화_
 
 # 프라이빗 라우팅
@@ -49,7 +49,7 @@ _NAT 생성 후 도식화_
 2. 명시적 서브넷 연결의 "서브넷 연결 편집" 클릭
 3. 생성한 "test-Private-SN" Subnet 체크 후 연결 저장
 
-<img src="/assets/images/posts/Infra/aws-private-rt_architecture.png">
+<img src="/assets/images/posts/Infra/AWS/2023-11-23-aws-private-vpc-practice/aws-private-rt_architecture.png">
 _라우팅 테이블 생성 후 도식화_
 
 ## 프라이빗 라우팅 테이블 경로 추가
@@ -60,7 +60,7 @@ _라우팅 테이블 생성 후 도식화_
    - 대상 1: "0.0.0.0/0"
    - 대상 2: "NAT 게이트웨이" 선택 후 생성한 NAT ID 선택
 
-<img src="/assets/images/posts/Infra/aws-private-rt-add_architecture.png">
+<img src="/assets/images/posts/Infra/AWS/2023-11-23-aws-private-vpc-practice/aws-private-rt-add_architecture.png">
 _라우팅 테이블 인터넷 경로 추가 후 도식화_
 
 # 검증
@@ -108,7 +108,7 @@ PING google.com (142.250.206.206) 56(84) bytes of data.
 64 bytes from kix07s07-in-f14.1e100.net (142.250.206.206): icmp_seq=1 ttl=103 time=18.3 ms
 ```
 
-<img src="/assets/images/posts/Infra/aws-private-instance_architecture.png">
+<img src="/assets/images/posts/Infra/AWS/2023-11-23-aws-private-vpc-practice/aws-private-instance_architecture.png">
 _인스턴스 생성 도식화_
 
 
@@ -119,7 +119,7 @@ _인스턴스 생성 도식화_
 3. 가상 라우터는 인터넷 게이트웨이로 데이터를 전달하고 인터넷 구간으로 전달
 4. 인터넷 구간을 통해 최종적으로 사용자에게 전달
 
-<img src="/assets/images/posts/Infra/aws-public-subnet_flow.png">
+<img src="/assets/images/posts/Infra/AWS/2023-11-23-aws-private-vpc-practice/aws-public-subnet_flow.png">
 _퍼블릭 서브넷에서 외부 인터넷 구간과 통신 흐름_
 
 ## 프라이빗 서브넷 통신 흐름
@@ -128,7 +128,7 @@ _퍼블릭 서브넷에서 외부 인터넷 구간과 통신 흐름_
 3. 가상 라우터는 NAT 게이트웨이로 데이터를 전달하고, NAT 게이트웨이에서 프라이빗 IP를 퍼블릭 IP로 전환
 4. NAT 게이트웨이에서 인터넷 구간을 넘어가기 위해 인터넷 게이트웨이를 거쳐 사용자에게 전달(사용자는 퍼블릭 IP로 수신)
 
-<img src="/assets/images/posts/Infra/aws-private-subnet_flow.png">
+<img src="/assets/images/posts/Infra/AWS/2023-11-23-aws-private-vpc-practice/aws-private-subnet_flow.png">
 _프라이빗 서브넷에서 외부 인터넷 구간과 통신 흐름_
 
 ## 요약

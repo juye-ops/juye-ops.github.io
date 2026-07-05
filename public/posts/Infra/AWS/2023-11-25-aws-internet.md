@@ -12,7 +12,7 @@ featured: false
 # 소개
 AWS VPC 내부에서 외부 인터넷으로 연결을 위한 방법(AWS 내부 -> 외부)
 
-<img src="/assets/images/posts/Infra/aws-network-definition.png">
+<img src="/assets/images/posts/Infra/AWS/2023-11-25-aws-internet/aws-network-definition.png">
 _AWS에서 인터넷 연결 정의_
 
 ## 인터넷 연결을 위한 4가지 조건
@@ -46,7 +46,7 @@ _AWS에서 인터넷 연결 정의_
 |주소 변환|프라이빗 IP를 퍼블릭IP 혹은 탄력적 IP로 1:1 주소변환|IP주소와 포트 번호 변환|IP주소와 포트 번호 변환(TCP 신규 연결)
 |특징|1개의 프라이빗 IP마다 1개의 공인 IP 매칭|여러개의 프라이빗 IP가 1개의 공인 IP 사용|어플리케이션 수준 제어 가능|
 
-<img src="/assets/images/posts/Infra/aws-igw-nat-proxy.png">
+<img src="/assets/images/posts/Infra/AWS/2023-11-25-aws-internet/aws-igw-nat-proxy.png">
 
 # 인터넷 게이트웨이
 확장성과 가용성이 있는 VPC 구성 요소로 VPC와 인터넷 간에 통신을 지원
@@ -63,7 +63,7 @@ _AWS에서 인터넷 연결 정의_
 4. 인터넷 게이트웨이는 다시 한 번 NAT 정보에 의해서 목적지 IP를 50.1.1.1에서 10.0.0.10으로 변경
 5. 최종적으로 VPC 내부로 전달하여 내부 인스턴스(10.0.0.10)에 도달
 
-<img src="/assets/images/posts/Infra/aws-igw-sequence.png">
+<img src="/assets/images/posts/Infra/AWS/2023-11-25-aws-internet/aws-igw-sequence.png">
 
 ### 제약 사항
 - 하나의 VPC에는 한 개의 인터넷 게이트웨이만 사용 가능
@@ -77,7 +77,7 @@ _AWS에서 인터넷 연결 정의_
 
 > NAT라는 용어를 일반적인 IT 용례에 따라 사용하지만, ㅇ실제로 NAT 디바이스는 IP 주소와 포트 번호 변환 모두 수행
 
-<img src="/assets/images/posts/Infra/aws-nat-gateway-instance.png">
+<img src="/assets/images/posts/Infra/AWS/2023-11-25-aws-internet/aws-nat-gateway-instance.png">
 _NAT 게이트웨이와 NAT 인스턴스_
 
 ## NAT 게이트웨이와 인스턴스 비교
@@ -112,10 +112,10 @@ NAT 인스턴스
 3. NAT 인스턴스는 인터넷 게이트웨이로 트래픽 전송
 4. 인터넷 게이트웨이는 NAT 인스턴스의 프라이빗 IP를 미리 맵핑 된 탄력적 IP로 1:1 IP NAT 하여 외부 인터넷으로 전송
 
-<img src="/assets/images/posts/Infra/aws-nat-instance-sequence.png">
+<img src="/assets/images/posts/Infra/AWS/2023-11-25-aws-internet/aws-nat-instance-sequence.png">
 _NAT 인스턴스를 통한 외부 접속 시 트래픽 흐름에 따른 동작_
 
-<img src="/assets/images/posts/Infra/aws-nat-instance-multi-sequence.png">
+<img src="/assets/images/posts/Infra/AWS/2023-11-25-aws-internet/aws-nat-instance-multi-sequence.png">
 _다수의 내부 인스턴스가 외부 접속 시_
 
 ## 제약사항
@@ -128,6 +128,6 @@ _다수의 내부 인스턴스가 외부 접속 시_
 1. 프라이빗 서브넷 내부의 인스턴스는 HTTP 통신을 위해서 목적지 IP는 Proxy 인스턴스로 이동
 2. 외부 구간과 통신을 하고 결과를 다시 내부 인스턴스로 전송
 
-<img src="/assets/images/posts/Infra/aws-proxy-instance-sequence.png">
+<img src="/assets/images/posts/Infra/AWS/2023-11-25-aws-internet/aws-proxy-instance-sequence.png">
 _Proxy 인스턴스를 통한 외부 통신_
 

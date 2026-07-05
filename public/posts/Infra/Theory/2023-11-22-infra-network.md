@@ -14,7 +14,7 @@ featured: false
 - 계층별로 하위 계층의 기능을 이용하고 상위 계층으로 기능을 제공하는 상하 관계
 
 ## 설명
-<img src="/assets/images/posts/Infra/network-osi7layer.png">
+<img src="/assets/images/posts/Infra/Theory/2023-11-22-infra-network/network-osi7layer.png">
 _OSI 7 레이어와 TCP/IP 프로토콜 간 계층별 비교_
 
 ### 1 Layer - 물리 계층
@@ -121,7 +121,7 @@ IP 주소에 네트워크 ID와 호스트 ID를 구분하는 기준 값
 - DHCP Request: DHCP 클라이언트에서 DHCP 서버로 할당받은 IP를 요청
 - DHCP Ack: DHCP 서버에서 최종적으로 할당 IP를 승인하여 알림
 
-<img src="/assets/images/posts/Infra/network-dhcp-sequence.png">
+<img src="/assets/images/posts/Infra/Theory/2023-11-22-infra-network/network-dhcp-sequence.png">
 _DHCP 동작 절차_
 
 # DNS(Domain Name System)
@@ -139,5 +139,5 @@ _DHCP 동작 절차_
 - 라우터: 라우팅을 수행하는 장비
 - 라우팅 테이블을 통해 경로를 파악하고 원하는 목적지 대상으로 데이터를 전달
 
-<img src="/assets/images/posts/Infra/network-router_routingtable.png">
+<img src="/assets/images/posts/Infra/Theory/2023-11-22-infra-network/network-router_routingtable.png">
 _라우터와 라우팅 테이블_

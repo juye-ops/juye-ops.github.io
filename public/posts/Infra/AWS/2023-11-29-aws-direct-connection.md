@@ -14,7 +14,7 @@ featured: false
 - VPN 같은 경우에는 인터넷을 통해 VPN 터널을 구성하기 때문에 인터넷 환경에 따라 연결 품질이 좌우
 - AWS Direct Connect는 실제 전용선으로 AWS와 연결하기 때문에 더욱 일관성 있는 서비스 품질을 보장
 
-<img src="/assets/images/posts/Infra/aws-direct-connect.png">
+<img src="/assets/images/posts/Infra/AWS/2023-11-29-aws-direct-connection/aws-direct-connect.png">
 _AWS Direct Connect 기본 구성도_
 
 ## 특징
@@ -57,7 +57,7 @@ Direct Connect 파트너를 통해 Hosted Connection 구성 가능
 Direct Connect는 표준 프로토콜인 LACP(Link Aggregation Control Protocol)를 지원하여, 단일 Direct Connect 로케이션에서 하나 또는 다수의 연결을 하나의 논리적인 연결로 구성 가능
 - 다수의 동일한 대역폭 연결을 하나의 연결로 구성하여 더 높은 대역폭 및 장애에 대한 내결함성을 향상
 
-<img src="/assets/images/posts/Infra/aws-direct-connect-lag.png">
+<img src="/assets/images/posts/Infra/AWS/2023-11-29-aws-direct-connection/aws-direct-connect-lag.png">
 
 ### Bidirectional Forwarding Detection(BFD)
 지정된 임계치 이후에 빠르게 BGP 연결을 끊어 다음 경로로 라우팅 가능

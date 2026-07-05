@@ -21,7 +21,7 @@ featured: false
   - Cache Hit: 캐시 서버에서 콘텐츠를 보유한 상태
   - Cache Miss: 콘텐츠를 가지고 있지 않은 상태이며, 오리진에서 원본 콘텐츠를 요청하여 저장
 
-<img src="/assets/images/posts/Infra/aws-cloudfront-cache-hitmiss.png">
+<img src="/assets/images/posts/Infra/AWS/2023-11-27-aws-cloudfront/aws-cloudfront-cache-hitmiss.png">
 _Cache Hit과 Cache Miss_
 
 ### 정적 캐싱(Static Caching)
@@ -40,7 +40,7 @@ AWS에서 제공하는 CDN 기능
 
 ## 아키텍처
 
-<img src="/assets/images/posts/Infra/aws-cloudfront-architecture.png">
+<img src="/assets/images/posts/Infra/AWS/2023-11-27-aws-cloudfront/aws-cloudfront-architecture.png">
 _CloudFront 아키텍처 예시_
 
 1. 오리진: AWS 서비스 중 EC2, ELB, S3가 오리진 대상이 될 수 있으며, 고객 데이터 센터 내 별도의 서버도 가능

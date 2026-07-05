@@ -19,10 +19,10 @@ featured: false
 - 보안 규칙 및 사용자 정의의 특정 트래픽 패턴을 필터링하는 규칙을 생성하여 웹 애플리케이션에 트래픽 도달을 제어
   - CloudFront, ALB, API Gateway에 배포 가능
 
-<img src="/assets/images/posts/Infra/aws-waf-architecture.png">
+<img src="/assets/images/posts/Infra/AWS/2023-12-05-aws-vpc-flow-log/aws-waf-architecture.png">
 _WAF 도식화_
 
-<img src="/assets/images/posts/Infra/aws-waf-sequence.png">
+<img src="/assets/images/posts/Infra/AWS/2023-12-05-aws-vpc-flow-log/aws-waf-sequence.png">
 _WAF 동작 도식화(정상/비정상 흐름)_
 
 ## 주요 기능

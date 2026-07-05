@@ -9,7 +9,7 @@ featured: false
 ---
 *본 학습은 **따라하며 배우는 AWS 네트워크 입문** 서적을 통해 진행했습니다.*
 
-<img src="/assets/images/posts/Infra/aws-network_services.png">
+<img src="/assets/images/posts/Infra/AWS/2023-11-20-aws-network/aws-network_services.png">
 _AWS Network 주요 서비스_
 
 # AWS VPC - 리소스 격리
@@ -21,7 +21,7 @@ VPN은 공용 인터넷을 통해 가상의 사설 네트워크를 구성하여 
 - 데이터 암호화, 전용 연결 등 여러 보안 요구사항들을 충족 가능
 - AWS에서 제공하는 관리형 VPN 서비스에는 Site-to-Site VPN과 클라이언트 VPN을 제공
 
-<img src="/assets/images/posts/Infra/aws-network_site-to-site.png">
+<img src="/assets/images/posts/Infra/AWS/2023-11-20-aws-network/aws-network_site-to-site.png">
 _AWS VPN 서비스 도식화_
 
 # ELB(Elastic Load Balancing) - 로드 밸런서
@@ -39,13 +39,13 @@ AWS에서 제공하는 관리형 DNS 서비스
 # AWS 전송 게이트웨이 - 네트워크 확장
 VPC나 온프레미스 등의 네트워크를 단일 지점으로 연결할 수 있는 라우팅 서비스
 
-<img src="/assets/images/posts/Infra/aws-network_gateway.png">
+<img src="/assets/images/posts/Infra/AWS/2023-11-20-aws-network/aws-network_gateway.png">
 _AWS 전송 게이트웨이 도식화_
 
 # AWS Direct Connect - AWS 전용 연결
 데이터 센터, 본사 사무실 또는 코로케이션(Co-Location) 환경과 같은 장소에서 AWS와의 전용 네트워크 연결을 제공하는 전용선 서비스
 
-<img src="/assets/images/posts/Infra/aws-network_direct-connect.png">
+<img src="/assets/images/posts/Infra/AWS/2023-11-20-aws-network/aws-network_direct-connect.png">
 _AWS Direct Connect 도식화_
 
 # AWS Cloud Front - CDN(콘텐츠 전송/캐시)
