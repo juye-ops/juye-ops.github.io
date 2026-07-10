@@ -2,13 +2,14 @@
 
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import categoryTree from "@/shared/metadata/categoryTree.json";
 import { BlogHeader } from "../components/BlogHeader"; // 공통 헤더 임포트
+
+import treePostsData from "@/shared/metadata/posts.tree.json";
 
 export async function DomainPage({ params }: { params: Promise<{ domain: string }> }) {
   const { domain: rawDomain } = await params;
   const domainName = decodeURIComponent(rawDomain);
-  const currentDomain = categoryTree.find((d) => d.domainSlug === domainName);
+  const currentDomain = treePostsData.find((d) => d.domainSlug === domainName);
 
   if (!currentDomain) return notFound();
 

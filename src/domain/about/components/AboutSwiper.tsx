@@ -6,13 +6,9 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import { Content } from './Content';
 import { Profile } from './Profile';
+import { AboutSectionData } from '../types/about.types';
 
-interface AboutSwiperProps {
-  frontmatter: any
-  sections: string[]
-}
-
-export function AboutSwiper({ frontmatter, sections }: AboutSwiperProps) {
+export function AboutSwiper({ frontmatter, sections }: AboutSectionData) {
   
   return (
     <Swiper

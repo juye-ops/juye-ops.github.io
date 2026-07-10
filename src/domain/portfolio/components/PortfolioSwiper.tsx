@@ -7,11 +7,10 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Project } from "./Project";
 
-interface PortfolioSwiperProps {
-  projects: any[];
-}
+import projectMetadata from "@/shared/metadata/portfolio.json"
 
-export function PortfolioSwiper({ projects }: PortfolioSwiperProps) {
+
+export function PortfolioSwiper() {
   return (
     <Swiper
       modules={[Navigation, Pagination, Mousewheel, Keyboard]}
@@ -24,7 +23,7 @@ export function PortfolioSwiper({ projects }: PortfolioSwiperProps) {
       className='h-screen'
       direction='vertical'
     >
-      {projects.map((project) => (
+      {projectMetadata.map((project) => (
         <SwiperSlide>
           <Project {...project} />
         </SwiperSlide>

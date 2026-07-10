@@ -2,9 +2,10 @@
 
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import categoryTree from "@/shared/metadata/categoryTree.json";
 import { BlogHeader } from "../components/BlogHeader"; // 공통 컴포넌트 임포트
 import { PostList } from "../components/PostList";
+
+import treePostsData from "@/shared/metadata/posts.tree.json";
 
 interface PostListPageProps {
   params: Promise<{
@@ -19,7 +20,7 @@ export async function PostListPage({ params }: PostListPageProps) {
   const decodedDomain = decodeURIComponent(rawDomain);
   const decodedCategory = decodeURIComponent(rawCategory);
 
-  const currentDomain = categoryTree.find((d) => d.domainSlug === decodedDomain);
+  const currentDomain = treePostsData.find((d) => d.domainSlug === decodedDomain);
   const currentCategory = currentDomain?.categories.find(
     (c) => c.categorySlug === decodedCategory
   );
@@ -47,8 +48,10 @@ export async function PostListPage({ params }: PostListPageProps) {
       <main className="max-w-4xl mx-auto px-6 py-16 sm:py-20">
         <PostList
           posts={posts}
-          domain={rawDomain}
-          category={rawCategory}
+          domain={currentDomain.domain}
+          domainSlug={currentDomain.domainSlug}
+          category={currentCategory.category}
+          categorySlug={currentCategory.categorySlug}
         />
 
         {/* 하단 푸터 백링크 */}

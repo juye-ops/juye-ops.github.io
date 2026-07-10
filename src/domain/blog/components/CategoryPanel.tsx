@@ -3,7 +3,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
-import { CategoryPanelProps } from '../types/category.types';
+import { CategoryPanelProps } from '../types/domain.types';
 
 
 export function CategoryPanel({
@@ -55,8 +55,8 @@ export function CategoryPanel({
                 type="button" // 접근성 보장
                 onClick={() => toggleDomain(domainNode.domain)}
                 className={`w-full flex justify-between items-center py-4 px-6 text-left rounded-2xl transition-all duration-300 text-lg font-medium ${isSelected
-                    ? 'bg-indigo-50 text-indigo-700 shadow-md border-2 border-indigo-200'
-                    : 'text-gray-900 hover:bg-gray-100'
+                  ? 'bg-indigo-50 text-indigo-700 shadow-md border-2 border-indigo-200'
+                  : 'text-gray-900 hover:bg-gray-100'
                   }`}
               >
                 <Link
@@ -83,8 +83,8 @@ export function CategoryPanel({
                         type="button"
                         onClick={() => handleCategoryClick(domainNode.domainSlug, catNode.categorySlug)}
                         className={`w-full text-left py-2 px-4 text-base rounded-xl transition-all duration-200 ${isCategorySelected
-                            ? 'bg-indigo-500 text-white font-semibold shadow-sm'
-                            : 'text-gray-600 hover:bg-indigo-50 hover:text-indigo-600'
+                          ? 'bg-indigo-500 text-white font-semibold shadow-sm'
+                          : 'text-gray-600 hover:bg-indigo-50 hover:text-indigo-600'
                           }`}
                       >
                         <div className="flex justify-between items-center">

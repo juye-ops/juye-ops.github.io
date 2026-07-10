@@ -1,16 +1,15 @@
 // @/domain/blog/pages/BlogPage.tsx
 'use client';
 
-import categoryTreeData from "@/shared/metadata/categoryTree.json";
-import { getFlatPosts } from "../utils/getFlatPosts";
 import { useBlogSearch } from "../hooks/useBlogSearch";
 import { BlogHeader } from "../components/BlogHeader";
 import { BlogContentPanel } from "../components/BlogContentPanel";
 import { SearchBar } from "../components/SearchBar";
 
+import flatPostsData from "@/shared/metadata/posts.flat.json"
+
 export function BlogPage() {
-  const allPosts = getFlatPosts();
-  const { text, setText, filteredPosts } = useBlogSearch(allPosts);
+  const { text, setText, filteredPosts } = useBlogSearch(flatPostsData);
 
   return (
     <div className="min-h-screen bg-slate-50/50 text-slate-800 antialiased font-sans">
@@ -25,7 +24,6 @@ export function BlogPage() {
         <BlogContentPanel
           text={text}
           filteredPosts={filteredPosts}
-          categoryTreeData={categoryTreeData}
         />
       </main>
     </div>
