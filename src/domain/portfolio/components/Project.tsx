@@ -34,10 +34,10 @@ export function Project({ contentUrl }: ProjectProps) {
         />
       </div>
 
-      <div className="pointer-events-none sticky bottom-0 inset-x-0 h-24 bg-linear-to-t from-white dark:from-neutral-900 via-white/20 dark:via-neutral-900/80 to-transparent flex items-end justify-center z-10 -mt-24">
+      <div className="pointer-events-none sticky bottom-0 inset-x-0 h-24 bg-linear-to-t from-white  via-white/20 /80 to-transparent flex items-end justify-center z-10 -mt-24">
         <button
           type="button"
-          className="pointer-events-auto mb-4 inline-flex items-center gap-1 rounded-full border border-neutral-300 dark:border-neutral-700 bg-white/90 dark:bg-neutral-900/90 px-4 py-1.5 text-xs md:text-sm font-medium text-neutral-700 dark:text-neutral-200 hover:bg-neutral-50 dark:hover:bg-neutral-800 transition shadow-md"
+          className="pointer-events-auto mb-4 inline-flex items-center gap-1 rounded-full border border-neutral-300  bg-white/90 /90 px-4 py-1.5 text-xs md:text-sm font-medium text-neutral-700  hover:bg-neutral-50 :bg-neutral-800 transition shadow-md"
           onClick={() => setOpen(true)}
         >
           더 보기

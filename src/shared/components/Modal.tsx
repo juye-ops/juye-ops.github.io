@@ -26,10 +26,10 @@ export function Modal({ open, onClose, title, children }: ModalProps) {
       />
 
       {/* dialog */}
-      <div className="relative z-10 w-full max-w-3xl max-h-[80vh] rounded-xl bg-white dark:bg-neutral-900 shadow-xl flex flex-col">
-        <header className="flex items-center justify-between px-5 py-3 border-b border-neutral-200 dark:border-neutral-800">
+      <div className="relative z-10 w-full max-w-3xl max-h-[80vh] rounded-xl bg-white  shadow-xl flex flex-col">
+        <header className="flex items-center justify-between px-5 py-3 border-b border-neutral-200 ">
           <h2 className="text-base md:text-lg font-medium truncate">{title}</h2>
-          <button onClick={onClose} className="p-1 rounded hover:bg-neutral-100 dark:hover:bg-neutral-800">
+          <button onClick={onClose} className="p-1 rounded hover:bg-neutral-100 :bg-neutral-800">
             <span className="sr-only">닫기</span>
             <svg className="w-5 h-5 text-neutral-500" viewBox="0 0 24 24" fill="none" stroke="currentColor">
               <path strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" d="M6 6l12 12M18 6L6 18" />

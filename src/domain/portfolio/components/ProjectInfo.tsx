@@ -16,25 +16,25 @@ export function ProjectInfo({ frontmatter }: ProjectInfoProps) {
     <div className="w-full h-full min-h-[252px] pb-2">
       
       {/* 1. 상단 미니멀 타이틀 라인 */}
-      <div className="flex items-center justify-between gap-2 text-[11px] font-mono tracking-tight text-neutral-400 dark:text-neutral-500 mb-3">
+      <div className="flex items-center justify-between gap-2 text-[11px] font-mono tracking-tight text-neutral-400  mb-3">
         {frontmatter.organization && (
-          <span className="text-neutral-600 dark:text-neutral-400 font-bold tracking-normal">
+          <span className="text-neutral-600  font-bold tracking-normal">
             @{frontmatter.organization}
           </span>
         )}
         <div className="flex items-center gap-2">
           <span>{frontmatter.due}</span>
-          <span className="text-neutral-200 dark:text-neutral-800 select-none">•</span>
+          <span className="text-neutral-200  select-none">•</span>
           <span>{frontmatter.images?.length || 0} slots</span>
         </div>
       </div>
 
       {/* 2. 대제목 */}
       <div className="mb-3.5">
-        <h1 className="text-xl sm:text-2xl font-bold tracking-tight text-neutral-900 dark:text-neutral-50 leading-tight mb-2">
+        <h1 className="text-xl sm:text-2xl font-bold tracking-tight text-neutral-900  leading-tight mb-2">
           {frontmatter.title}
         </h1>
-        <div className="h-[1px] w-full bg-neutral-100 dark:bg-neutral-800/60" />
+        <div className="h-[1px] w-full bg-neutral-100 /60" />
       </div>
 
       {/* 3. 인스펙터 메타데이터 그리드 */}
@@ -42,10 +42,10 @@ export function ProjectInfo({ frontmatter }: ProjectInfoProps) {
         {/* Role 행 */}
         {frontmatter.role && (
           <div className="grid grid-cols-[60px_1fr] items-start gap-2">
-            <span className="font-mono text-[10px] uppercase font-semibold text-neutral-400 dark:text-neutral-500 pt-0.5">
+            <span className="font-mono text-[10px] uppercase font-semibold text-neutral-400  pt-0.5">
               role
             </span>
-            <span className="text-[11px] text-neutral-700 dark:text-neutral-300 font-medium">
+            <span className="text-[11px] text-neutral-700  font-medium">
               {frontmatter.role}
             </span>
           </div>
@@ -54,14 +54,14 @@ export function ProjectInfo({ frontmatter }: ProjectInfoProps) {
         {/* Domain 행 */}
         {frontmatter.domain && frontmatter.domain.length > 0 && (
           <div className="grid grid-cols-[60px_1fr] items-start gap-2">
-            <span className="font-mono text-[10px] uppercase font-semibold text-neutral-400 dark:text-neutral-500 pt-0.5">
+            <span className="font-mono text-[10px] uppercase font-semibold text-neutral-400  pt-0.5">
               domain
             </span>
             <div className="flex flex-wrap gap-1.5">
               {frontmatter.domain.map((dom) => (
                 <span
                   key={dom}
-                  className="inline-flex items-center text-[11px] font-medium px-2 py-0.5 rounded-sm bg-neutral-100 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-200 border border-neutral-200/40 dark:border-neutral-700/40"
+                  className="inline-flex items-center text-[11px] font-medium px-2 py-0.5 rounded-sm bg-neutral-100  text-neutral-800  border border-neutral-200/40 /40"
                 >
                   {dom}
                 </span>
@@ -73,14 +73,14 @@ export function ProjectInfo({ frontmatter }: ProjectInfoProps) {
         {/* Techs 행 */}
         {frontmatter.skills && frontmatter.skills.length > 0 && (
           <div className="grid grid-cols-[60px_1fr] items-start gap-2">
-            <span className="font-mono text-[10px] uppercase font-semibold text-neutral-400 dark:text-neutral-500 pt-0.5">
+            <span className="font-mono text-[10px] uppercase font-semibold text-neutral-400  pt-0.5">
               techs
             </span>
             <div className="flex flex-wrap gap-1">
               {frontmatter.skills.map((skill) => (
                 <span
                   key={skill}
-                  className="inline-flex items-center text-[11px] font-medium px-1.5 py-0.5 rounded-sm bg-blue-50/40 dark:bg-blue-950/20 text-blue-600 dark:text-blue-400 border border-blue-100/50 dark:border-blue-900/30"
+                  className="inline-flex items-center text-[11px] font-medium px-1.5 py-0.5 rounded-sm bg-blue-50/40 /20 text-blue-600  border border-blue-100/50 /30"
                 >
                   {skill}
                 </span>
@@ -92,10 +92,10 @@ export function ProjectInfo({ frontmatter }: ProjectInfoProps) {
         {/* Outcome 행 */}
         {frontmatter.outcome && (
           <div className="grid grid-cols-[60px_1fr] items-start gap-2">
-            <span className="font-mono text-[10px] uppercase font-semibold text-neutral-400 dark:text-neutral-500 pt-0.5">
+            <span className="font-mono text-[10px] uppercase font-semibold text-neutral-400  pt-0.5">
               result
             </span>
-            <span className="text-[11px] text-neutral-600 dark:text-neutral-400 break-keep leading-relaxed">
+            <span className="text-[11px] text-neutral-600  break-keep leading-relaxed">
               {frontmatter.outcome}
             </span>
           </div>
@@ -104,14 +104,14 @@ export function ProjectInfo({ frontmatter }: ProjectInfoProps) {
         {/* Link 행 */}
         {frontmatter.href && (
           <div className="grid grid-cols-[60px_1fr] items-start gap-2">
-            <span className="font-mono text-[10px] uppercase font-semibold text-neutral-400 dark:text-neutral-500 pt-0.5">
+            <span className="font-mono text-[10px] uppercase font-semibold text-neutral-400  pt-0.5">
               source
             </span>
             <a 
               href={frontmatter.href}
               target="_blank"
               rel="noreferrer"
-              className="text-[11px] text-blue-500 dark:text-blue-400 hover:underline font-mono inline-flex items-center gap-0.5"
+              className="text-[11px] text-blue-500  hover:underline font-mono inline-flex items-center gap-0.5"
             >
               visit project ↗
             </a>
@@ -121,8 +121,8 @@ export function ProjectInfo({ frontmatter }: ProjectInfoProps) {
 
       {/* 구분선과 본문 설명 영역 (그리드 바로 아래에 마진 없이 타이트하게 연결) */}
       <div className="space-y-2">
-        <div className="h-[1px] w-full bg-neutral-100 dark:bg-neutral-800/60" />
-        <p className="text-xs sm:text-sm leading-relaxed text-neutral-500 dark:text-neutral-400 tracking-tight break-keep font-normal pt-0.5">
+        <div className="h-[1px] w-full bg-neutral-100 /60" />
+        <p className="text-xs sm:text-sm leading-relaxed text-neutral-500  tracking-tight break-keep font-normal pt-0.5">
           {frontmatter.description}
         </p>
       </div>

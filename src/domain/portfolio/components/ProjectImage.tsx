@@ -21,7 +21,7 @@ export function ProjectImage({ frontmatter }: ProjectImageProps) {
 
   if (!hasImages) {
     return (
-      <div className="w-full aspect-video max-w-md rounded-xl flex items-center justify-center text-neutral-400 bg-neutral-100 dark:bg-neutral-800 border border-dashed border-neutral-300 dark:border-neutral-700">
+      <div className="w-full aspect-video max-w-md rounded-xl flex items-center justify-center text-neutral-400 bg-neutral-100  border border-dashed border-neutral-300 ">
         준비중
       </div>
     );
@@ -30,7 +30,7 @@ export function ProjectImage({ frontmatter }: ProjectImageProps) {
   return (
     <div className="w-full max-w-md flex flex-col gap-2">
       {/* 1. 메인 이미지 슬라이더 (16:9 고정 및 초소형 핏) */}
-      <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-2xs bg-white dark:bg-neutral-800 border border-neutral-200/50 dark:border-neutral-700/50 group">
+      <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-2xs bg-white  border border-neutral-200/50 /50 group">
         <Swiper
           modules={[Navigation]}
           spaceBetween={0}
@@ -92,12 +92,12 @@ export function ProjectImage({ frontmatter }: ProjectImageProps) {
 
       {/* 3. 하단 초슬림 캡션 영역 */}
       {frontmatter.images![activeIndex]?.caption && (
-        <div className="w-full p-2.5 rounded-lg bg-neutral-50 dark:bg-neutral-900/40 border border-neutral-200/40 dark:border-neutral-800/60 shadow-3xs mt-0.5">
+        <div className="w-full p-2.5 rounded-lg bg-neutral-50 /40 border border-neutral-200/40 /60 shadow-3xs mt-0.5">
           <div className="flex gap-2 items-start">
-            <span className="inline-flex items-center justify-center text-[8px] font-mono font-bold bg-blue-50/80 dark:bg-blue-950/40 border border-blue-100/60 dark:border-blue-900/40 text-blue-600 dark:text-blue-400 rounded px-1 py-0.5 mt-0.5 select-none">
+            <span className="inline-flex items-center justify-center text-[8px] font-mono font-bold bg-blue-50/80 /40 border border-blue-100/60 /40 text-blue-600  rounded px-1 py-0.5 mt-0.5 select-none">
               FIG {activeIndex + 1}
             </span>
-            <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-normal font-normal tracking-tight break-keep flex-1">
+            <p className="text-xs text-neutral-500  leading-normal font-normal tracking-tight break-keep flex-1">
               {frontmatter.images![activeIndex].caption}
             </p>
           </div>
