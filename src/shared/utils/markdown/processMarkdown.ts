@@ -13,7 +13,7 @@ import remarkBreaks from 'remark-breaks';
 import remarkCodeTitles from "remark-flexible-code-titles";
 import { visit } from 'unist-util-visit'; // 설치 필요: npm install unist-util-visit
 
-import { RAW_URL_ROOT } from '@/shared/constants/env';
+import { PKMS_PATH } from '@/shared/constants/env';
 
 
 export async function processMarkdown(content: string) {
@@ -40,11 +40,8 @@ export async function processMarkdown(content: string) {
         if (node.tagName === 'img' && node.properties?.src) {
           const src = node.properties.src as string;
 
-          // 이미 절대 경로(http/https)이거나 데이터 URI인 경우는 건너뜀
           if (!src.startsWith('http') && !src.startsWith('data:')) {
-            // 상대 경로일 경우 ROOT 경로를 앞에 붙임
-            // 슬래시(/) 처리를 깔끔하게 하기 위해 정규식 사용 가능
-            node.properties.src = `${RAW_URL_ROOT}/${src.replace(/^\/+/, '')}`;
+            node.properties.src = `${PKMS_PATH}/${src.replace(/^\/+/, '')}`;
           }
         }
       });
