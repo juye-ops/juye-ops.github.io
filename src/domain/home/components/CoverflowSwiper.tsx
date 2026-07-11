@@ -12,11 +12,7 @@ import { useWheelScroll } from "../hooks/useWheelScroll";
 import { COVERFLOW_CONFIG } from "../utils/config";
 import Link from "next/link";
 
-export function CoverflowSwiper({
-  items,
-  onItemChange,
-  containerRef,
-}: CoverflowSwiperProps) {
+export function CoverflowSwiper({ items, onItemChange, containerRef }: CoverflowSwiperProps) {
   const slides = useMemo(() => items ?? [], [items]);
   const swiperRef = useRef<SwiperInstance | null>(null);
   const internalContainerRef = useRef<HTMLDivElement | null>(null);
@@ -31,7 +27,7 @@ export function CoverflowSwiper({
   });
 
   return (
-    <div ref={internalContainerRef}>
+    <>
       <Swiper
         onSwiper={
           (swiper) => { swiperRef.current = swiper; }
@@ -40,7 +36,7 @@ export function CoverflowSwiper({
         effect="coverflow"
         grabCursor
         centeredSlides={true}
-        loop={true}
+        loop={items.length > 2}
         slidesPerView={COVERFLOW_CONFIG.swiper.slidesPerView}
         spaceBetween={COVERFLOW_CONFIG.swiper.spaceBetween}
         speed={COVERFLOW_CONFIG.swiper.speed}
@@ -51,16 +47,16 @@ export function CoverflowSwiper({
           const item = slides[idx];
           if (item && onItemChange) onItemChange(item);
         }}
-        className="w-1/3"
+
       >
         {slides.map((item, index) => (
-          <SwiperSlide key={index} className="swiper-slide-coverflow !w-[200px] sm:!w-[300px] md:!w-[400px]">
+          <SwiperSlide key={index} className="swiper-slide-coverflow w-70! sm:w-100! md:w-130! px-20">
             <Link href={`blog/${item.domainSlug}/${item.categorySlug}/${item.slug}`}>
               <CoverflowCard item={item} />
             </Link>
           </SwiperSlide>
         ))}
       </Swiper>
-    </div>
+    </>
   );
 }

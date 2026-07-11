@@ -6,7 +6,12 @@ export interface AboutFrontmatter {
   blog: string;
 }
 
-export interface AboutState {
-  frontmatter: AboutFrontmatter | null;
+export interface AboutJSONData {
+  frontmatter: AboutFrontmatter;
+  contentUrl: string;
+}
+
+export interface AboutSectionData {
+  frontmatter: AboutFrontmatter;
   sections: string[];
 }

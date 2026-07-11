@@ -1,7 +1,16 @@
-import matter from 'gray-matter';
+import matter from "gray-matter";
 
-// 1. 순수하게 문자열을 받아 객체로 변환하는 함수 (Shared)
-export function parseMarkdown(text: string, matterOnly: boolean = false) {
-  const { data, content: body } = matter(text);
-  return matterOnly ? data : { frontmatter: data, content: body };
+// types/markdown.types.ts
+export interface MarkdownResult<T> {
+  frontmatter: T;
+  content: string;
+}
+
+// shared/utils/markdown.ts
+export function parseMarkdown<T>(text: string): MarkdownResult<T> {
+  const { data, content } = matter(text);
+  return { 
+    frontmatter: data as T, 
+    content 
+  };
 }

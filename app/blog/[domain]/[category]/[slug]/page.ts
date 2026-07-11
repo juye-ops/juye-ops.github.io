@@ -1,13 +1,11 @@
-// app/blog/[domain]/[category]/[slug]/page.tsx
-
-import categoryTree from "@/shared/metadata/categoryTree.json";
+import treePostsData from "@/shared/metadata/posts.tree.json";
 
 export async function generateStaticParams() {
-  return categoryTree.flatMap((domainNode) =>
+  return treePostsData.flatMap((domainNode) =>
     domainNode.categories.flatMap((categoryNode) =>
       categoryNode.posts.map((post) => ({
         domain: encodeURIComponent(domainNode.domainSlug),
-        category: encodeURIComponent(categoryNode.categorySlug), 
+        category: encodeURIComponent(categoryNode.categorySlug),
         slug: encodeURIComponent(post.slug),
       }))
     )

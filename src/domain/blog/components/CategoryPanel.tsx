@@ -3,7 +3,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
-import { CategoryPanelProps } from '../types/category.types';
+import { CategoryPanelProps } from '../types/domain.types';
 
 
 export function CategoryPanel({
@@ -54,10 +54,8 @@ export function CategoryPanel({
               <button
                 type="button" // 접근성 보장
                 onClick={() => toggleDomain(domainNode.domain)}
-                className={`w-full flex justify-between items-center py-4 px-6 text-left rounded-2xl transition-all duration-300 text-lg font-medium ${isSelected
-                    ? 'bg-indigo-50 text-indigo-700 shadow-md border-2 border-indigo-200'
-                    : 'text-gray-900 hover:bg-gray-100'
-                  }`}
+                className={`w-full flex justify-between items-center py-4 px-6 text-left rounded-2xl transition-all duration-300 text-lg font-medium 
+                  ${isSelected ? 'bg-indigo-50 text-indigo-700 shadow-md border-2 border-indigo-200' : 'text-gray-900 hover:bg-gray-100'}`}
               >
                 <Link
                   className="hover:text-indigo-500 hover:underline decoration-2 underline-offset-4 transition-colors cursor-pointer"
@@ -73,8 +71,6 @@ export function CategoryPanel({
               {isOpen && (
                 <div className="ml-6 mt-2 space-y-2 border-l-2 border-indigo-200 pl-4 py-2 animate-in fade-in slide-in-from-top-2 duration-300">
                   {domainNode.categories.map((catNode) => {
-                    // 🌟 [중요] 주소창 slug와 JSON 내부의 categorySlug를 비교하여 활성화 표시를 켭니다.
-                    // 예: "ci-cd" === "ci-cd"
                     const isCategorySelected = selectedCategory === catNode.categorySlug;
 
                     return (
@@ -82,17 +78,12 @@ export function CategoryPanel({
                         key={catNode.category}
                         type="button"
                         onClick={() => handleCategoryClick(domainNode.domainSlug, catNode.categorySlug)}
-                        className={`w-full text-left py-2 px-4 text-base rounded-xl transition-all duration-200 ${isCategorySelected
-                            ? 'bg-indigo-500 text-white font-semibold shadow-sm'
-                            : 'text-gray-600 hover:bg-indigo-50 hover:text-indigo-600'
-                          }`}
+                        className={`w-full text-left py-2 px-4 text-base rounded-xl transition-all duration-200 
+                          ${isCategorySelected ? 'bg-indigo-500 text-white font-semibold shadow-sm' : 'text-gray-600 hover:bg-indigo-50 hover:text-indigo-600'}`}
                       >
                         <div className="flex justify-between items-center">
-                          {/* 🌟 화면에는 원래 이름인 "CI/CD"가 기가 막히게 출력됩니다. */}
                           <span>{catNode.category}</span>
-                          <span className={`text-xs ${isCategorySelected ? 'text-indigo-100' : 'opacity-60'}`}>
-                            {catNode.posts.length}
-                          </span>
+                          <span className={`text-xs ${isCategorySelected ? 'text-indigo-100' : 'opacity-60'}`}>{catNode.posts.length}</span>
                         </div>
                       </button>
                     );

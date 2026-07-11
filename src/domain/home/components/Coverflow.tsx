@@ -1,8 +1,8 @@
 'use client';
 import { useRef } from "react";
 import { CoverflowSwiper } from "./CoverflowSwiper";
-import { COVERFLOW_STYLES } from "./style";
 import { CoverflowProps } from "../types/coverflow.types";
+import "./Coverflow.css";
 
 export function Coverflow({ items, onItemChange }: CoverflowProps) {
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -16,7 +16,6 @@ export function Coverflow({ items, onItemChange }: CoverflowProps) {
         onItemChange={onItemChange}
         containerRef={containerRef}
       />
-      <style>{COVERFLOW_STYLES}</style>
     </section>
   );
 }

@@ -1,20 +1,13 @@
-'use client';
-
-import { getFlatPosts } from "@/domain/blog/utils/getFlatPosts";
 import { Coverflow } from "@/domain/home/components/Coverflow";
+import { getFeaturedPosts } from "../utils/getFeaturedPosts";
 
 export function HomePage() {
-  const allPosts = getFlatPosts()
-
-  const featuredPosts = allPosts.filter((post) => post.featured === true);
+  // 컴포넌트 내부에서 함수 호출하여 가공된 데이터 사용
+  const featuredPosts = getFeaturedPosts();
 
   return (
     <div className={"items-center justify-center h-screen fade-in"}>
-      {/* Coverflow 영역 */}
-      <Coverflow
-        items={featuredPosts}
-      />
-
+      <Coverflow items={featuredPosts} />
     </div>
   );
 }

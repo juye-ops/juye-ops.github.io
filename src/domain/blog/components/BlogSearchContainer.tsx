@@ -5,8 +5,8 @@ import Fuse from 'fuse.js';
 import { SearchBar } from './SearchBar';
 import { SearchResultList } from './SearchResultList';
 import { CategoryPanel } from './CategoryPanel';
-import type { SearchablePost } from '../utils/getFlatPosts';
 import type { DomainNode } from '../types/domain.types';
+import { SearchablePost } from '../types/post.types';
 
 interface BlogSearchContainerProps {
   allPosts: SearchablePost[];

@@ -1,10 +1,9 @@
-import categoryTree from "@/shared/metadata/categoryTree.json";
+import treePostsData from "@/shared/metadata/posts.tree.json";
 
 export async function generateStaticParams() {
-  return categoryTree.flatMap((domainNode) =>
+  return treePostsData.flatMap((domainNode) =>
     domainNode.categories.map((categoryNode) => ({
       domain: encodeURIComponent(domainNode.domainSlug),
-      // 🌟 원래 이름 대신 'ci-cd'가 담긴 주소용 필드를 넘겨줍니다!
       category: encodeURIComponent(categoryNode.categorySlug), 
     }))
   );

@@ -4,15 +4,9 @@ import { CoverflowCardImage } from "./CoverflowCardImage";
 
 export function CoverflowCard({ item }: CoverflowCardProps) {
   return (
-    <article
-      className="group relative h-[700px] sm:!h-[500px] rounded-2xl bg-neutral-900/70 border border-neutral-800 overflow-hidden shadow-lg shadow-black/40 transition-all duration-300 cursor-pointer"
-    >
+    <article className="group relative h-[700px] sm:!h-[500px] rounded-2xl bg-neutral-900/70 border border-neutral-800 overflow-hidden shadow-lg shadow-black/40 transition-all duration-300 cursor-pointer">
       <CoverflowCardImage src={item.thumbnail} alt={item.title} />
-      <CoverflowCardContent
-        title={item.title}
-        description={item.description}
-        badge={item.featured ? "Featured" : ""}
-      />
+      <CoverflowCardContent title={item.title} description={item.description} badge={item.featured ? "Featured" : ""}/>
     </article>
   );
 }

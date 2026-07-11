@@ -6,14 +6,10 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import { Content } from './Content';
 import { Profile } from './Profile';
+import { AboutSectionData } from '../types/about.types';
 
-interface AboutSwiperProps {
-  frontmatter: any
-  sections: string[]
-}
+export function AboutSwiper({ frontmatter, sections }: AboutSectionData) {
 
-export function AboutSwiper({ frontmatter, sections }: AboutSwiperProps) {
-  
   return (
     <Swiper
       direction="vertical"
@@ -24,7 +20,7 @@ export function AboutSwiper({ frontmatter, sections }: AboutSwiperProps) {
       style={{ position: 'absolute', inset: 0 }}
     >
       <SwiperSlide>
-        {frontmatter ? <Profile key="profile" frontmatter={frontmatter} /> : null}
+        {frontmatter && <Profile key="profile" frontmatter={frontmatter} />}
       </SwiperSlide>
       {sections.map((section) => (
         <SwiperSlide>
