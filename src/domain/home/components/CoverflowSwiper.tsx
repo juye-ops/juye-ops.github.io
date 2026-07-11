@@ -12,11 +12,7 @@ import { useWheelScroll } from "../hooks/useWheelScroll";
 import { COVERFLOW_CONFIG } from "../utils/config";
 import Link from "next/link";
 
-export function CoverflowSwiper({
-  items,
-  onItemChange,
-  containerRef,
-}: CoverflowSwiperProps) {
+export function CoverflowSwiper({ items, onItemChange, containerRef }: CoverflowSwiperProps) {
   const slides = useMemo(() => items ?? [], [items]);
   const swiperRef = useRef<SwiperInstance | null>(null);
   const internalContainerRef = useRef<HTMLDivElement | null>(null);

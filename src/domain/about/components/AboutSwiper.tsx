@@ -9,7 +9,7 @@ import { Profile } from './Profile';
 import { AboutSectionData } from '../types/about.types';
 
 export function AboutSwiper({ frontmatter, sections }: AboutSectionData) {
-  
+
   return (
     <Swiper
       direction="vertical"
@@ -20,7 +20,7 @@ export function AboutSwiper({ frontmatter, sections }: AboutSectionData) {
       style={{ position: 'absolute', inset: 0 }}
     >
       <SwiperSlide>
-        {frontmatter ? <Profile key="profile" frontmatter={frontmatter} /> : null}
+        {frontmatter && <Profile key="profile" frontmatter={frontmatter} />}
       </SwiperSlide>
       {sections.map((section) => (
         <SwiperSlide>

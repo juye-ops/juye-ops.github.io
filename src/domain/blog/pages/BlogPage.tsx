@@ -13,18 +13,15 @@ export function BlogPage() {
 
   return (
     <div className="min-h-screen bg-slate-50/50 text-slate-800 antialiased font-sans">
-      <BlogHeader
-        title="Categories"
-        meta={<span className="text-slate-400">Technical infrastructure & engineering archive.</span>}
+      <BlogHeader title="Categories" meta={
+        <span className="text-slate-400">Technical infrastructure & engineering archive.</span>
+      }
       />
       <div className="mt-12">
         <SearchBar value={text} onChange={setText} />
       </div>
       <main className="max-w-4xl mx-auto px-6 py-16">
-        <BlogContentPanel
-          text={text}
-          filteredPosts={filteredPosts}
-        />
+        <BlogContentPanel text={text} filteredPosts={filteredPosts} />
       </main>
     </div>
   );
