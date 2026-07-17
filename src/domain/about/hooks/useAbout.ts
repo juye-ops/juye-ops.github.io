@@ -4,6 +4,7 @@ import { processMarkdown } from '@/shared/utils/markdown/processMarkdown';
 import { AboutFrontmatter, AboutSectionData } from '../types/about.types';
 
 import aboutMetadata from '@/shared/metadata/about.json';
+import { getSlugFromContentURL } from '@/shared/utils/markdown/getSlug';
 
 export function useAbout() {
   const [data, setData] = useState<AboutSectionData | null>(null);
@@ -15,6 +16,9 @@ export function useAbout() {
       try {
         // 1. contentUrl을 통해 실제 마크다운 텍스트를 가져옵니다.
         const mdRes = await fetch(aboutMetadata.contentUrl);
+        const mdSlug = getSlugFromContentURL(aboutMetadata.contentUrl)
+
+
         const rawMarkdown = await mdRes.text();
 
         // 2. 가져온 마크다운 텍스트를 파싱합니다.
@@ -23,7 +27,7 @@ export function useAbout() {
 
         // 3. 비동기 마크다운 처리 (HTML 변환)
         const processedSections = await Promise.all(
-          sections.map((section) => processMarkdown(section))
+          sections.map((section) => processMarkdown(section, frontmatter, mdSlug))
         );
 
         // 4. 최종 데이터 저장

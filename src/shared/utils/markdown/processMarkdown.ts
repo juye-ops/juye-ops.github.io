@@ -15,53 +15,56 @@ import remarkCodeTitles from "remark-flexible-code-titles";
 import { visit } from 'unist-util-visit'; // 설치 필요: npm install unist-util-visit
 
 import { PKMS_PATH } from '@/shared/constants/env';
+import { PostFrontmatter } from '@/domain/blog/types/post.types';
 
-function remarkCustom() {
-  return (tree: any, file: any) => {
-    console.log(file);
+
+function remarkCustom({ frontmatter, slug }: { frontmatter: PostFrontmatter; slug: string }) {
+  return (tree: any) => {
     (visit as any)(tree, 'text', (node: any, index: number | undefined, parent: any) => {
       if (!node.value || typeof index !== 'number' || !parent) return;
 
-      // 1. 정규식 수정: [^\]] 대신 [\s\S]를 사용하여 줄바꿈을 포함하도록 합니다.
-      // 2. g 플래그를 사용하지 않고 exec 대신 match 등을 활용하거나 주의가 필요합니다.
+      // 옵시디언 이미지 문법 정규식
       const obsidianImageRegex = /!\[\[([^\]]+\.(png|jpg|jpeg|gif|svg))\]\]/;
-
       if (!obsidianImageRegex.test(node.value)) return;
 
       const newChildren: any[] = [];
       let text = node.value;
       let match;
 
-      // 루프를 돌며 분해
       while ((match = obsidianImageRegex.exec(text)) !== null) {
-        // 이미지 앞의 텍스트
+        // 이미지 앞 텍스트 처리
         if (match.index > 0) {
           newChildren.push({ type: 'text', value: text.slice(0, match.index) });
         }
 
-        // 이미지 노드
+        const originalFilename = match[1];
+
+        // [경로 조립 로직]
+        // 만약 파일명이 이미 '/'로 시작하면(절대경로) 그대로 사용, 아니면 조립
+        const resolvedUrl = originalFilename.startsWith('/') 
+          ? originalFilename 
+          : `/assets/images/posts/${frontmatter.domain}/${frontmatter.category}/${slug}/${originalFilename}`;
+
+        // 이미지 노드 생성
         newChildren.push({
           type: 'image',
-          url: match[1],
-          alt: match[1],
+          url: resolvedUrl,
+          alt: originalFilename,
         });
 
-        // 나머지 텍스트
         text = text.slice(match.index + match[0].length);
       }
 
-      // 마지막 텍스트
+      // 마지막 텍스트 처리
       if (text.length > 0) {
         newChildren.push({ type: 'text', value: text });
       }
 
-      // 부모 교체
       parent.children.splice(index, 1, ...newChildren);
       return index + newChildren.length;
     });
   };
 }
-
 
 function rehypeCustom() {
   return (tree: any) => {
@@ -78,7 +81,7 @@ function rehypeCustom() {
 }
 
 
-export async function processMarkdown(content: string) {
+export async function processMarkdown(content: string, frontmatter: PostFrontmatter, slug: string) {
   return String(await unified()
     .use(remarkParse)
     .use(remarkBreaks)
@@ -87,7 +90,7 @@ export async function processMarkdown(content: string) {
     .use(remarkCallout)
     .use(remarkHighlight)
     .use(remarkCodeTitles)
-    .use(remarkCustom)
+    .use(remarkCustom, { frontmatter, slug })
     .use(remarkRehype, { allowDangerousHtml: true })
     .use(rehypeRaw)
     .use(rehypeKatex, { strict: false, })

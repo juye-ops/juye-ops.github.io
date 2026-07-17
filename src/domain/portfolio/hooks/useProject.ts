@@ -4,6 +4,7 @@ import { processMarkdown } from '@/shared/utils/markdown/processMarkdown';
 import { useState, useEffect } from 'react';
 import { ProjectFrontmatter } from '../types/portfolio.types';
 import { processImageUrl } from '../utils/processImageUrl';
+import { getSlugFromContentURL } from '@/shared/utils/markdown/getSlug';
 
 
 export function useProject(contentUrl: string) {
@@ -16,16 +17,18 @@ export function useProject(contentUrl: string) {
       try {
         setLoading(true);
         const response = await fetch(contentUrl);
+        const mdSlug = getSlugFromContentURL(contentUrl)
+
         const rawText = await response.text();
 
         // 1. 파싱
-        let { frontmatter, content } = parseMarkdown<ProjectFrontmatter>(rawText);
+        let { frontmatter, content } = parseMarkdown(rawText);
 
         // 2. frontmatter 덮어쓰기 (가공)
         if (Array.isArray(frontmatter.images)) {
           frontmatter = {
             ...frontmatter,
-            images: frontmatter.images.map((img) => ({
+            images: frontmatter.images.map((img: any) => ({
               ...img,
               src: processImageUrl(img.src),
             })),
@@ -33,7 +36,7 @@ export function useProject(contentUrl: string) {
         }
 
         // 3. content 덮어쓰기 (변환)
-        content = await processMarkdown(content);
+        content = await processMarkdown(content, frontmatter, mdSlug);
 
         // 4. 최종 데이터 상태 업데이트
         setData({ frontmatter, content });
