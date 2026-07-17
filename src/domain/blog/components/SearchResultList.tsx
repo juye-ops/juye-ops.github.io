@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { SearchablePost } from '../types/post.types';
-import { getSlugsFromNames } from '@/shared/utils/getSlugsFromName';
+import { getSlugsFromNames } from '@/shared/utils/markdown/getSlugsFromName';
 
 interface SearchResultListProps {
   posts: SearchablePost[];
@@ -24,8 +24,8 @@ export function SearchResultList({ posts }: SearchResultListProps) {
         const slugs = getSlugsFromNames(post.frontmatter.domain, post.frontmatter.category);
 
         // 2. 추출 실패 시 대비 (폴백 경로)
-        const domainSlug = slugs?.domainSlug || 'unknown';
-        const categorySlug = slugs?.categorySlug || 'unknown';
+        const domainSlug = slugs?.domainSlug || '_nodomain';
+        const categorySlug = slugs?.categorySlug || '_nocategory';
 
         return (
           <Link

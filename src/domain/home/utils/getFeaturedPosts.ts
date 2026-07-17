@@ -1,6 +1,6 @@
 // @/shared/utils/post.ts
 import flatPostsData from "@/shared/metadata/posts.flat.json";
-import { getSlugsFromNames } from "@/shared/utils/getSlugsFromName";
+import { getSlugsFromNames } from "@/shared/utils/markdown/getSlugsFromName";
 
 export const getFeaturedPosts = () => {
   return Object.entries(flatPostsData)
@@ -13,8 +13,8 @@ export const getFeaturedPosts = () => {
         ...post.frontmatter,
         slug,
         // 2. 추출한 결과 사용 (실패 시 unknown 폴백)
-        domainSlug: slugs?.domainSlug || "unknown",
-        categorySlug: slugs?.categorySlug || "unknown",
+        domainSlug: slugs?.domainSlug || "_nodomain",
+        categorySlug: slugs?.categorySlug || "_nocategory",
         description: post.frontmatter.description || "",
         thumbnail: post.frontmatter.thumbnail || "",
         date: post.frontmatter.date,

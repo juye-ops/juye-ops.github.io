@@ -1,16 +1,16 @@
 import matter from "gray-matter";
 
 // types/markdown.types.ts
-export interface MarkdownResult<T> {
-  frontmatter: T;
+export interface MarkdownResult {
+  frontmatter: any;
   content: string;
 }
 
 // shared/utils/markdown.ts
-export function parseMarkdown<T>(text: string): MarkdownResult<T> {
+export function parseMarkdown(text: string): MarkdownResult {
   const { data, content } = matter(text);
   return { 
-    frontmatter: data as T, 
+    frontmatter: data, 
     content 
   };
 }
