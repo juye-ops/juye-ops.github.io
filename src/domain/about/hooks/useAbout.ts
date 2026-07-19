@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
-import { parseMarkdown, parseSections } from '@/shared/utils/markdown';
+import { parseMarkdown, parseSections } from '@/shared/utils/markdown/parser';
 import { processMarkdown } from '@/shared/utils/markdown/processMarkdown';
 import { AboutFrontmatter, AboutSectionData } from '../types/about.types';
 
 import aboutMetadata from '@/shared/metadata/about.json';
-import { getSlugFromContentURL } from '@/shared/utils/markdown/getSlug';
+import { getSlugFromContentURL } from '@/shared/utils/markdown/slug';
 
 export function useAbout() {
   const [data, setData] = useState<AboutSectionData | null>(null);

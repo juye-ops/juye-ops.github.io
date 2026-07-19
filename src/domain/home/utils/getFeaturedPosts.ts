@@ -1,6 +1,6 @@
 // @/shared/utils/post.ts
 import flatPostsData from "@/shared/metadata/posts.flat.json";
-import { getSlugsFromNames } from "@/shared/utils/markdown/getSlugsFromName";
+import { getSlugsFromNames } from "@/shared/utils/markdown/slug";
 
 export const getFeaturedPosts = () => {
   return Object.entries(flatPostsData)

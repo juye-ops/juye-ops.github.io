@@ -2,9 +2,9 @@
 
 import { useState, useEffect } from 'react';
 import { PostData, PostFrontmatter } from '../types/post.types';
-import { parseMarkdown } from '@/shared/utils/markdown';
+import { parseMarkdown } from '@/shared/utils/markdown/parser';
 import { processMarkdown } from '@/shared/utils/markdown/processMarkdown';
-import { getSlugFromContentURL } from '@/shared/utils/markdown/getSlug';
+import { getSlugFromContentURL } from '@/shared/utils/markdown/slug';
 
 export function usePost(contentUrl: string) {
   const [data, setData] = useState<PostData>();
