@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { SearchablePost } from '../types/post.types';
-import { getSlugsFromNames } from '@/shared/utils/markdown/getSlugsFromName';
+import { getSlugsFromNames } from '@/shared/utils/markdown/slug';
 
 interface SearchResultListProps {
   posts: SearchablePost[];

@@ -1,10 +1,10 @@
 // src/domain/portfolio/hooks/useProject.ts
-import { parseMarkdown } from '@/shared/utils/markdown';
+import { parseMarkdown } from '@/shared/utils/markdown/parser';
 import { processMarkdown } from '@/shared/utils/markdown/processMarkdown';
 import { useState, useEffect } from 'react';
 import { ProjectFrontmatter } from '../types/portfolio.types';
 import { processImageUrl } from '../utils/processImageUrl';
-import { getSlugFromContentURL } from '@/shared/utils/markdown/getSlug';
+import { getSlugFromContentURL } from '@/shared/utils/markdown/slug';
 
 
 export function useProject(contentUrl: string) {

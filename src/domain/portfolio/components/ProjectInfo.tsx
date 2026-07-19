@@ -1,4 +1,6 @@
+import { getBlogUrlBySlug } from "@/shared/utils/markdown/slug";
 import { ProjectFrontmatter } from "../types/portfolio.types";
+import Link from "next/link";
 
 interface ProjectInfoProps {
   frontmatter: ProjectFrontmatter & {
@@ -81,14 +83,13 @@ export function ProjectInfo({ frontmatter }: ProjectInfoProps) {
         {frontmatter.href && (
           <div className="grid grid-cols-[60px_1fr] items-start gap-2">
             <span className="font-mono text-[10px] uppercase font-semibold text-neutral-400  pt-0.5">source</span>
-            <a
-              href={frontmatter.href}
-              target="_blank"
+            <Link
+              href={getBlogUrlBySlug(frontmatter.href)}
               rel="noreferrer"
               className="text-[11px] text-blue-500  hover:underline font-mono inline-flex items-center gap-0.5"
             >
               visit project ↗
-            </a>
+            </Link>
           </div>
         )}
       </div>
